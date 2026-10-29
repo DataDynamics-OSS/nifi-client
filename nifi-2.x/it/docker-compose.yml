@@ -1,0 +1,18 @@
+# 통합 테스트용 NiFi 2.12.0 (no auth / HTTPS single-user 로그인)
+services:
+  nifi-http:
+    image: apache/nifi:2.12.0
+    ports: ["127.0.0.1:39080:39080"]
+    # 2.x 이미지는 HTTPS로만 시작하므로 start-http.sh로 HTTP 무인증 모드로 바꾼다
+    entrypoint: ["/opt/nifi/it/start-http.sh"]
+    volumes: ["./:/opt/nifi/it:ro"]
+    environment:
+      NIFI_WEB_HTTP_PORT: "39080"
+  nifi-https:
+    image: apache/nifi:2.12.0
+    ports: ["127.0.0.1:39443:39443"]
+    environment:
+      NIFI_WEB_HTTPS_PORT: "39443"
+      NIFI_WEB_PROXY_HOST: "localhost:39443"
+      SINGLE_USER_CREDENTIALS_USERNAME: "admin"
+      SINGLE_USER_CREDENTIALS_PASSWORD: "ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB"

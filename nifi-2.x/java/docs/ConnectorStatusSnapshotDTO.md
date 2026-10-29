@@ -1,0 +1,30 @@
+# ConnectorStatusSnapshotDTO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**activeThreadCount** | **Integer** | The number of active threads for the connector. |  [optional]
+**bytesQueued** | **Long** | The number of bytes queued in this connector&#x27;s managed process group. |  [optional]
+**bytesRead** | **Long** | The number of bytes read by processors in this connector&#x27;s managed process group. |  [optional]
+**bytesReceived** | **Long** | The number of bytes received by this connector&#x27;s managed process group. |  [optional]
+**bytesSent** | **Long** | The number of bytes sent by this connector&#x27;s managed process group. |  [optional]
+**bytesWritten** | **Long** | The number of bytes written by processors in this connector&#x27;s managed process group. |  [optional]
+**flowFilesQueued** | **Integer** | The number of FlowFiles queued in this connector&#x27;s managed process group. |  [optional]
+**flowFilesReceived** | **Integer** | The number of FlowFiles received by this connector&#x27;s managed process group. |  [optional]
+**flowFilesSent** | **Integer** | The number of FlowFiles sent by this connector&#x27;s managed process group. |  [optional]
+**groupId** | **String** | The id of the parent process group to which the connector belongs. |  [optional]
+**id** | **String** | The id of the connector. |  [optional]
+**idle** | **Boolean** | Whether or not the connector is currently idle (no FlowFiles queued and no FlowFiles processed recently). |  [optional]
+**idleDuration** | **String** | A human-readable representation of how long the connector has been idle, or null if the connector is not idle. |  [optional]
+**idleDurationMillis** | **Long** | The number of milliseconds the connector has been idle, or null if the connector is not idle. |  [optional]
+**name** | **String** | The name of the connector. |  [optional]
+**processingPerformanceStatus** | [**ProcessingPerformanceStatusDTO**](ProcessingPerformanceStatusDTO.md) |  |  [optional]
+**queued** | **String** | The count/size of queued data, pretty-printed. |  [optional]
+**queuedCount** | **String** | The count of queued FlowFiles, pretty-printed. |  [optional]
+**queuedSize** | **String** | The size of queued data, pretty-printed. |  [optional]
+**read** | **String** | The number of bytes read, pretty-printed. |  [optional]
+**received** | **String** | The count/size of data that has been received by this connector, pretty-printed. |  [optional]
+**runStatus** | **String** | The run status of the connector. |  [optional]
+**sent** | **String** | The count/size of data that has been sent by this connector, pretty-printed. |  [optional]
+**type** | **String** | The type of the connector. |  [optional]
+**written** | **String** | The number of bytes written, pretty-printed. |  [optional]

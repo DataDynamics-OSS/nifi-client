@@ -1,0 +1,16 @@
+# ConnectionStatisticsSnapshotDTO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The id of the connection. | [optional] 
+**predicted_bytes_at_next_interval** | **int** | The predicted total number of bytes in the queue at the next configured interval. | [optional] 
+**predicted_count_at_next_interval** | **int** | The predicted number of queued objects at the next configured interval. | [optional] 
+**predicted_millis_until_bytes_backpressure** | **int** | The predicted number of milliseconds before the connection will have backpressure applied, based on the total number of bytes in the queue. | [optional] 
+**predicted_millis_until_count_backpressure** | **int** | The predicted number of milliseconds before the connection will have backpressure applied, based on the queued count. | [optional] 
+**predicted_percent_bytes** | **int** | The predicted percentage of bytes in the queue against current threshold at the next configured interval. | [optional] 
+**predicted_percent_count** | **int** | The predicted percentage of queued objects at the next configured interval. | [optional] 
+**prediction_interval_millis** | **int** | The prediction interval in seconds | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
