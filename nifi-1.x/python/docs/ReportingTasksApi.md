@@ -1,4 +1,4 @@
-# swagger_client.ReportingTasksApi
+# nifi_client_v1.ReportingTasksApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -28,14 +28,14 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+body = nifi_client_v1.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 
 try:
     # Performs analysis of the component's configuration, providing information about which attributes are referenced.
@@ -78,12 +78,12 @@ Clears the state for a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
 
 try:
@@ -126,12 +126,12 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The ID of the Reporting Task
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -176,12 +176,12 @@ Gets a reporting task property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
 property_name = 'property_name_example' # str | The property name.
 sensitive = false # bool | Property Descriptor requested sensitive status (optional) (default to false)
@@ -228,12 +228,12 @@ Gets a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
 
 try:
@@ -276,12 +276,12 @@ Gets the state for a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
 
 try:
@@ -324,12 +324,12 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The ID of the Reporting Task
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -374,12 +374,12 @@ Deletes a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -428,14 +428,14 @@ This will initiate the process of verifying a given Reporting Task configuration
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The reporting task configuration verification request.
+body = nifi_client_v1.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The reporting task configuration verification request.
 
 try:
     # Performs verification of the Reporting Task's configuration
@@ -478,14 +478,14 @@ Updates a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
-body = swagger_client.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
+body = nifi_client_v1.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
 
 try:
     # Updates a reporting task
@@ -528,14 +528,14 @@ Updates run status of a reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportingTasksApi()
+api_instance = nifi_client_v1.ReportingTasksApi()
 id = 'id_example' # str | The reporting task id.
-body = swagger_client.ReportingTaskRunStatusEntity() # ReportingTaskRunStatusEntity | The reporting task run status.
+body = nifi_client_v1.ReportingTaskRunStatusEntity() # ReportingTaskRunStatusEntity | The reporting task run status.
 
 try:
     # Updates run status of a reporting task

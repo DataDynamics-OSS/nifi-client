@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.flowfile_queues_api import FlowfileQueuesApi  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.api.flowfile_queues_api import FlowfileQueuesApi  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestFlowfileQueuesApi(unittest.TestCase):
     """FlowfileQueuesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.flowfile_queues_api.FlowfileQueuesApi()  # noqa: E501
+        self.api = nifi_client_v1.api.flowfile_queues_api.FlowfileQueuesApi()  # noqa: E501
 
     def tearDown(self):
         pass

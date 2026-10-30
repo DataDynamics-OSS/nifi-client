@@ -27,11 +27,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -83,11 +83,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -139,11 +139,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -195,11 +195,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -251,11 +251,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -303,11 +303,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -355,11 +355,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -417,11 +417,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -479,11 +479,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -535,11 +535,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -593,11 +593,11 @@ Note: This endpoint is subject to change as NiFi and it&#x27;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.TenantsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.TenantsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

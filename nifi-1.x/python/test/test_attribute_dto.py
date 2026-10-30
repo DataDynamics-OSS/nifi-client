@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.attribute_dto import AttributeDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.attribute_dto import AttributeDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestAttributeDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestAttributeDTO(unittest.TestCase):
     def testAttributeDTO(self):
         """Test AttributeDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.attribute_dto.AttributeDTO()  # noqa: E501
+        # model = nifi_client_v1.models.attribute_dto.AttributeDTO()  # noqa: E501
         pass
 
 

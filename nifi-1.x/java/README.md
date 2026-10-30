@@ -1,4 +1,4 @@
-# nifi-client
+# nifi-client-v1
 
 NiFi Rest API
 - API version: 1.28.1
@@ -38,8 +38,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.swagger</groupId>
-  <artifactId>nifi-client</artifactId>
+  <groupId>io.datadynamics</groupId>
+  <artifactId>nifi-client-v1</artifactId>
   <version>1.28.1</version>
   <scope>compile</scope>
 </dependency>
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:nifi-client:1.28.1"
+compile "io.datadynamics:nifi-client-v1:1.28.1"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/nifi-client-1.28.1.jar`
+* `target/nifi-client-v1-1.28.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -72,10 +72,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.AccessApi;
+import io.datadynamics.nifi.client.v1.*;
+import io.datadynamics.nifi.client.v1.auth.*;
+import io.datadynamics.nifi.client.v1.model.*;
+import io.datadynamics.nifi.client.v1.api.AccessApi;
 
 import java.io.File;
 import java.util.*;

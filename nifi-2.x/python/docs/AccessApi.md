@@ -1,4 +1,4 @@
-# swagger_client.AccessApi
+# nifi_client_v2.AccessApi
 
 All URIs are relative to */*
 
@@ -19,12 +19,12 @@ The token returned is formatted as a JSON Web Token (JWT). The token is base64 e
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v2.AccessApi()
 username = 'username_example' # str |  (optional)
 password = 'password_example' # str |  (optional)
 
@@ -69,18 +69,18 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.AccessApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Performs a logout for other providers that have been issued a JWT.
@@ -118,18 +118,18 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.AccessApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Completes the logout sequence by removing the cached Logout Request and Cookie if they existed and redirects to /nifi/login.

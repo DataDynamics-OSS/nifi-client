@@ -1,11 +1,11 @@
 {
-  "groupId": "io.swagger",
-  "artifactId": "nifi-client",
+  "groupId": "io.datadynamics",
+  "artifactId": "nifi-client-v2",
   "artifactVersion": "2.12.0",
   "artifactDescription": "Apache NiFi 2.12.0 REST API Java client",
-  "invokerPackage": "io.swagger.client",
-  "apiPackage": "io.swagger.client.api",
-  "modelPackage": "io.swagger.client.model",
+  "invokerPackage": "io.datadynamics.nifi.client.v2",
+  "apiPackage": "io.datadynamics.nifi.client.v2.api",
+  "modelPackage": "io.datadynamics.nifi.client.v2.model",
   "library": "okhttp4-gson",
   "dateLibrary": "java8",
   "hideGenerationTimestamp": true

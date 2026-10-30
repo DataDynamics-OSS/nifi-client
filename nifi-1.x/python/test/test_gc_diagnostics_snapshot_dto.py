@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.gc_diagnostics_snapshot_dto import GCDiagnosticsSnapshotDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.gc_diagnostics_snapshot_dto import GCDiagnosticsSnapshotDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestGCDiagnosticsSnapshotDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestGCDiagnosticsSnapshotDTO(unittest.TestCase):
     def testGCDiagnosticsSnapshotDTO(self):
         """Test GCDiagnosticsSnapshotDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.gc_diagnostics_snapshot_dto.GCDiagnosticsSnapshotDTO()  # noqa: E501
+        # model = nifi_client_v1.models.gc_diagnostics_snapshot_dto.GCDiagnosticsSnapshotDTO()  # noqa: E501
         pass
 
 

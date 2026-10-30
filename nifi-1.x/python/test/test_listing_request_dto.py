@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.listing_request_dto import ListingRequestDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.listing_request_dto import ListingRequestDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestListingRequestDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestListingRequestDTO(unittest.TestCase):
     def testListingRequestDTO(self):
         """Test ListingRequestDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.listing_request_dto.ListingRequestDTO()  # noqa: E501
+        # model = nifi_client_v1.models.listing_request_dto.ListingRequestDTO()  # noqa: E501
         pass
 
 

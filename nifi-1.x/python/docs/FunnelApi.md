@@ -1,4 +1,4 @@
-# swagger_client.FunnelApi
+# nifi_client_v1.FunnelApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -20,12 +20,12 @@ Gets a funnel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FunnelApi()
+api_instance = nifi_client_v1.FunnelApi()
 id = 'id_example' # str | The funnel id.
 
 try:
@@ -68,12 +68,12 @@ Deletes a funnel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FunnelApi()
+api_instance = nifi_client_v1.FunnelApi()
 id = 'id_example' # str | The funnel id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -122,14 +122,14 @@ Updates a funnel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FunnelApi()
+api_instance = nifi_client_v1.FunnelApi()
 id = 'id_example' # str | The funnel id.
-body = swagger_client.FunnelEntity() # FunnelEntity | The funnel configuration details.
+body = nifi_client_v1.FunnelEntity() # FunnelEntity | The funnel configuration details.
 
 try:
     # Updates a funnel

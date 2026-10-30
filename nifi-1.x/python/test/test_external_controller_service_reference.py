@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.external_controller_service_reference import ExternalControllerServiceReference  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.external_controller_service_reference import ExternalControllerServiceReference  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestExternalControllerServiceReference(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestExternalControllerServiceReference(unittest.TestCase):
     def testExternalControllerServiceReference(self):
         """Test ExternalControllerServiceReference"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.external_controller_service_reference.ExternalControllerServiceReference()  # noqa: E501
+        # model = nifi_client_v1.models.external_controller_service_reference.ExternalControllerServiceReference()  # noqa: E501
         pass
 
 

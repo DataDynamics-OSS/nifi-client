@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.supported_mime_types_dto import SupportedMimeTypesDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.supported_mime_types_dto import SupportedMimeTypesDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestSupportedMimeTypesDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSupportedMimeTypesDTO(unittest.TestCase):
     def testSupportedMimeTypesDTO(self):
         """Test SupportedMimeTypesDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.supported_mime_types_dto.SupportedMimeTypesDTO()  # noqa: E501
+        # model = nifi_client_v2.models.supported_mime_types_dto.SupportedMimeTypesDTO()  # noqa: E501
         pass
 
 

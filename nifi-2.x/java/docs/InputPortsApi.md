@@ -19,11 +19,11 @@ Clears bulletins for an input port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.InputPortsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.InputPortsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -75,11 +75,11 @@ Gets an input port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.InputPortsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.InputPortsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -129,11 +129,11 @@ Deletes an input port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.InputPortsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.InputPortsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -189,11 +189,11 @@ Updates an input port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.InputPortsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.InputPortsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -245,11 +245,11 @@ Updates run status of an input-port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.InputPortsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.InputPortsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

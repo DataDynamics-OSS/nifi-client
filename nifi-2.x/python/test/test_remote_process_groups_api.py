@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.remote_process_groups_api import RemoteProcessGroupsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.api.remote_process_groups_api import RemoteProcessGroupsApi  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestRemoteProcessGroupsApi(unittest.TestCase):

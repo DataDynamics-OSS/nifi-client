@@ -1,4 +1,4 @@
-# swagger_client.ProvenanceApi
+# nifi_client_v1.ProvenanceApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -24,12 +24,12 @@ Deletes a lineage query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
+api_instance = nifi_client_v1.ProvenanceApi()
 id = 'id_example' # str | The id of the lineage query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -74,12 +74,12 @@ Deletes a provenance query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
+api_instance = nifi_client_v1.ProvenanceApi()
 id = 'id_example' # str | The id of the provenance query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -124,12 +124,12 @@ Gets a lineage query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
+api_instance = nifi_client_v1.ProvenanceApi()
 id = 'id_example' # str | The id of the lineage query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -174,12 +174,12 @@ Gets a provenance query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
+api_instance = nifi_client_v1.ProvenanceApi()
 id = 'id_example' # str | The id of the provenance query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 summarize = false # bool | Whether or not incremental results are returned. If false, provenance events are only returned once the query completes. This property is true by default. (optional) (default to false)
@@ -228,12 +228,12 @@ Gets the searchable attributes for provenance events
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
+api_instance = nifi_client_v1.ProvenanceApi()
 
 try:
     # Gets the searchable attributes for provenance events
@@ -272,13 +272,13 @@ Lineage queries may be long running so this endpoint submits a request. The resp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
-body = swagger_client.LineageEntity() # LineageEntity | The lineage query details.
+api_instance = nifi_client_v1.ProvenanceApi()
+body = nifi_client_v1.LineageEntity() # LineageEntity | The lineage query details.
 
 try:
     # Submits a lineage query
@@ -320,13 +320,13 @@ Provenance queries may be long running so this endpoint submits a request. The r
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi()
-body = swagger_client.ProvenanceEntity() # ProvenanceEntity | The provenance query details.
+api_instance = nifi_client_v1.ProvenanceApi()
+body = nifi_client_v1.ProvenanceEntity() # ProvenanceEntity | The provenance query details.
 
 try:
     # Submits a provenance query

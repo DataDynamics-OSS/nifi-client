@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.parameter_context_entity import ParameterContextEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.parameter_context_entity import ParameterContextEntity  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestParameterContextEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestParameterContextEntity(unittest.TestCase):
     def testParameterContextEntity(self):
         """Test ParameterContextEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.parameter_context_entity.ParameterContextEntity()  # noqa: E501
+        # model = nifi_client_v1.models.parameter_context_entity.ParameterContextEntity()  # noqa: E501
         pass
 
 

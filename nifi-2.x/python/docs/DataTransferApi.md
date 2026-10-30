@@ -1,4 +1,4 @@
-# swagger_client.DataTransferApi
+# nifi_client_v2.DataTransferApi
 
 All URIs are relative to */*
 
@@ -21,18 +21,18 @@ Commit or cancel the specified transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 response_code = 56 # int | The response code. Available values are BAD_CHECKSUM(19), CONFIRM_TRANSACTION(12) or CANCEL_TRANSACTION(15).
 port_id = 'port_id_example' # str | The input port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
@@ -79,18 +79,18 @@ Commit or cancel the specified transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 response_code = 56 # int | The response code. Available values are CONFIRM_TRANSACTION(12) or CANCEL_TRANSACTION(15).
 checksum = '' # str | A checksum calculated at client side using CRC32 to check flow file content integrity. It must match with the value calculated at server side.
 port_id = 'port_id_example' # str | The output port id.
@@ -139,18 +139,18 @@ Create a transaction to the specified output port or input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 port_type = 'port_type_example' # str | The port type.
 port_id = 'port_id_example' # str | The input or output port id.
 body = NULL # object |  (optional)
@@ -195,18 +195,18 @@ Extend transaction TTL
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 port_id = 'port_id_example' # str | The input port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
 body = NULL # object |  (optional)
@@ -251,18 +251,18 @@ Extend transaction TTL
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 port_id = 'port_id_example' # str | The output port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
 body = NULL # object |  (optional)
@@ -307,18 +307,18 @@ Transfer FlowFiles to the input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 port_id = 'port_id_example' # str | The input port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
 body = NULL # object |  (optional)
@@ -363,18 +363,18 @@ Transfer FlowFiles from the output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.DataTransferApi(nifi_client_v2.ApiClient(configuration))
 port_id = 'port_id_example' # str | The output port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
 body = NULL # object |  (optional)

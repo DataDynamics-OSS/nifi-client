@@ -1,4 +1,4 @@
-# swagger_client.FlowfileQueuesApi
+# nifi_client_v1.FlowfileQueuesApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -25,12 +25,12 @@ Creates a request to drop the contents of the queue in this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 
 try:
@@ -73,12 +73,12 @@ Lists the contents of the queue in this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 
 try:
@@ -121,12 +121,12 @@ Cancels and/or removes a request to list the contents of this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 listing_request_id = 'listing_request_id_example' # str | The listing request id.
 
@@ -171,12 +171,12 @@ Gets the content for a FlowFile in a Connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 flowfile_uuid = 'flowfile_uuid_example' # str | The flowfile uuid.
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -225,12 +225,12 @@ Gets the current status of a drop request for the specified connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -275,12 +275,12 @@ Gets a FlowFile from a Connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 flowfile_uuid = 'flowfile_uuid_example' # str | The flowfile uuid.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
@@ -327,12 +327,12 @@ Gets the current status of a listing request for the specified connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 listing_request_id = 'listing_request_id_example' # str | The listing request id.
 
@@ -377,12 +377,12 @@ Cancels and/or removes a request to drop the contents of this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowfileQueuesApi()
+api_instance = nifi_client_v1.FlowfileQueuesApi()
 id = 'id_example' # str | The connection id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 

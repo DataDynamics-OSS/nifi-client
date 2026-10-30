@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.clear_bulletins_for_group_results_entity import ClearBulletinsForGroupResultsEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.clear_bulletins_for_group_results_entity import ClearBulletinsForGroupResultsEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestClearBulletinsForGroupResultsEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestClearBulletinsForGroupResultsEntity(unittest.TestCase):
     def testClearBulletinsForGroupResultsEntity(self):
         """Test ClearBulletinsForGroupResultsEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.clear_bulletins_for_group_results_entity.ClearBulletinsForGroupResultsEntity()  # noqa: E501
+        # model = nifi_client_v2.models.clear_bulletins_for_group_results_entity.ClearBulletinsForGroupResultsEntity()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# nifi-client
+# nifi-client-v2
 
 Apache NiFi REST API
 - API version: 2.12.0
@@ -38,8 +38,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.swagger</groupId>
-  <artifactId>nifi-client</artifactId>
+  <groupId>io.datadynamics</groupId>
+  <artifactId>nifi-client-v2</artifactId>
   <version>2.12.0</version>
   <scope>compile</scope>
 </dependency>
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:nifi-client:2.12.0"
+compile "io.datadynamics:nifi-client-v2:2.12.0"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/nifi-client-2.12.0.jar`
+* `target/nifi-client-v2-2.12.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -71,10 +71,10 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.AccessApi;
+import io.datadynamics.nifi.client.v2.*;
+import io.datadynamics.nifi.client.v2.auth.*;
+import io.datadynamics.nifi.client.v2.model.*;
+import io.datadynamics.nifi.client.v2.api.AccessApi;
 
 import java.io.File;
 import java.util.*;
@@ -95,10 +95,10 @@ public class AccessApiExample {
         }
     }
 }
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.AccessApi;
+import io.datadynamics.nifi.client.v2.*;
+import io.datadynamics.nifi.client.v2.auth.*;
+import io.datadynamics.nifi.client.v2.model.*;
+import io.datadynamics.nifi.client.v2.api.AccessApi;
 
 import java.io.File;
 import java.util.*;
@@ -124,10 +124,10 @@ public class AccessApiExample {
         }
     }
 }
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.AccessApi;
+import io.datadynamics.nifi.client.v2.*;
+import io.datadynamics.nifi.client.v2.auth.*;
+import io.datadynamics.nifi.client.v2.model.*;
+import io.datadynamics.nifi.client.v2.api.AccessApi;
 
 import java.io.File;
 import java.util.*;

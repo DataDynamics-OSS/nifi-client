@@ -20,11 +20,11 @@ Gets the input content for a provenance event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,11 +78,11 @@ Retrieves the latest cached Provenance Events for the specified component
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -134,11 +134,11 @@ Gets the output content for a provenance event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -192,11 +192,11 @@ Gets a provenance event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -248,11 +248,11 @@ Replays content from a provenance event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -302,11 +302,11 @@ Replays content from a provenance event
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProvenanceEventsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProvenanceEventsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

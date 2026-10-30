@@ -48,11 +48,11 @@ Generates a copy response for the given copy request
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -104,11 +104,11 @@ Copies a snippet and discards it.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -160,11 +160,11 @@ Creates a connection
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -216,11 +216,11 @@ Creates a new controller service
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -272,11 +272,11 @@ Creates a request to drop all FlowFiles of all connection queues in this process
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -326,11 +326,11 @@ Creates a funnel
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -382,11 +382,11 @@ Creates an input port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -438,11 +438,11 @@ Creates a label
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -494,11 +494,11 @@ Creates an output port
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -550,11 +550,11 @@ Creates a process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -608,11 +608,11 @@ Creates a new processor
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -664,11 +664,11 @@ Creates a new process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -722,11 +722,11 @@ Deletes the Replace Request with the given ID. After a request is created via a 
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -778,11 +778,11 @@ Gets a process group for download
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -836,11 +836,11 @@ Gets all connections
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -890,11 +890,11 @@ Gets the current status of a drop all FlowFiles request.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -946,11 +946,11 @@ Gets all funnels
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1000,11 +1000,11 @@ Gets all input ports
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1054,11 +1054,11 @@ Gets all labels
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1108,11 +1108,11 @@ Gets a list of local modifications to the Process Group since it was last synchr
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1162,11 +1162,11 @@ Gets all output ports
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1216,11 +1216,11 @@ Gets a process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1270,11 +1270,11 @@ Gets all process groups
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1324,11 +1324,11 @@ Gets all processors
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1380,11 +1380,11 @@ Gets all remote process groups
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1436,11 +1436,11 @@ Returns the Replace Request with the given ID. Once a Replace Request has been c
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1490,11 +1490,11 @@ Imports a specified process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1548,11 +1548,11 @@ This will initiate the action of replacing a process group with the given proces
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1604,11 +1604,11 @@ Pastes into the specified process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1660,11 +1660,11 @@ Cancels and/or removes a request to drop all FlowFiles.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1716,11 +1716,11 @@ Deletes a process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1778,11 +1778,11 @@ This endpoint is used for replication within a cluster, when replacing a flow wi
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1834,11 +1834,11 @@ Updates a process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1890,11 +1890,11 @@ Uploads a versioned flow definition and creates a process group
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ProcessGroupsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ProcessGroupsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

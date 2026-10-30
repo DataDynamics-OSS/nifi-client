@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.version_control_component_mapping_entity import VersionControlComponentMappingEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.version_control_component_mapping_entity import VersionControlComponentMappingEntity  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestVersionControlComponentMappingEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestVersionControlComponentMappingEntity(unittest.TestCase):
     def testVersionControlComponentMappingEntity(self):
         """Test VersionControlComponentMappingEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.version_control_component_mapping_entity.VersionControlComponentMappingEntity()  # noqa: E501
+        # model = nifi_client_v1.models.version_control_component_mapping_entity.VersionControlComponentMappingEntity()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.RemoteProcessGroupsApi
+# nifi_client_v2.RemoteProcessGroupsApi
 
 All URIs are relative to */*
 
@@ -25,19 +25,19 @@ Clears bulletins for a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request.
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -79,18 +79,18 @@ Gets a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -131,18 +131,18 @@ Gets the state for a RemoteProcessGroup
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The processor id.
 
 try:
@@ -183,18 +183,18 @@ Deletes a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The remote process group id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -241,19 +241,19 @@ Updates a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -297,19 +297,19 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port configuration details.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port configuration details.
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
 
@@ -355,19 +355,19 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port run status details.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port run status details.
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
 
@@ -413,19 +413,19 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port configuration details.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port configuration details.
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
 
@@ -471,19 +471,19 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port run status details.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port run status details.
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
 
@@ -527,19 +527,19 @@ Updates run status of a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group run status.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group run status.
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -581,19 +581,19 @@ Updates run status of all remote process groups in a process group (recursively)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process groups run status.
+api_instance = nifi_client_v2.RemoteProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process groups run status.
 id = 'id_example' # str | The process group id.
 
 try:

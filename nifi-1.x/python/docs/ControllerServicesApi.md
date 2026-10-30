@@ -1,4 +1,4 @@
-# swagger_client.ControllerServicesApi
+# nifi_client_v1.ControllerServicesApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -30,14 +30,14 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+body = nifi_client_v1.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 
 try:
     # Performs analysis of the component's configuration, providing information about which attributes are referenced.
@@ -80,12 +80,12 @@ Clears the state for a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -128,12 +128,12 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The ID of the Controller Service
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -178,12 +178,12 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 ui_only = false # bool |  (optional) (default to false)
 
@@ -228,12 +228,12 @@ Gets a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -276,12 +276,12 @@ Gets a controller service property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 property_name = 'property_name_example' # str | The property name to return the descriptor for.
 sensitive = false # bool | Property Descriptor requested sensitive status (optional) (default to false)
@@ -328,12 +328,12 @@ Gets the state for a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -376,12 +376,12 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The ID of the Controller Service
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -426,12 +426,12 @@ Deletes a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -480,14 +480,14 @@ This will initiate the process of verifying a given Controller Service configura
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The controller service configuration verification request.
+body = nifi_client_v1.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The controller service configuration verification request.
 
 try:
     # Performs verification of the Controller Service's configuration
@@ -530,14 +530,14 @@ Updates a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+body = nifi_client_v1.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 
 try:
     # Updates a controller service
@@ -580,14 +580,14 @@ Updates a controller services references
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
-body = swagger_client.UpdateControllerServiceReferenceRequestEntity() # UpdateControllerServiceReferenceRequestEntity | The controller service request update request.
+body = nifi_client_v1.UpdateControllerServiceReferenceRequestEntity() # UpdateControllerServiceReferenceRequestEntity | The controller service request update request.
 
 try:
     # Updates a controller services references
@@ -630,14 +630,14 @@ Updates run status of a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi()
+api_instance = nifi_client_v1.ControllerServicesApi()
 id = 'id_example' # str | The controller service id.
-body = swagger_client.ControllerServiceRunStatusEntity() # ControllerServiceRunStatusEntity | The controller service run status.
+body = nifi_client_v1.ControllerServiceRunStatusEntity() # ControllerServiceRunStatusEntity | The controller service run status.
 
 try:
     # Updates run status of a controller service

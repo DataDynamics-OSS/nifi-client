@@ -1,4 +1,4 @@
-# swagger_client.SnippetsApi
+# nifi_client_v2.SnippetsApi
 
 All URIs are relative to */*
 
@@ -17,19 +17,19 @@ Creates a snippet. The snippet will be automatically discarded if not used in a 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SnippetEntity() # SnippetEntity | The snippet configuration details.
+api_instance = nifi_client_v2.SnippetsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.SnippetEntity() # SnippetEntity | The snippet configuration details.
 
 try:
     # Creates a snippet. The snippet will be automatically discarded if not used in a subsequent request after 1 minute.
@@ -69,18 +69,18 @@ Deletes the components in a snippet and discards the snippet
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.SnippetsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The snippet id.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -123,19 +123,19 @@ Move's the components in this Snippet into a new Process Group and discards the 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SnippetEntity() # SnippetEntity | The snippet configuration details.
+api_instance = nifi_client_v2.SnippetsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.SnippetEntity() # SnippetEntity | The snippet configuration details.
 id = 'id_example' # str | The snippet id.
 
 try:

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.resource_claim_details_dto import ResourceClaimDetailsDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.resource_claim_details_dto import ResourceClaimDetailsDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestResourceClaimDetailsDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestResourceClaimDetailsDTO(unittest.TestCase):
     def testResourceClaimDetailsDTO(self):
         """Test ResourceClaimDetailsDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.resource_claim_details_dto.ResourceClaimDetailsDTO()  # noqa: E501
+        # model = nifi_client_v2.models.resource_claim_details_dto.ResourceClaimDetailsDTO()  # noqa: E501
         pass
 
 

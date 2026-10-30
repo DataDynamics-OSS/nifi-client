@@ -30,11 +30,11 @@ This endpoint will create a new Asset in the given Parameter Context. The Asset 
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -88,11 +88,11 @@ Create a Parameter Context
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -144,11 +144,11 @@ This endpoint will create a new Asset in the given Parameter Context. The Asset 
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -204,11 +204,11 @@ Deletes the Parameter Context with the given ID.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -266,11 +266,11 @@ Deletes the Update Request with the given ID. After a request is created via a P
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -326,11 +326,11 @@ Deletes the Validation Request with the given ID. After a request is created via
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -384,11 +384,11 @@ Retrieves the content of the asset with the given id
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -440,11 +440,11 @@ Lists the assets that belong to the Parameter Context with the given ID.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -496,11 +496,11 @@ Returns the Parameter Context with the given ID.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -554,11 +554,11 @@ Returns the Update Request with the given ID. Once an Update Request has been cr
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -612,11 +612,11 @@ Returns the Validation Request with the given ID. Once a Validation Request has 
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -670,11 +670,11 @@ This will initiate the process of updating a Parameter Context. Changing the val
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -728,11 +728,11 @@ This will initiate the process of validating all components whose Process Group 
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -786,11 +786,11 @@ This endpoint will update a Parameter Context to match the provided entity. Howe
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ParameterContextsApi;
+//import io.datadynamics.nifi.client.v2.ApiClient;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.Configuration;
+//import io.datadynamics.nifi.client.v2.auth.*;
+//import io.datadynamics.nifi.client.v2.api.ParameterContextsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

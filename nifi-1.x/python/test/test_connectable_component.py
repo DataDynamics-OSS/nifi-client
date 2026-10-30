@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.connectable_component import ConnectableComponent  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.connectable_component import ConnectableComponent  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestConnectableComponent(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestConnectableComponent(unittest.TestCase):
     def testConnectableComponent(self):
         """Test ConnectableComponent"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.connectable_component.ConnectableComponent()  # noqa: E501
+        # model = nifi_client_v1.models.connectable_component.ConnectableComponent()  # noqa: E501
         pass
 
 

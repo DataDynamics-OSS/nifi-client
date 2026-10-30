@@ -12,7 +12,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "nifi-client"
+NAME = "nifi-client-v2"
 VERSION = "2.12.0"
 # To install the library, run the following
 #
@@ -32,7 +32,7 @@ setup(
     keywords=["Swagger", "Apache NiFi REST API"],
     python_requires=">=3.9,<3.10",
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(exclude=["test", "test.*"]),
     include_package_data=True,
     long_description="""\
     REST API definition for Apache NiFi web services  # noqa: E501

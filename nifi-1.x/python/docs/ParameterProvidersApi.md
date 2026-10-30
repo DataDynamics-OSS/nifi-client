@@ -1,4 +1,4 @@
-# swagger_client.ParameterProvidersApi
+# nifi_client_v1.ParameterProvidersApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -32,14 +32,14 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+body = nifi_client_v1.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 
 try:
     # Performs analysis of the component's configuration, providing information about which attributes are referenced.
@@ -82,12 +82,12 @@ Clears the state for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -130,12 +130,12 @@ Deletes the Apply Parameters Request with the given ID. After a request is creat
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 provider_id = 'provider_id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Apply Parameters Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
@@ -182,12 +182,12 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -232,14 +232,14 @@ Fetches and temporarily caches the parameters for a provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
-body = swagger_client.ParameterProviderParameterFetchEntity() # ParameterProviderParameterFetchEntity | The parameter fetch request.
+body = nifi_client_v1.ParameterProviderParameterFetchEntity() # ParameterProviderParameterFetchEntity | The parameter fetch request.
 
 try:
     # Fetches and temporarily caches the parameters for a provider
@@ -282,12 +282,12 @@ Gets a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -330,12 +330,12 @@ Returns the Apply Parameters Request with the given ID. Once an Apply Parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 provider_id = 'provider_id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Apply Parameters Request
 
@@ -380,12 +380,12 @@ Gets all references to a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -428,12 +428,12 @@ Gets a parameter provider property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 property_name = 'property_name_example' # str | The property name.
 
@@ -478,12 +478,12 @@ Gets the state for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -526,12 +526,12 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -576,12 +576,12 @@ Deletes a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -630,14 +630,14 @@ This will initiate the process of applying fetched parameters to all referencing
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 provider_id = 'provider_id_example' # str | 
-body = swagger_client.ParameterProviderParameterApplicationEntity() # ParameterProviderParameterApplicationEntity | The apply parameters request.
+body = nifi_client_v1.ParameterProviderParameterApplicationEntity() # ParameterProviderParameterApplicationEntity | The apply parameters request.
 
 try:
     # Initiate a request to apply the fetched parameters of a Parameter Provider
@@ -680,14 +680,14 @@ This will initiate the process of verifying a given Parameter Provider configura
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The parameter provider configuration verification request.
+body = nifi_client_v1.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The parameter provider configuration verification request.
 
 try:
     # Performs verification of the Parameter Provider's configuration
@@ -730,14 +730,14 @@ Updates a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi()
+api_instance = nifi_client_v1.ParameterProvidersApi()
 id = 'id_example' # str | The parameter provider id.
-body = swagger_client.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
+body = nifi_client_v1.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
 
 try:
     # Updates a parameter provider

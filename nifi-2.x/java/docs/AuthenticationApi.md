@@ -15,8 +15,8 @@ Retrieves the authentication configuration details and status information
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.AuthenticationApi;
+//import io.datadynamics.nifi.client.v2.ApiException;
+//import io.datadynamics.nifi.client.v2.api.AuthenticationApi;
 
 
 AuthenticationApi apiInstance = new AuthenticationApi();

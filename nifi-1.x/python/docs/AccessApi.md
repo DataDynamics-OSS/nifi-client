@@ -1,4 +1,4 @@
-# swagger_client.AccessApi
+# nifi_client_v1.AccessApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -27,12 +27,12 @@ The token returned is formatted as a JSON Web Token (JWT). The token is base64 e
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 username = 'username_example' # str |  (optional)
 password = 'password_example' # str |  (optional)
 
@@ -77,12 +77,12 @@ The token returned is formatted as a JSON Web Token (JWT). The token is base64 e
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Creates a token for accessing the REST API via Kerberos ticket exchange / SPNEGO negotiation
@@ -121,12 +121,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Gets the status the client's access
@@ -165,12 +165,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Get expiration for current Access Token
@@ -209,12 +209,12 @@ Retrieves the access configuration for this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Retrieves the access configuration for this NiFi
@@ -253,12 +253,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Redirect/callback URI for processing the result of the Apache Knox login sequence.
@@ -296,12 +296,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Performs a logout in the Apache Knox.
@@ -339,12 +339,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Initiates a request to authenticate through Apache Knox.
@@ -382,12 +382,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Performs a logout for other providers that have been issued a JWT.
@@ -425,12 +425,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccessApi()
+api_instance = nifi_client_v1.AccessApi()
 
 try:
     # Completes the logout sequence by removing the cached Logout Request and Cookie if they existed and redirects to /nifi/login.

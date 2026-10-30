@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.restriction import Restriction  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.restriction import Restriction  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestRestriction(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestRestriction(unittest.TestCase):
     def testRestriction(self):
         """Test Restriction"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.restriction.Restriction()  # noqa: E501
+        # model = nifi_client_v1.models.restriction.Restriction()  # noqa: E501
         pass
 
 

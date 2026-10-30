@@ -1,4 +1,4 @@
-# swagger_client.ParameterContextsApi
+# nifi_client_v1.ParameterContextsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -27,13 +27,13 @@ Create a Parameter Context
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
-body = swagger_client.ParameterContextEntity() # ParameterContextEntity | The Parameter Context.
+api_instance = nifi_client_v1.ParameterContextsApi()
+body = nifi_client_v1.ParameterContextEntity() # ParameterContextEntity | The Parameter Context.
 
 try:
     # Create a Parameter Context
@@ -75,12 +75,12 @@ Deletes the Parameter Context with the given ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 id = 'id_example' # str | The Parameter Context ID.
 version = 'version_example' # str | The version is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, a new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -129,12 +129,12 @@ Deletes the Update Request with the given ID. After a request is created via a P
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | The ID of the ParameterContext
 request_id = 'request_id_example' # str | The ID of the Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
@@ -181,12 +181,12 @@ Deletes the Validation Request with the given ID. After a request is created via
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | The ID of the Parameter Context
 id = 'id_example' # str | The ID of the Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
@@ -233,12 +233,12 @@ Returns the Parameter Context with the given ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 id = 'id_example' # str | The ID of the Parameter Context
 include_inherited_parameters = false # bool | Whether or not to include inherited parameters from other parameter contexts, and therefore also overridden values.  If true, the result will be the 'effective' parameter context. (optional) (default to false)
 
@@ -283,12 +283,12 @@ Returns the Update Request with the given ID. Once an Update Request has been cr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | The ID of the Parameter Context
 request_id = 'request_id_example' # str | The ID of the Update Request
 
@@ -333,12 +333,12 @@ Returns the Validation Request with the given ID. Once a Validation Request has 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | The ID of the Parameter Context
 id = 'id_example' # str | The ID of the Validation Request
 
@@ -383,14 +383,14 @@ This will initiate the process of updating a Parameter Context. Changing the val
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | 
-body = swagger_client.ParameterContextEntity() # ParameterContextEntity | The updated version of the parameter context.
+body = nifi_client_v1.ParameterContextEntity() # ParameterContextEntity | The updated version of the parameter context.
 
 try:
     # Initiate the Update Request of a Parameter Context
@@ -433,14 +433,14 @@ This will initiate the process of validating all components whose Process Group 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 context_id = 'context_id_example' # str | 
-body = swagger_client.ParameterContextValidationRequestEntity() # ParameterContextValidationRequestEntity | The validation request
+body = nifi_client_v1.ParameterContextValidationRequestEntity() # ParameterContextValidationRequestEntity | The validation request
 
 try:
     # Initiate a Validation Request to determine how the validity of components will change if a Parameter Context were to be updated
@@ -483,14 +483,14 @@ This endpoint will update a Parameter Context to match the provided entity. Howe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterContextsApi()
+api_instance = nifi_client_v1.ParameterContextsApi()
 id = 'id_example' # str | 
-body = swagger_client.ParameterContextEntity() # ParameterContextEntity | The updated Parameter Context
+body = nifi_client_v1.ParameterContextEntity() # ParameterContextEntity | The updated Parameter Context
 
 try:
     # Modifies a Parameter Context

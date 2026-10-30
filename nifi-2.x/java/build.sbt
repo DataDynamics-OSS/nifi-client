@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.swagger",
-    name := "nifi-client",
+    organization := "io.datadynamics",
+    name := "nifi-client-v2",
     version := "2.12.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),

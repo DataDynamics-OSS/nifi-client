@@ -1,4 +1,4 @@
-# swagger_client.ProvenanceEventsApi
+# nifi_client_v1.ProvenanceEventsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -22,12 +22,12 @@ Gets the input content for a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi()
+api_instance = nifi_client_v1.ProvenanceEventsApi()
 id = 'id_example' # str | The provenance event id.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
 
@@ -72,12 +72,12 @@ Gets the output content for a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi()
+api_instance = nifi_client_v1.ProvenanceEventsApi()
 id = 'id_example' # str | The provenance event id.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
 
@@ -122,12 +122,12 @@ Gets a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi()
+api_instance = nifi_client_v1.ProvenanceEventsApi()
 id = 'id_example' # str | The provenance event id.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this event exists if clustered. (optional)
 
@@ -172,13 +172,13 @@ Replays content from a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi()
-body = swagger_client.SubmitReplayRequestEntity() # SubmitReplayRequestEntity | The replay request.
+api_instance = nifi_client_v1.ProvenanceEventsApi()
+body = nifi_client_v1.SubmitReplayRequestEntity() # SubmitReplayRequestEntity | The replay request.
 
 try:
     # Replays content from a provenance event
@@ -220,13 +220,13 @@ Replays content from a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi()
-body = swagger_client.ReplayLastEventRequestEntity() # ReplayLastEventRequestEntity | The replay request.
+api_instance = nifi_client_v1.ProvenanceEventsApi()
+body = nifi_client_v1.ReplayLastEventRequestEntity() # ReplayLastEventRequestEntity | The replay request.
 
 try:
     # Replays content from a provenance event

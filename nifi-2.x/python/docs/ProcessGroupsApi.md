@@ -1,4 +1,4 @@
-# swagger_client.ProcessGroupsApi
+# nifi_client_v2.ProcessGroupsApi
 
 All URIs are relative to */*
 
@@ -48,19 +48,19 @@ Generates a copy response for the given copy request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CopyRequestEntity() # CopyRequestEntity | The request including the components to be copied from the specified Process Group.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.CopyRequestEntity() # CopyRequestEntity | The request including the components to be copied from the specified Process Group.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -102,19 +102,19 @@ Copies a snippet and discards it.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CopySnippetRequestEntity() # CopySnippetRequestEntity | The copy snippet request.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.CopySnippetRequestEntity() # CopySnippetRequestEntity | The copy snippet request.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -156,19 +156,19 @@ Creates a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectionEntity() # ConnectionEntity | The connection configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectionEntity() # ConnectionEntity | The connection configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -210,19 +210,19 @@ Creates a new controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -264,18 +264,18 @@ Creates a request to drop all FlowFiles of all connection queues in this process
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -316,19 +316,19 @@ Creates a funnel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FunnelEntity() # FunnelEntity | The funnel configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FunnelEntity() # FunnelEntity | The funnel configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -370,19 +370,19 @@ Creates an input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.PortEntity() # PortEntity | The input port configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.PortEntity() # PortEntity | The input port configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -424,19 +424,19 @@ Creates a label
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.LabelEntity() # LabelEntity | The label configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.LabelEntity() # LabelEntity | The label configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -478,19 +478,19 @@ Creates an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.PortEntity() # PortEntity | The output port configuration.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.PortEntity() # PortEntity | The output port configuration.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -532,19 +532,19 @@ Creates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
 id = 'id_example' # str | The process group id.
 parameter_context_handling_strategy = 'KEEP_EXISTING' # str | Handling Strategy controls whether to keep or replace Parameter Contexts (optional) (default to KEEP_EXISTING)
 
@@ -588,19 +588,19 @@ Creates a new processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProcessorEntity() # ProcessorEntity | The processor configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProcessorEntity() # ProcessorEntity | The processor configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -642,19 +642,19 @@ Creates a new process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -698,18 +698,18 @@ Deletes the Replace Request with the given ID. After a request is created via a 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -752,18 +752,18 @@ Gets a process group for download
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 include_referenced_services = false # bool | If referenced services from outside the target group should be included (optional) (default to false)
 include_component_state = false # bool | If component state should be included in the exported flow definition. Requires all processors to be stopped and all controller services to be disabled. (optional) (default to false)
@@ -808,18 +808,18 @@ Gets all connections
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -860,18 +860,18 @@ Gets the current status of a drop all FlowFiles request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -914,18 +914,18 @@ Gets all funnels
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -966,18 +966,18 @@ Gets all input ports
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1018,18 +1018,18 @@ Gets all labels
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1070,18 +1070,18 @@ Gets a list of local modifications to the Process Group since it was last synchr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1122,18 +1122,18 @@ Gets all output ports
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1174,18 +1174,18 @@ Gets a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1226,18 +1226,18 @@ Gets all process groups
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1278,18 +1278,18 @@ Gets all processors
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 include_descendant_groups = false # bool | Whether or not to include processors from descendant process groups (optional) (default to false)
 
@@ -1332,18 +1332,18 @@ Gets all remote process groups
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1386,18 +1386,18 @@ Returns the Replace Request with the given ID. Once a Replace Request has been c
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Replace Request
 
 try:
@@ -1438,20 +1438,20 @@ Imports a specified process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessGroupUploadEntity() # ProcessGroupUploadEntity | The Process Group Upload import details (optional)
+body = nifi_client_v2.ProcessGroupUploadEntity() # ProcessGroupUploadEntity | The Process Group Upload import details (optional)
 
 try:
     # Imports a specified process group
@@ -1494,19 +1494,19 @@ This will initiate the action of replacing a process group with the given proces
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1548,19 +1548,19 @@ Pastes into the specified process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.PasteRequestEntity() # PasteRequestEntity | The request including the components to be pasted into the specified Process Group.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.PasteRequestEntity() # PasteRequestEntity | The request including the components to be pasted into the specified Process Group.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1602,18 +1602,18 @@ Cancels and/or removes a request to drop all FlowFiles.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -1656,18 +1656,18 @@ Deletes a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -1716,19 +1716,19 @@ This endpoint is used for replication within a cluster, when replacing a flow wi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1770,19 +1770,19 @@ Updates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1824,18 +1824,18 @@ Uploads a versioned flow definition and creates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProcessGroupsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The process group id.
 client_id = 'client_id_example' # str |  (optional)
 disconnected_node_acknowledged = true # bool |  (optional)

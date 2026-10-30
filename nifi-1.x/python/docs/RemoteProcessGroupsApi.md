@@ -1,4 +1,4 @@
-# swagger_client.RemoteProcessGroupsApi
+# nifi_client_v1.RemoteProcessGroupsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -27,12 +27,12 @@ Gets a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -75,12 +75,12 @@ Gets the state for a RemoteProcessGroup
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -123,12 +123,12 @@ Deletes a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -177,14 +177,14 @@ Updates a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
-body = swagger_client.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group.
+body = nifi_client_v1.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group.
 
 try:
     # Updates a remote process group
@@ -227,15 +227,15 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
-body = swagger_client.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port.
+body = nifi_client_v1.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port.
 
 try:
     # Updates a remote port
@@ -279,15 +279,15 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port.
+body = nifi_client_v1.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port.
 
 try:
     # Updates run status of a remote port
@@ -331,15 +331,15 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
-body = swagger_client.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port.
+body = nifi_client_v1.RemoteProcessGroupPortEntity() # RemoteProcessGroupPortEntity | The remote process group port.
 
 try:
     # Updates a remote port
@@ -383,15 +383,15 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
 port_id = 'port_id_example' # str | The remote process group port id.
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port.
+body = nifi_client_v1.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group port.
 
 try:
     # Updates run status of a remote port
@@ -435,14 +435,14 @@ Updates run status of a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The remote process group id.
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group run status.
+body = nifi_client_v1.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process group run status.
 
 try:
     # Updates run status of a remote process group
@@ -485,14 +485,14 @@ Updates run status of all remote process groups in a process group (recursively)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemoteProcessGroupsApi()
+api_instance = nifi_client_v1.RemoteProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process groups run status.
+body = nifi_client_v1.RemotePortRunStatusEntity() # RemotePortRunStatusEntity | The remote process groups run status.
 
 try:
     # Updates run status of all remote process groups in a process group (recursively)

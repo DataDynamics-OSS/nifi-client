@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.system_diagnostics_api import SystemDiagnosticsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.api.system_diagnostics_api import SystemDiagnosticsApi  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestSystemDiagnosticsApi(unittest.TestCase):

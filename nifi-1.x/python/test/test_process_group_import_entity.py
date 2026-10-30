@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.process_group_import_entity import ProcessGroupImportEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.process_group_import_entity import ProcessGroupImportEntity  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestProcessGroupImportEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestProcessGroupImportEntity(unittest.TestCase):
     def testProcessGroupImportEntity(self):
         """Test ProcessGroupImportEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.process_group_import_entity.ProcessGroupImportEntity()  # noqa: E501
+        # model = nifi_client_v1.models.process_group_import_entity.ProcessGroupImportEntity()  # noqa: E501
         pass
 
 

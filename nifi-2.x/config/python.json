@@ -1,6 +1,6 @@
 {
-  "packageName": "swagger_client",
-  "projectName": "nifi-client",
+  "packageName": "nifi_client_v2",
+  "projectName": "nifi-client-v2",
   "packageVersion": "2.12.0",
   "hideGenerationTimestamp": true
 }

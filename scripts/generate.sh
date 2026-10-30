@@ -38,7 +38,8 @@ done
 # swagger-codegen 3.x Python 템플릿은 응답 bytes를 디코딩하지 않아서
 # text/plain 응답(예: /access/token)이 "b'...'" 문자열로 돌아온다.
 if [ "${CODEGEN_FIXES:-false}" = "true" ]; then
-  py_api_client="$DIR/python/swagger_client/api_client.py"
+  py_package="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["packageName"])' "$DIR/config/python.json")"
+  py_api_client="$DIR/python/$py_package/api_client.py"
   grep -q '^            data = response.data$' "$py_api_client"
   sed -i 's|^            data = response.data$|            data = response.data\n            if isinstance(data, bytes):\n                data = data.decode("utf-8")|' "$py_api_client"
 fi
@@ -55,3 +56,8 @@ PY_NEXT="${PYTHON_VERSION%%.*}.$((PY_MINOR + 1))"
 sed -i "s|^    install_requires=REQUIRES,|    python_requires=\">=$PYTHON_VERSION,<$PY_NEXT\",\n    install_requires=REQUIRES,|" "$DIR/python/setup.py"
 sed -i "s|^envlist = .*|envlist = py${PYTHON_VERSION/./}|" "$DIR/python/tox.ini"
 echo "$PYTHON_VERSION" > "$DIR/python/.python-version"
+
+# 생성된 단위 테스트(test/)가 wheel에 최상위 패키지로 들어가면
+# 1.x/2.x를 함께 설치할 때 서로 덮어쓰고 표준 라이브러리 test도 가린다.
+grep -q '^    packages=find_packages(),$' "$DIR/python/setup.py"
+sed -i 's|^    packages=find_packages(),$|    packages=find_packages(exclude=["test", "test.*"]),|' "$DIR/python/setup.py"

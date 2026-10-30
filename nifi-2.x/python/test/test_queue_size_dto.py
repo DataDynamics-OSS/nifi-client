@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.queue_size_dto import QueueSizeDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.queue_size_dto import QueueSizeDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestQueueSizeDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestQueueSizeDTO(unittest.TestCase):
     def testQueueSizeDTO(self):
         """Test QueueSizeDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.queue_size_dto.QueueSizeDTO()  # noqa: E501
+        # model = nifi_client_v2.models.queue_size_dto.QueueSizeDTO()  # noqa: E501
         pass
 
 

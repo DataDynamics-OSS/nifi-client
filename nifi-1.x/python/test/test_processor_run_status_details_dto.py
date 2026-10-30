@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.processor_run_status_details_dto import ProcessorRunStatusDetailsDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.processor_run_status_details_dto import ProcessorRunStatusDetailsDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestProcessorRunStatusDetailsDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestProcessorRunStatusDetailsDTO(unittest.TestCase):
     def testProcessorRunStatusDetailsDTO(self):
         """Test ProcessorRunStatusDetailsDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.processor_run_status_details_dto.ProcessorRunStatusDetailsDTO()  # noqa: E501
+        # model = nifi_client_v1.models.processor_run_status_details_dto.ProcessorRunStatusDetailsDTO()  # noqa: E501
         pass
 
 

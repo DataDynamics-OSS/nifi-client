@@ -19,8 +19,8 @@ Exports a template
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.TemplatesApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.TemplatesApi;
 
 
 TemplatesApi apiInstance = new TemplatesApi();
@@ -64,8 +64,8 @@ Deletes a template
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.TemplatesApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.TemplatesApi;
 
 
 TemplatesApi apiInstance = new TemplatesApi();

@@ -20,8 +20,8 @@ Gets a funnel
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.FunnelApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.FunnelApi;
 
 
 FunnelApi apiInstance = new FunnelApi();
@@ -65,8 +65,8 @@ Deletes a funnel
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.FunnelApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.FunnelApi;
 
 
 FunnelApi apiInstance = new FunnelApi();
@@ -116,8 +116,8 @@ Updates a funnel
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.FunnelApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.FunnelApi;
 
 
 FunnelApi apiInstance = new FunnelApi();

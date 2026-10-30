@@ -1,4 +1,4 @@
-# swagger_client.PoliciesApi
+# nifi_client_v1.PoliciesApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -22,13 +22,13 @@ Creates an access policy
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PoliciesApi()
-body = swagger_client.AccessPolicyEntity() # AccessPolicyEntity | The access policy configuration details.
+api_instance = nifi_client_v1.PoliciesApi()
+body = nifi_client_v1.AccessPolicyEntity() # AccessPolicyEntity | The access policy configuration details.
 
 try:
     # Creates an access policy
@@ -70,12 +70,12 @@ Gets an access policy
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PoliciesApi()
+api_instance = nifi_client_v1.PoliciesApi()
 id = 'id_example' # str | The access policy id.
 
 try:
@@ -118,12 +118,12 @@ Will return the effective policy if no component specific policy exists for the 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PoliciesApi()
+api_instance = nifi_client_v1.PoliciesApi()
 action = 'action_example' # str | The request action.
 resource = 'resource_example' # str | The resource of the policy.
 
@@ -168,12 +168,12 @@ Deletes an access policy
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PoliciesApi()
+api_instance = nifi_client_v1.PoliciesApi()
 id = 'id_example' # str | The access policy id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -222,14 +222,14 @@ Updates a access policy
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PoliciesApi()
+api_instance = nifi_client_v1.PoliciesApi()
 id = 'id_example' # str | The access policy id.
-body = swagger_client.AccessPolicyEntity() # AccessPolicyEntity | The access policy configuration details.
+body = nifi_client_v1.AccessPolicyEntity() # AccessPolicyEntity | The access policy configuration details.
 
 try:
     # Updates a access policy

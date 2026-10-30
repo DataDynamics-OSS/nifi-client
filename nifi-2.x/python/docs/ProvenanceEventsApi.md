@@ -1,4 +1,4 @@
-# swagger_client.ProvenanceEventsApi
+# nifi_client_v2.ProvenanceEventsApi
 
 All URIs are relative to */*
 
@@ -20,18 +20,18 @@ Gets the input content for a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
 id = 789 # int | The provenance event id.
 range = 'range_example' # str | Range of bytes requested (optional)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
@@ -76,18 +76,18 @@ Retrieves the latest cached Provenance Events for the specified component
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
 component_id = 'component_id_example' # str | The ID of the component to retrieve the latest Provenance Events for.
 limit = 10 # int | The number of events to limit the response to. Defaults to 10. (optional) (default to 10)
 
@@ -130,18 +130,18 @@ Gets the output content for a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
 id = 789 # int | The provenance event id.
 range = 'range_example' # str | Range of bytes requested (optional)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
@@ -186,18 +186,18 @@ Gets a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
 id = 789 # int | The provenance event id.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this event exists if clustered. (optional)
 
@@ -240,19 +240,19 @@ Replays content from a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SubmitReplayRequestEntity() # SubmitReplayRequestEntity | The replay request.
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.SubmitReplayRequestEntity() # SubmitReplayRequestEntity | The replay request.
 
 try:
     # Replays content from a provenance event
@@ -292,19 +292,19 @@ Replays content from a provenance event
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceEventsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ReplayLastEventRequestEntity() # ReplayLastEventRequestEntity | The replay request.
+api_instance = nifi_client_v2.ProvenanceEventsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ReplayLastEventRequestEntity() # ReplayLastEventRequestEntity | The replay request.
 
 try:
     # Replays content from a provenance event

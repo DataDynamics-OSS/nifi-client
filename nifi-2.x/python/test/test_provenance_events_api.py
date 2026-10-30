@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.provenance_events_api import ProvenanceEventsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.api.provenance_events_api import ProvenanceEventsApi  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestProvenanceEventsApi(unittest.TestCase):

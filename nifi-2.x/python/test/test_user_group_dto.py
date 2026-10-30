@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.user_group_dto import UserGroupDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.user_group_dto import UserGroupDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestUserGroupDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestUserGroupDTO(unittest.TestCase):
     def testUserGroupDTO(self):
         """Test UserGroupDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.user_group_dto.UserGroupDTO()  # noqa: E501
+        # model = nifi_client_v2.models.user_group_dto.UserGroupDTO()  # noqa: E501
         pass
 
 

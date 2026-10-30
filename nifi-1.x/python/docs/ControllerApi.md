@@ -1,4 +1,4 @@
-# swagger_client.ControllerApi
+# nifi_client_v1.ControllerApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -36,13 +36,13 @@ Creates a new bulletin
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.BulletinEntity() # BulletinEntity | The reporting task configuration details.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.BulletinEntity() # BulletinEntity | The reporting task configuration details.
 
 try:
     # Creates a new bulletin
@@ -84,13 +84,13 @@ Creates a new controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 
 try:
     # Creates a new controller service
@@ -132,13 +132,13 @@ Creates a new flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
 
 try:
     # Creates a new flow registry client
@@ -180,13 +180,13 @@ Creates a new parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
 
 try:
     # Creates a new parameter provider
@@ -228,13 +228,13 @@ Creates a new reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
 
 try:
     # Creates a new reporting task
@@ -276,12 +276,12 @@ Deletes a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The flow registry client id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -330,12 +330,12 @@ Purges history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 end_date = 'end_date_example' # str | Purge actions before this date/time.
 
 try:
@@ -378,12 +378,12 @@ Removes a node from the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The node id.
 
 try:
@@ -426,12 +426,12 @@ Returns the contents of the cluster including all nodes and their status.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 
 try:
     # Gets the contents of the cluster
@@ -470,12 +470,12 @@ Retrieves the configuration for this NiFi Controller
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 
 try:
     # Retrieves the configuration for this NiFi Controller
@@ -514,12 +514,12 @@ Gets a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The flow registry client id.
 
 try:
@@ -562,12 +562,12 @@ Gets the listing of available flow registry clients
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 
 try:
     # Gets the listing of available flow registry clients
@@ -606,12 +606,12 @@ Gets a node in the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The node id.
 
 try:
@@ -654,12 +654,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 
 try:
     # Gets status history for the node
@@ -698,12 +698,12 @@ Gets a flow registry client property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The flow registry client id.
 property_name = 'property_name_example' # str | The property name.
 sensitive = false # bool | Property Descriptor requested sensitive status (optional) (default to false)
@@ -750,12 +750,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 
 try:
     # Retrieves the types of flow  that this NiFi supports
@@ -794,13 +794,13 @@ Retrieves the configuration for this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
-body = swagger_client.ControllerConfigurationEntity() # ControllerConfigurationEntity | The controller configuration.
+api_instance = nifi_client_v1.ControllerApi()
+body = nifi_client_v1.ControllerConfigurationEntity() # ControllerConfigurationEntity | The controller configuration.
 
 try:
     # Retrieves the configuration for this NiFi
@@ -842,14 +842,14 @@ Updates a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The flow registry client id.
-body = swagger_client.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
+body = nifi_client_v1.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
 
 try:
     # Updates a flow registry client
@@ -892,14 +892,14 @@ Updates a node in the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi()
+api_instance = nifi_client_v1.ControllerApi()
 id = 'id_example' # str | The node id.
-body = swagger_client.NodeEntity() # NodeEntity | The node configuration. The only configuration that will be honored at this endpoint is the status.
+body = nifi_client_v1.NodeEntity() # NodeEntity | The node configuration. The only configuration that will be honored at this endpoint is the status.
 
 try:
     # Updates a node in the cluster

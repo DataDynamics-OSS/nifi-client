@@ -1,7 +1,7 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'io.swagger'
+group = 'io.datadynamics'
 version = '2.12.0'
 
 buildscript {
@@ -84,7 +84,7 @@ if(hasProperty('target') && target == 'android') {
     publishing {
         publications {
             maven(MavenPublication) {
-               artifactId = 'nifi-client'
+               artifactId = 'nifi-client-v2'
                from components.java
             }
         }

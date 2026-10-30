@@ -1,4 +1,4 @@
-# swagger_client.CountersApi
+# nifi_client_v1.CountersApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -19,12 +19,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CountersApi()
+api_instance = nifi_client_v1.CountersApi()
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
 
@@ -69,12 +69,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CountersApi()
+api_instance = nifi_client_v1.CountersApi()
 id = 'id_example' # str | The id of the counter.
 
 try:

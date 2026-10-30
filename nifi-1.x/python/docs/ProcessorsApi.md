@@ -1,4 +1,4 @@
-# swagger_client.ProcessorsApi
+# nifi_client_v1.ProcessorsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -31,14 +31,14 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The processor configuration analysis request.
+body = nifi_client_v1.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The processor configuration analysis request.
 
 try:
     # Performs analysis of the component's configuration, providing information about which attributes are referenced.
@@ -81,12 +81,12 @@ Clears the state for a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -129,12 +129,12 @@ Deletes a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -183,12 +183,12 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The ID of the Processor
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -233,12 +233,12 @@ Gets a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -281,12 +281,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -329,13 +329,13 @@ Submits a query to retrieve the run status details of all processors that are in
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
-body = swagger_client.RunStatusDetailsRequestEntity() # RunStatusDetailsRequestEntity | The request for the processors that should be included in the results (optional)
+api_instance = nifi_client_v1.ProcessorsApi()
+body = nifi_client_v1.RunStatusDetailsRequestEntity() # RunStatusDetailsRequestEntity | The request for the processors that should be included in the results (optional)
 
 try:
     # Submits a query to retrieve the run status details of all processors that are in the given list of Processor IDs
@@ -377,12 +377,12 @@ Gets the descriptor for a processor property
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 property_name = 'property_name_example' # str | The property name.
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -431,12 +431,12 @@ Gets the state for a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -479,12 +479,12 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The ID of the Processor
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -529,14 +529,14 @@ This will initiate the process of verifying a given Processor configuration. Thi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The processor configuration verification request.
+body = nifi_client_v1.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The processor configuration verification request.
 
 try:
     # Performs verification of the Processor's configuration
@@ -579,12 +579,12 @@ Terminates a processor, essentially \"deleting\" its threads and any active task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -627,14 +627,14 @@ Updates a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
-body = swagger_client.ProcessorEntity() # ProcessorEntity | The processor configuration details.
+body = nifi_client_v1.ProcessorEntity() # ProcessorEntity | The processor configuration details.
 
 try:
     # Updates a processor
@@ -677,14 +677,14 @@ Updates run status of a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessorsApi()
+api_instance = nifi_client_v1.ProcessorsApi()
 id = 'id_example' # str | The processor id.
-body = swagger_client.ProcessorRunStatusEntity() # ProcessorRunStatusEntity | The processor run status.
+body = nifi_client_v1.ProcessorRunStatusEntity() # ProcessorRunStatusEntity | The processor run status.
 
 try:
     # Updates run status of a processor

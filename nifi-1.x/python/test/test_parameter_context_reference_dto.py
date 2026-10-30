@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.parameter_context_reference_dto import ParameterContextReferenceDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.parameter_context_reference_dto import ParameterContextReferenceDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestParameterContextReferenceDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestParameterContextReferenceDTO(unittest.TestCase):
     def testParameterContextReferenceDTO(self):
         """Test ParameterContextReferenceDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.parameter_context_reference_dto.ParameterContextReferenceDTO()  # noqa: E501
+        # model = nifi_client_v1.models.parameter_context_reference_dto.ParameterContextReferenceDTO()  # noqa: E501
         pass
 
 

@@ -76,7 +76,8 @@ One fix is also applied to the generated Python code. The swagger-codegen 3.x Py
 pip install ./nifi-1.x/python    # or ./nifi-2.x/python, Python 3.9
 ```
 
-Both lines are published as `io.swagger:nifi-client` / `nifi-client` and are told apart by version (1.28.1, 2.12.0).
+Java is published as `io.datadynamics:nifi-client-v1:1.28.1` / `io.datadynamics:nifi-client-v2:2.12.0`, and Python as `nifi-client-v1` / `nifi-client-v2`, so both lines can be used together.
+The Java package is `io.datadynamics.nifi.client.v1` / `io.datadynamics.nifi.client.v2` and the Python package is `nifi_client_v1` / `nifi_client_v2`.
 
 Prebuilt jars and wheels are attached to the GitHub releases `v1.28.1` and `v2.12.0`.
 
@@ -111,12 +112,12 @@ ProcessorEntity p = new ProcessorsApi(client).updateRunStatus(runStatusEntity, p
 1.x takes `update_run_status(id, body)`, 2.x takes `update_run_status(body, id)`. Login is the same for both.
 
 ```python
-import swagger_client
-cfg = swagger_client.Configuration()
+import nifi_client_v1 as nifi_client   # 2.x: nifi_client_v2
+cfg = nifi_client.Configuration()
 cfg.host = "https://localhost:8443/nifi-api"
 cfg.verify_ssl = False           # for self-signed certificates
-client = swagger_client.ApiClient(cfg)
-token = swagger_client.AccessApi(client).create_access_token(username="admin", password="password")
+client = nifi_client.ApiClient(cfg)
+token = nifi_client.AccessApi(client).create_access_token(username="admin", password="password")
 client.set_default_header("Authorization", "Bearer " + token)
 ```
 

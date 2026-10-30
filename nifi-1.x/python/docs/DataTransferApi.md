@@ -1,4 +1,4 @@
-# swagger_client.DataTransferApi
+# nifi_client_v1.DataTransferApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -24,12 +24,12 @@ Commit or cancel the specified transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 response_code = 56 # int | The response code. Available values are BAD_CHECKSUM(19), CONFIRM_TRANSACTION(12) or CANCEL_TRANSACTION(15).
 port_id = 'port_id_example' # str | The input port id.
 transaction_id = 'transaction_id_example' # str | The transaction id.
@@ -76,12 +76,12 @@ Commit or cancel the specified transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 response_code = 56 # int | The response code. Available values are CONFIRM_TRANSACTION(12) or CANCEL_TRANSACTION(15).
 checksum = 'checksum_example' # str | A checksum calculated at client side using CRC32 to check flow file content integrity. It must match with the value calculated at server side.
 port_id = 'port_id_example' # str | The output port id.
@@ -130,12 +130,12 @@ Create a transaction to the specified output port or input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 port_type = 'port_type_example' # str | The port type.
 port_id = 'port_id_example' # str | 
 
@@ -180,12 +180,12 @@ Extend transaction TTL
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 port_id = 'port_id_example' # str | 
 transaction_id = 'transaction_id_example' # str | 
 
@@ -230,12 +230,12 @@ Extend transaction TTL
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 port_id = 'port_id_example' # str | 
 transaction_id = 'transaction_id_example' # str | 
 
@@ -280,12 +280,12 @@ Transfer flow files to the input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 port_id = 'port_id_example' # str | The input port id.
 transaction_id = 'transaction_id_example' # str | 
 
@@ -330,12 +330,12 @@ Transfer flow files from the output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataTransferApi()
+api_instance = nifi_client_v1.DataTransferApi()
 port_id = 'port_id_example' # str | The output port id.
 transaction_id = 'transaction_id_example' # str | 
 

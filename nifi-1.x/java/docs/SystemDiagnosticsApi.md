@@ -19,8 +19,8 @@ Note: This endpoint is subject to change as NiFi and it&#39;s REST API evolve.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SystemDiagnosticsApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.SystemDiagnosticsApi;
 
 
 SystemDiagnosticsApi apiInstance = new SystemDiagnosticsApi();
@@ -64,8 +64,8 @@ Gets the diagnostics for the system NiFi is running on
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SystemDiagnosticsApi;
+//import io.datadynamics.nifi.client.v1.ApiException;
+//import io.datadynamics.nifi.client.v1.api.SystemDiagnosticsApi;
 
 
 SystemDiagnosticsApi apiInstance = new SystemDiagnosticsApi();

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.provenance_search_value_dto import ProvenanceSearchValueDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.provenance_search_value_dto import ProvenanceSearchValueDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestProvenanceSearchValueDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestProvenanceSearchValueDTO(unittest.TestCase):
     def testProvenanceSearchValueDTO(self):
         """Test ProvenanceSearchValueDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.provenance_search_value_dto.ProvenanceSearchValueDTO()  # noqa: E501
+        # model = nifi_client_v1.models.provenance_search_value_dto.ProvenanceSearchValueDTO()  # noqa: E501
         pass
 
 

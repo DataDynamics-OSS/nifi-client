@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.garbage_collection_diagnostics_dto import GarbageCollectionDiagnosticsDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.garbage_collection_diagnostics_dto import GarbageCollectionDiagnosticsDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestGarbageCollectionDiagnosticsDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestGarbageCollectionDiagnosticsDTO(unittest.TestCase):
     def testGarbageCollectionDiagnosticsDTO(self):
         """Test GarbageCollectionDiagnosticsDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.garbage_collection_diagnostics_dto.GarbageCollectionDiagnosticsDTO()  # noqa: E501
+        # model = nifi_client_v1.models.garbage_collection_diagnostics_dto.GarbageCollectionDiagnosticsDTO()  # noqa: E501
         pass
 
 

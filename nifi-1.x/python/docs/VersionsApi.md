@@ -1,4 +1,4 @@
-# swagger_client.VersionsApi
+# nifi_client_v1.VersionsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -31,13 +31,13 @@ Creates a request so that a Process Group can be placed under Version Control or
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
-body = swagger_client.CreateActiveRequestEntity() # CreateActiveRequestEntity | The versioned flow details.
+api_instance = nifi_client_v1.VersionsApi()
+body = nifi_client_v1.CreateActiveRequestEntity() # CreateActiveRequestEntity | The versioned flow details.
 
 try:
     # Create a version control request
@@ -79,12 +79,12 @@ Deletes the Revert Request with the given ID. After a request is created via a P
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The ID of the Revert Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -129,12 +129,12 @@ Deletes the Update Request with the given ID. After a request is created via a P
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The ID of the Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -179,12 +179,12 @@ Deletes the Version Control Request with the given ID. This will allow other thr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The request ID.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -228,12 +228,12 @@ Gets the latest version of a Process Group for download
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -276,12 +276,12 @@ Returns the Revert Request with the given ID. Once a Revert Request has been cre
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The ID of the Revert Request
 
 try:
@@ -324,12 +324,12 @@ Returns the Update Request with the given ID. Once an Update Request has been cr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The ID of the Update Request
 
 try:
@@ -372,12 +372,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -420,14 +420,14 @@ For a Process Group that is already under Version Control, this will initiate th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.VersionControlInformationEntity() # VersionControlInformationEntity | The Version Control Information to revert to.
+body = nifi_client_v1.VersionControlInformationEntity() # VersionControlInformationEntity | The Version Control Information to revert to.
 
 try:
     # Initiate the Revert Request of a Process Group with the given ID
@@ -470,14 +470,14 @@ For a Process Group that is already under Version Control, this will initiate th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.VersionControlInformationEntity() # VersionControlInformationEntity | The controller service configuration details.
+body = nifi_client_v1.VersionControlInformationEntity() # VersionControlInformationEntity | The controller service configuration details.
 
 try:
     # Initiate the Update Request of a Process Group with the given ID
@@ -520,14 +520,14 @@ Begins version controlling the Process Group with the given ID or commits change
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.StartVersionControlRequestEntity() # StartVersionControlRequestEntity | The versioned flow details.
+body = nifi_client_v1.StartVersionControlRequestEntity() # StartVersionControlRequestEntity | The versioned flow details.
 
 try:
     # Save the Process Group with the given ID
@@ -570,12 +570,12 @@ Stops version controlling the Process Group with the given ID. The Process Group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
 version = 'version_example' # str | The version is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, a new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -624,14 +624,14 @@ For a Process Group that is already under Version Control, this will update the 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.VersionedFlowSnapshotEntity() # VersionedFlowSnapshotEntity | The controller service configuration details.
+body = nifi_client_v1.VersionedFlowSnapshotEntity() # VersionedFlowSnapshotEntity | The controller service configuration details.
 
 try:
     # Update the version of a Process Group with the given ID
@@ -674,14 +674,14 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = nifi_client_v1.VersionsApi()
 id = 'id_example' # str | The request ID.
-body = swagger_client.VersionControlComponentMappingEntity() # VersionControlComponentMappingEntity | The version control component mapping.
+body = nifi_client_v1.VersionControlComponentMappingEntity() # VersionControlComponentMappingEntity | The version control component mapping.
 
 try:
     # Updates the request with the given ID

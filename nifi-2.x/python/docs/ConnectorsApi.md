@@ -1,4 +1,4 @@
-# swagger_client.ConnectorsApi
+# nifi_client_v2.ConnectorsApi
 
 All URIs are relative to */*
 
@@ -63,19 +63,19 @@ This will apply any pending configuration changes to the connector. The client c
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorEntity() # ConnectorEntity | The connector configuration with revision.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorEntity() # ConnectorEntity | The connector configuration with revision.
 id = 'id_example' # str | The connector id.
 
 try:
@@ -117,18 +117,18 @@ Cancels the draining of FlowFiles for a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -175,21 +175,21 @@ Clears the state for a controller service within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 controller_service_id = 'controller_service_id_example' # str | The controller service id.
-body = swagger_client.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
+body = nifi_client_v2.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
 
 try:
     # Clears the state for a controller service within a connector
@@ -231,21 +231,21 @@ Clears the state for a processor within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 processor_id = 'processor_id_example' # str | The processor id.
-body = swagger_client.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
+body = nifi_client_v2.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
 
 try:
     # Clears the state for a processor within a connector
@@ -289,18 +289,18 @@ This endpoint will create a new Asset in the Connector. The Asset will be create
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 body = NULL # object | The contents of the asset
 id = 'id_example' # str | 
 filename = 'filename_example' # str |  (optional)
@@ -345,19 +345,19 @@ Creates a new connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorEntity() # ConnectorEntity | The connector configuration details.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorEntity() # ConnectorEntity | The connector configuration details.
 
 try:
     # Creates a new connector
@@ -397,18 +397,18 @@ Uploads a flow snapshot payload for a later Connector migration request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 body = NULL # object | The migration payload snapshot
 id = 'id_example' # str | 
 
@@ -451,20 +451,20 @@ Creates a Connector migration request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | 
-body = swagger_client.MigrationRequestEntity() # MigrationRequestEntity |  (optional)
+body = nifi_client_v2.MigrationRequestEntity() # MigrationRequestEntity |  (optional)
 
 try:
     # Creates a Connector migration request
@@ -507,18 +507,18 @@ This will create a request to purge all FlowFiles from the connector. The connec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -561,18 +561,18 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 request_id = 'request_id_example' # str | The ID of the Verification Request
@@ -617,18 +617,18 @@ Deletes a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -677,18 +677,18 @@ Deletes the Backlog Request with the given ID. After a request is created, it is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 request_id = 'request_id_example' # str | The ID of the Backlog Request
 
@@ -731,18 +731,18 @@ Deletes the Connector migration request with the given ID
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | 
 request_id = 'request_id_example' # str | 
 
@@ -787,18 +787,18 @@ This will discard any pending configuration changes for the connector and revert
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -847,18 +847,18 @@ Ends Troubleshooting mode for the Connector, restoring the authoritative flow. A
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -907,19 +907,19 @@ Places the Connector into Troubleshooting mode so that its managed flow may be d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorEntity() # ConnectorEntity | The connector entity with revision.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorEntity() # ConnectorEntity | The connector entity with revision.
 id = 'id_example' # str | The connector id.
 
 try:
@@ -961,18 +961,18 @@ Retrieves the content of the asset with the given id for a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 asset_id = 'asset_id_example' # str | The asset id.
 
@@ -1017,18 +1017,18 @@ Lists the assets that belong to the Connector with the given ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -1071,18 +1071,18 @@ Returns the Verification Request with the given ID. Once a Verification Request 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 request_id = 'request_id_example' # str | The ID of the Verification Request
@@ -1127,18 +1127,18 @@ Gets a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -1181,18 +1181,18 @@ Returns the Backlog Request with the given ID. Once a Backlog Request has been c
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 request_id = 'request_id_example' # str | The ID of the Backlog Request
 
@@ -1235,18 +1235,18 @@ Gets a specific configuration step by name for a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 
@@ -1289,18 +1289,18 @@ Gets all configuration step names for a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -1341,18 +1341,18 @@ Gets the status history for a connection within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 connection_id = 'connection_id_example' # str | The connection id.
 
@@ -1397,18 +1397,18 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 controller_service_id = 'controller_service_id_example' # str | The controller service id.
 ui_only = false # bool |  (optional) (default to false)
@@ -1453,18 +1453,18 @@ Gets the state for a controller service within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 controller_service_id = 'controller_service_id_example' # str | The controller service id.
 
@@ -1507,18 +1507,18 @@ Gets the status history for a process group within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 process_group_id = 'process_group_id_example' # str | The process group id.
 
@@ -1561,18 +1561,18 @@ Gets the state for a processor within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 processor_id = 'processor_id_example' # str | The processor id.
 
@@ -1615,18 +1615,18 @@ Gets the status history for a processor within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 processor_id = 'processor_id_example' # str | The processor id.
 
@@ -1671,18 +1671,18 @@ Gets the allowable values for a specific property that supports dynamic fetching
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 property_group_name = 'property_group_name_example' # str | The property group name.
@@ -1731,18 +1731,18 @@ Gets the status history for a remote process group within a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 remote_process_group_id = 'remote_process_group_id_example' # str | The remote process group id.
 
@@ -1787,18 +1787,18 @@ Returns the status for the process group managed by the specified connector. The
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 recursive = false # bool | Whether all descendant groups and the status of their content will be included. Optional, defaults to false (optional) (default to false)
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
@@ -1847,18 +1847,18 @@ Returns the controller services for the specified process group within the conne
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 connector_id = 'connector_id_example' # str | The connector id.
 process_group_id = 'process_group_id_example' # str | The process group id.
 include_ancestor_groups = true # bool | Whether or not to include parent/ancestor process groups (optional) (default to true)
@@ -1909,18 +1909,18 @@ Returns the flow for the specified process group within the connector's hierarch
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 connector_id = 'connector_id_example' # str | The connector id.
 process_group_id = 'process_group_id_example' # str | The process group id.
 ui_only = false # bool | Whether to return only UI-specific fields (optional) (default to false)
@@ -1965,18 +1965,18 @@ Gets the Connector migration request with the given ID
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | 
 request_id = 'request_id_example' # str | 
 
@@ -2019,18 +2019,18 @@ Lists the Versioned Process Groups that the Connector can be migrated from
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
@@ -2073,18 +2073,18 @@ Returns the parameter context (with effective parameters, including those inheri
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 connector_id = 'connector_id_example' # str | The connector id.
 process_group_id = 'process_group_id_example' # str | The process group id.
 
@@ -2127,18 +2127,18 @@ Gets the current status of a purge request for the specified connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 purge_request_id = 'purge_request_id_example' # str | The purge request id.
 
@@ -2183,18 +2183,18 @@ Returns metadata for all secrets available from all secret providers. This endpo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -2237,19 +2237,19 @@ This will initiate draining of FlowFiles for a stopped connector. Draining allow
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorEntity() # ConnectorEntity | The connector entity with revision.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorEntity() # ConnectorEntity | The connector entity with revision.
 id = 'id_example' # str | The connector id.
 
 try:
@@ -2291,18 +2291,18 @@ Cancels and/or removes a request to purge the FlowFiles for this connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 purge_request_id = 'purge_request_id_example' # str | The purge request id.
 
@@ -2347,18 +2347,18 @@ Only search results from authorized components will be returned.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 q = '' # str | The search term. (optional)
 
@@ -2403,19 +2403,19 @@ This will initiate the process of verifying a given Connector Configuration Step
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VerifyConnectorConfigStepRequestEntity() # VerifyConnectorConfigStepRequestEntity | The verify config request entity containing the configuration step to verify.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VerifyConnectorConfigStepRequestEntity() # VerifyConnectorConfigStepRequestEntity | The verify config request entity containing the configuration step to verify.
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 
@@ -2461,18 +2461,18 @@ This will initiate the process of determining the backlog for a Connector. This 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connector id.
 
 try:
@@ -2513,19 +2513,19 @@ Updates a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorEntity() # ConnectorEntity | The connector configuration details.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorEntity() # ConnectorEntity | The connector configuration details.
 id = 'id_example' # str | The connector id.
 
 try:
@@ -2567,19 +2567,19 @@ Updates a specific configuration step by name for a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConfigurationStepEntity() # ConfigurationStepEntity | The configuration step configuration.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConfigurationStepEntity() # ConfigurationStepEntity | The configuration step configuration.
 id = 'id_example' # str | The connector id.
 configuration_step_name = 'configuration_step_name_example' # str | The configuration step name.
 
@@ -2623,19 +2623,19 @@ Updates run status of a connector
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectorsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConnectorRunStatusEntity() # ConnectorRunStatusEntity | The connector run status.
+api_instance = nifi_client_v2.ConnectorsApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConnectorRunStatusEntity() # ConnectorRunStatusEntity | The connector run status.
 id = 'id_example' # str | The connector id.
 
 try:

@@ -1,4 +1,4 @@
-# swagger_client.SystemDiagnosticsApi
+# nifi_client_v2.SystemDiagnosticsApi
 
 All URIs are relative to */*
 
@@ -18,18 +18,18 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SystemDiagnosticsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.SystemDiagnosticsApi(nifi_client_v2.ApiClient(configuration))
 bean_name_filter = 'bean_name_filter_example' # str | Regular Expression Pattern to be applied against the ObjectName (optional)
 
 try:
@@ -70,18 +70,18 @@ Gets the diagnostics for the system NiFi is running on
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SystemDiagnosticsApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.SystemDiagnosticsApi(nifi_client_v2.ApiClient(configuration))
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 diagnostic_level = 'BASIC' # str | BASIC or VERBOSE verbosity details. Optional, defaults to BASIC (optional) (default to BASIC)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)

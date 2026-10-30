@@ -1,4 +1,4 @@
-# swagger_client.TenantsApi
+# nifi_client_v1.TenantsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -28,13 +28,13 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
-body = swagger_client.UserEntity() # UserEntity | The user configuration details.
+api_instance = nifi_client_v1.TenantsApi()
+body = nifi_client_v1.UserEntity() # UserEntity | The user configuration details.
 
 try:
     # Creates a user
@@ -76,13 +76,13 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
-body = swagger_client.UserGroupEntity() # UserGroupEntity | The user group configuration details.
+api_instance = nifi_client_v1.TenantsApi()
+body = nifi_client_v1.UserGroupEntity() # UserGroupEntity | The user group configuration details.
 
 try:
     # Creates a user group
@@ -124,12 +124,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user id.
 
 try:
@@ -172,12 +172,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user group id.
 
 try:
@@ -220,12 +220,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 
 try:
     # Gets all user groups
@@ -264,12 +264,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 
 try:
     # Gets all users
@@ -308,12 +308,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -362,12 +362,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user group id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -416,12 +416,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 q = 'q_example' # str | Identity to search for.
 
 try:
@@ -464,14 +464,14 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user id.
-body = swagger_client.UserEntity() # UserEntity | The user configuration details.
+body = nifi_client_v1.UserEntity() # UserEntity | The user configuration details.
 
 try:
     # Updates a user
@@ -514,14 +514,14 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TenantsApi()
+api_instance = nifi_client_v1.TenantsApi()
 id = 'id_example' # str | The user group id.
-body = swagger_client.UserGroupEntity() # UserGroupEntity | The user group configuration details.
+body = nifi_client_v1.UserGroupEntity() # UserGroupEntity | The user group configuration details.
 
 try:
     # Updates a user group

@@ -1,4 +1,4 @@
-# swagger_client.FlowFileQueuesApi
+# nifi_client_v2.FlowFileQueuesApi
 
 All URIs are relative to */*
 
@@ -22,18 +22,18 @@ Creates a request to drop the contents of the queue in this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 
 try:
@@ -74,18 +74,18 @@ Lists the contents of the queue in this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 
 try:
@@ -126,18 +126,18 @@ Cancels and/or removes a request to list the contents of this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 listing_request_id = 'listing_request_id_example' # str | The listing request id.
 
@@ -180,18 +180,18 @@ Gets the content for a FlowFile in a Connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 flowfile_uuid = 'flowfile_uuid_example' # str | The FlowFile uuid.
 range = 'range_example' # str | Range of bytes requested (optional)
@@ -240,18 +240,18 @@ Gets the current status of a drop request for the specified connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -294,18 +294,18 @@ Gets a FlowFile from a Connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 flowfile_uuid = 'flowfile_uuid_example' # str | The FlowFile uuid.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where the content exists if clustered. (optional)
@@ -350,18 +350,18 @@ Gets the current status of a listing request for the specified connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 listing_request_id = 'listing_request_id_example' # str | The listing request id.
 
@@ -404,18 +404,18 @@ Cancels and/or removes a request to drop the contents of this connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.FlowFileQueuesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.FlowFileQueuesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The connection id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 

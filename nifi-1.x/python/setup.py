@@ -13,7 +13,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "nifi-client"
+NAME = "nifi-client-v1"
 VERSION = "1.28.1"
 # To install the library, run the following
 #
@@ -39,7 +39,7 @@ setup(
     keywords=["Swagger", "NiFi Rest API"],
     python_requires=">=3.9,<3.10",
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(exclude=["test", "test.*"]),
     include_package_data=True,
     long_description="""\
     The Rest API provides programmatic access to command and control a NiFi instance in real time. Start and                                             stop processors, monitor queues, query provenance data, and more. Each endpoint below includes a description,                                             definitions of the expected input and output, potential response codes, and the authorizations required                                             to invoke each service.  # noqa: E501

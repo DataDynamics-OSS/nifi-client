@@ -1,4 +1,4 @@
-# swagger_client.ControllerApi
+# nifi_client_v2.ControllerApi
 
 All URIs are relative to */*
 
@@ -60,19 +60,19 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 id = 'id_example' # str | The flow analysis rules id.
 
 try:
@@ -114,19 +114,19 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 id = 'id_example' # str | The registry client id.
 
 try:
@@ -168,19 +168,19 @@ Clears bulletins for a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
 id = 'id_example' # str | The flow analysis rule id.
 
 try:
@@ -222,19 +222,19 @@ Clears bulletins for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -276,19 +276,19 @@ Clears bulletins for a registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The request to clear bulletins.
 id = 'id_example' # str | The registry client id.
 
 try:
@@ -330,20 +330,20 @@ Clears the state for a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow analysis rule id.
-body = swagger_client.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
+body = nifi_client_v2.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
 
 try:
     # Clears the state for a flow analysis rule
@@ -384,19 +384,19 @@ Creates a new bulletin
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.BulletinEntity() # BulletinEntity | The reporting task configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.BulletinEntity() # BulletinEntity | The reporting task configuration details.
 
 try:
     # Creates a new bulletin
@@ -436,19 +436,19 @@ Creates a new controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 
 try:
     # Creates a new controller service
@@ -488,19 +488,19 @@ Creates a new flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FlowAnalysisRuleEntity() # FlowAnalysisRuleEntity | The flow analysis rule configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FlowAnalysisRuleEntity() # FlowAnalysisRuleEntity | The flow analysis rule configuration details.
 
 try:
     # Creates a new flow analysis rule
@@ -540,19 +540,19 @@ Creates a new flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
 
 try:
     # Creates a new flow registry client
@@ -592,19 +592,19 @@ Creates a new parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
 
 try:
     # Creates a new parameter provider
@@ -644,19 +644,19 @@ Creates a new reporting task
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ReportingTaskEntity() # ReportingTaskEntity | The reporting task configuration details.
 
 try:
     # Creates a new reporting task
@@ -698,18 +698,18 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Flow Analysis Rule
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -752,18 +752,18 @@ Deletes a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow registry client id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -810,18 +810,18 @@ Purges history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 end_date = 'end_date_example' # str | Purge actions before this date/time.
 
 try:
@@ -862,18 +862,18 @@ Deletes an installed NAR
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the NAR.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 force = false # bool | Indicates if the NAR should be deleted even when components are instantiated. (optional) (default to false)
@@ -918,18 +918,18 @@ Removes a node from the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The node id.
 
 try:
@@ -972,18 +972,18 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Registry Client
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -1026,18 +1026,18 @@ Retrieves the content of the NAR with the given id
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the NAR.
 
 try:
@@ -1080,18 +1080,18 @@ Returns the contents of the cluster including all nodes and their status.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Gets the contents of the cluster
@@ -1128,18 +1128,18 @@ Retrieves the configuration for this NiFi Controller
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Retrieves the configuration for this NiFi Controller
@@ -1176,18 +1176,18 @@ Gets a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow analysis rule id.
 
 try:
@@ -1228,18 +1228,18 @@ Gets a flow analysis rule property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow analysis rule id.
 property_name = 'property_name_example' # str | The property name.
 sensitive = true # bool | Property Descriptor requested sensitive status (optional)
@@ -1284,18 +1284,18 @@ Gets the state for a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow analysis rule id.
 
 try:
@@ -1338,18 +1338,18 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Flow Analysis Rule
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -1392,18 +1392,18 @@ Gets all flow analysis rules
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Gets all flow analysis rules
@@ -1440,18 +1440,18 @@ Gets a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow registry client id.
 
 try:
@@ -1492,18 +1492,18 @@ Gets the listing of available flow registry clients
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Gets the listing of available flow registry clients
@@ -1540,18 +1540,18 @@ Retrieves the component types available from the installed NARs
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the NAR.
 
 try:
@@ -1592,18 +1592,18 @@ Retrieves summary information for installed NARs
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Retrieves summary information for installed NARs
@@ -1640,18 +1640,18 @@ Retrieves the summary information for the NAR with the given identifier
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the NAR.
 
 try:
@@ -1692,18 +1692,18 @@ Gets a node in the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The node id.
 
 try:
@@ -1746,18 +1746,18 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Gets status history for the node
@@ -1794,18 +1794,18 @@ Gets a flow registry client property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow registry client id.
 property_name = 'property_name_example' # str | The property name.
 sensitive = true # bool | Property Descriptor requested sensitive status (optional)
@@ -1852,18 +1852,18 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Retrieves the types of flow registry clients that this NiFi supports
@@ -1902,18 +1902,18 @@ Returns the Verification Request with the given ID. Once a Verification Request 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Registry Client
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -1956,19 +1956,19 @@ Imports a reporting task snapshot
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VersionedReportingTaskImportRequestEntity() # VersionedReportingTaskImportRequestEntity | The import request containing the reporting task snapshot to import.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VersionedReportingTaskImportRequestEntity() # VersionedReportingTaskImportRequestEntity | The import request containing the reporting task snapshot to import.
 
 try:
     # Imports a reporting task snapshot
@@ -2008,18 +2008,18 @@ Deletes a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The flow analysis rule id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -2068,19 +2068,19 @@ This will initiate the process of verifying a given Flow Analysis Rule configura
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The flow analysis rules configuration verification request.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The flow analysis rules configuration verification request.
 id = 'id_example' # str | The flow analysis rules id.
 
 try:
@@ -2124,19 +2124,19 @@ Initiates verification of a Registry Client configuration. The request returns i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The registry client configuration verification request.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The registry client configuration verification request.
 id = 'id_example' # str | The registry client id.
 
 try:
@@ -2178,19 +2178,19 @@ Updates the configuration for this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ControllerConfigurationEntity() # ControllerConfigurationEntity | The controller configuration.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ControllerConfigurationEntity() # ControllerConfigurationEntity | The controller configuration.
 
 try:
     # Updates the configuration for this NiFi
@@ -2230,19 +2230,19 @@ Updates a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FlowAnalysisRuleEntity() # FlowAnalysisRuleEntity | The flow analysis rule configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FlowAnalysisRuleEntity() # FlowAnalysisRuleEntity | The flow analysis rule configuration details.
 id = 'id_example' # str | The flow analysis rule id.
 
 try:
@@ -2284,19 +2284,19 @@ Updates a flow registry client
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FlowRegistryClientEntity() # FlowRegistryClientEntity | The flow registry client configuration details.
 id = 'id_example' # str | The flow registry client id.
 
 try:
@@ -2338,19 +2338,19 @@ Updates a node in the cluster
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.NodeEntity() # NodeEntity | The node configuration. The only configuration that will be honored at this endpoint is the status.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.NodeEntity() # NodeEntity | The node configuration. The only configuration that will be honored at this endpoint is the status.
 id = 'id_example' # str | The node id.
 
 try:
@@ -2392,19 +2392,19 @@ Updates run status of a flow analysis rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
-body = swagger_client.FlowAnalysisRuleRunStatusEntity() # FlowAnalysisRuleRunStatusEntity | The flow analysis rule run status.
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.FlowAnalysisRuleRunStatusEntity() # FlowAnalysisRuleRunStatusEntity | The flow analysis rule run status.
 id = 'id_example' # str | The flow analysis rule id.
 
 try:
@@ -2446,18 +2446,18 @@ Uploads a NAR and requests for it to be installed
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerApi(nifi_client_v2.ApiClient(configuration))
 body = NULL # object | The contents of the NAR file.
 filename = 'filename_example' # str |  (optional)
 

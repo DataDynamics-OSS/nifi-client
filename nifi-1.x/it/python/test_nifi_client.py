@@ -11,8 +11,8 @@ import uuid
 import pytest
 import urllib3
 
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 
 URL = os.environ.get("NIFI_URL") or "http://localhost:8080/nifi-api"
 USERNAME = os.environ.get("NIFI_USERNAME")
@@ -25,28 +25,28 @@ pytestmark = pytest.mark.filterwarnings("ignore::urllib3.exceptions.InsecureRequ
 
 
 def new_client():
-    cfg = swagger_client.Configuration()
+    cfg = nifi_client_v1.Configuration()
     cfg.host = URL
     cfg.verify_ssl = not URL.startswith("https")
-    return swagger_client.ApiClient(cfg)
+    return nifi_client_v1.ApiClient(cfg)
 
 
 @pytest.fixture(scope="module")
 def client():
     c = new_client()
     if SECURED:
-        token = swagger_client.AccessApi(c).create_access_token(username=USERNAME, password=PASSWORD)
+        token = nifi_client_v1.AccessApi(c).create_access_token(username=USERNAME, password=PASSWORD)
         assert len(token.split(".")) == 3, "JWT 형식이 아님: %s" % token
         c.set_default_header("Authorization", "Bearer " + token)
     return c
 
 
 def revision(version):
-    return swagger_client.RevisionDTO(version=version, client_id=CLIENT_ID)
+    return nifi_client_v1.RevisionDTO(version=version, client_id=CLIENT_ID)
 
 
 def position():
-    return swagger_client.PositionDTO(x=0.0, y=0.0)
+    return nifi_client_v1.PositionDTO(x=0.0, y=0.0)
 
 
 def wait_for(fn, predicate, message):
@@ -59,12 +59,12 @@ def wait_for(fn, predicate, message):
 
 
 def test_about(client):
-    about = swagger_client.FlowApi(client).get_about_info()
+    about = nifi_client_v1.FlowApi(client).get_about_info()
     assert about.about.version == "1.28.1"
 
 
 def test_current_user(client):
-    user = swagger_client.FlowApi(client).get_current_user()
+    user = nifi_client_v1.FlowApi(client).get_current_user()
     if SECURED:
         assert user.identity == USERNAME
         assert user.anonymous is False
@@ -75,44 +75,44 @@ def test_current_user(client):
 @pytest.mark.skipif(not SECURED, reason="HTTPS 로그인 모드에서만 의미 있음")
 def test_secured_endpoints_reject_missing_or_bad_credentials():
     with pytest.raises(ApiException) as no_token:
-        swagger_client.FlowApi(new_client()).get_flow("root")
+        nifi_client_v1.FlowApi(new_client()).get_flow("root")
     assert no_token.value.status == 401
 
     with pytest.raises(ApiException) as bad_login:
-        swagger_client.AccessApi(new_client()).create_access_token(username=USERNAME, password=PASSWORD + "-wrong")
+        nifi_client_v1.AccessApi(new_client()).create_access_token(username=USERNAME, password=PASSWORD + "-wrong")
     assert bad_login.value.status == 400
 
 
 def test_process_group_and_processor_lifecycle(client):
-    flow_api = swagger_client.FlowApi(client)
-    groups_api = swagger_client.ProcessGroupsApi(client)
-    processors_api = swagger_client.ProcessorsApi(client)
+    flow_api = nifi_client_v1.FlowApi(client)
+    groups_api = nifi_client_v1.ProcessGroupsApi(client)
+    processors_api = nifi_client_v1.ProcessorsApi(client)
 
     root_id = flow_api.get_flow("root").process_group_flow.id
     assert root_id
 
-    group = groups_api.create_process_group(root_id, swagger_client.ProcessGroupEntity(
+    group = groups_api.create_process_group(root_id, nifi_client_v1.ProcessGroupEntity(
         revision=revision(0),
-        component=swagger_client.ProcessGroupDTO(name="nifi-client-it", position=position())))
+        component=nifi_client_v1.ProcessGroupDTO(name="nifi-client-it", position=position())))
     group_id = group.id
     try:
-        processor = groups_api.create_processor(group_id, swagger_client.ProcessorEntity(
+        processor = groups_api.create_processor(group_id, nifi_client_v1.ProcessorEntity(
             revision=revision(0),
-            component=swagger_client.ProcessorDTO(
+            component=nifi_client_v1.ProcessorDTO(
                 type="org.apache.nifi.processors.standard.GenerateFlowFile",
                 name="generate",
                 position=position(),
-                config=swagger_client.ProcessorConfigDTO(
+                config=nifi_client_v1.ProcessorConfigDTO(
                     scheduling_period="10 sec",
                     auto_terminated_relationships=["success"]))))
         processor_id = processor.id
         assert processor.component.config.scheduling_period == "10 sec"
 
-        processor = processors_api.update_processor(processor_id, swagger_client.ProcessorEntity(
+        processor = processors_api.update_processor(processor_id, nifi_client_v1.ProcessorEntity(
             revision=processor.revision,
-            component=swagger_client.ProcessorDTO(
+            component=nifi_client_v1.ProcessorDTO(
                 id=processor_id, name="generate-renamed",
-                config=swagger_client.ProcessorConfigDTO(scheduling_period="30 sec"))))
+                config=nifi_client_v1.ProcessorConfigDTO(scheduling_period="30 sec"))))
         assert processor.component.name == "generate-renamed"
         assert processor.component.config.scheduling_period == "30 sec"
 
@@ -120,11 +120,11 @@ def test_process_group_and_processor_lifecycle(client):
                              lambda p: p.component.validation_status == "VALID",
                              "processor did not become VALID")
 
-        processor = processors_api.update_run_status(processor_id, swagger_client.ProcessorRunStatusEntity(
+        processor = processors_api.update_run_status(processor_id, nifi_client_v1.ProcessorRunStatusEntity(
             revision=processor.revision, state="RUNNING"))
         assert processor.component.state == "RUNNING"
 
-        processor = processors_api.update_run_status(processor_id, swagger_client.ProcessorRunStatusEntity(
+        processor = processors_api.update_run_status(processor_id, nifi_client_v1.ProcessorRunStatusEntity(
             revision=processor.revision, state="STOPPED"))
         assert processor.component.state == "STOPPED"
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.site_to_site_api import SiteToSiteApi  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.api.site_to_site_api import SiteToSiteApi  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestSiteToSiteApi(unittest.TestCase):

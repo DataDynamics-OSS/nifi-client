@@ -1,4 +1,4 @@
-# swagger_client.FlowApi
+# nifi_client_v1.FlowApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -66,14 +66,14 @@ Enable or disable Controller Services in the specified Process Group.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ActivateControllerServicesEntity() # ActivateControllerServicesEntity | The request to schedule or unschedule. If the comopnents in the request are not specified, all authorized components will be considered.
+body = nifi_client_v1.ActivateControllerServicesEntity() # ActivateControllerServicesEntity | The request to schedule or unschedule. If the comopnents in the request are not specified, all authorized components will be considered.
 
 try:
     # Enable or disable Controller Services in the specified Process Group.
@@ -116,12 +116,12 @@ Download a snapshot of the given reporting tasks and any controller services the
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 reporting_task_id = 'reporting_task_id_example' # str | Specifies a reporting task id to export. If not specified, all reporting tasks will be exported. (optional)
 
 try:
@@ -164,12 +164,12 @@ Generates a client id.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Generates a client id.
@@ -208,12 +208,12 @@ Retrieves details about this NiFi to put in the About dialog
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves details about this NiFi to put in the About dialog
@@ -252,12 +252,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The action id.
 
 try:
@@ -300,12 +300,12 @@ Retrieves the banners for this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves the banners for this NiFi
@@ -344,12 +344,12 @@ Gets the buckets from the specified registry for the current user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The registry id.
 
 try:
@@ -392,12 +392,12 @@ Gets current bulletins
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 after = 'after_example' # str | Includes bulletins with an id after this value. (optional)
 source_name = 'source_name_example' # str | Includes bulletins originating from this sources whose name match this regular expression. (optional)
 message = 'message_example' # str | Includes bulletins whose message that match this regular expression. (optional)
@@ -450,12 +450,12 @@ Retrieves Controller level bulletins
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves Controller level bulletins
@@ -494,12 +494,12 @@ The cluster summary for this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # The cluster summary for this NiFi
@@ -538,12 +538,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 component_id = 'component_id_example' # str | The component id.
 
 try:
@@ -586,12 +586,12 @@ Gets statistics for a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The connection id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the statistics. (optional)
@@ -638,12 +638,12 @@ Gets status for a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The connection id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
@@ -690,12 +690,12 @@ Gets the status history for a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The connection id.
 
 try:
@@ -738,12 +738,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 service_type = 'service_type_example' # str | If specified, will only return controller services that are compatible with this type of service. (optional)
 service_bundle_group = 'service_bundle_group_example' # str | If serviceType specified, is the bundle group of the serviceType. (optional)
 service_bundle_artifact = 'service_bundle_artifact_example' # str | If serviceType specified, is the bundle artifact of the serviceType. (optional)
@@ -798,12 +798,12 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 ui_only = false # bool |  (optional) (default to false)
 include_referencing_components = true # bool | Whether or not to include services' referencing components in the response (optional) (default to true)
 
@@ -848,12 +848,12 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
 include_ancestor_groups = true # bool | Whether or not to include parent/ancestor process groups (optional) (default to true)
 include_descendant_groups = false # bool | Whether or not to include descendant process groups (optional) (default to false)
@@ -904,12 +904,12 @@ Gets the current status of this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets the current status of this NiFi
@@ -948,12 +948,12 @@ Retrieves the user identity of the user making the request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves the user identity of the user making the request
@@ -992,12 +992,12 @@ Gets the details of a flow from the specified registry and bucket for the specif
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 registry_id = 'registry_id_example' # str | The registry client id.
 bucket_id = 'bucket_id_example' # str | The bucket id.
 flow_id = 'flow_id_example' # str | The flow id.
@@ -1044,12 +1044,12 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
 ui_only = false # bool |  (optional) (default to false)
 
@@ -1094,12 +1094,12 @@ Retrieves the configuration for this NiFi flow
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves the configuration for this NiFi flow
@@ -1138,12 +1138,12 @@ Gets all metrics for the flow from a particular node
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 producer = 'producer_example' # str | The producer for flow file metrics. Each producer may have its own output format.
 included_registries = ['included_registries_example'] # list[str] | Set of included metrics registries (optional)
 sample_name = 'sample_name_example' # str | Regular Expression Pattern to be applied against the sample name field (optional)
@@ -1194,12 +1194,12 @@ Gets the flows from the specified registry and bucket for the current user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 registry_id = 'registry_id_example' # str | The registry client id.
 bucket_id = 'bucket_id_example' # str | The bucket id.
 
@@ -1244,12 +1244,12 @@ Gets status for an input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The input port id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
@@ -1296,12 +1296,12 @@ Gets status for an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The output port id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
@@ -1348,12 +1348,12 @@ Gets all Parameter Contexts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets all Parameter Contexts
@@ -1392,12 +1392,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 bundle_group_filter = 'bundle_group_filter_example' # str | If specified, will only return types that are a member of this bundle group. (optional)
 bundle_artifact_filter = 'bundle_artifact_filter_example' # str | If specified, will only return types that are a member of this bundle artifact. (optional)
 type = 'type_example' # str | If specified, will only return types whose fully qualified classname matches. (optional)
@@ -1444,12 +1444,12 @@ Gets all parameter providers
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets all parameter providers
@@ -1488,12 +1488,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves the types of prioritizers that this NiFi supports
@@ -1532,12 +1532,12 @@ The status for a process group includes status for all descendent components. Wh
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
 recursive = false # bool | Whether all descendant groups and the status of their content will be included. Optional, defaults to false (optional) (default to false)
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
@@ -1586,12 +1586,12 @@ Gets status history for a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1634,12 +1634,12 @@ Gets status for a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The processor id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
@@ -1686,12 +1686,12 @@ Gets status history for a processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The processor id.
 
 try:
@@ -1734,12 +1734,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 bundle_group_filter = 'bundle_group_filter_example' # str | If specified, will only return types that are a member of this bundle group. (optional)
 bundle_artifact_filter = 'bundle_artifact_filter_example' # str | If specified, will only return types that are a member of this bundle artifact. (optional)
 type = 'type_example' # str | If specified, will only return types whose fully qualified classname matches. (optional)
@@ -1786,12 +1786,12 @@ Gets the listing of available flow registry clients
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets the listing of available flow registry clients
@@ -1830,12 +1830,12 @@ Gets status for a remote process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The remote process group id.
 nodewise = false # bool | Whether or not to include the breakdown per node. Optional, defaults to false (optional) (default to false)
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where to get the status. (optional)
@@ -1882,12 +1882,12 @@ Gets the status history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The remote process group id.
 
 try:
@@ -1930,12 +1930,12 @@ Get a snapshot of the given reporting tasks and any controller services they use
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 reporting_task_id = 'reporting_task_id_example' # str | Specifies a reporting task id to export. If not specified, all reporting tasks will be exported. (optional)
 
 try:
@@ -1978,12 +1978,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 bundle_group_filter = 'bundle_group_filter_example' # str | If specified, will only return types that are a member of this bundle group. (optional)
 bundle_artifact_filter = 'bundle_artifact_filter_example' # str | If specified, will only return types that are a member of this bundle artifact. (optional)
 type = 'type_example' # str | If specified, will only return types whose fully qualified classname matches. (optional)
@@ -2030,12 +2030,12 @@ Gets all reporting tasks
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets all reporting tasks
@@ -2074,12 +2074,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Retrieves the runtime manifest for this NiFi instance.
@@ -2118,12 +2118,12 @@ Gets all templates
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 
 try:
     # Gets all templates
@@ -2162,12 +2162,12 @@ Gets the differences between two versions of the same versioned flow, the basis 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 registry_id = 'registry_id_example' # str | The registry client id.
 bucket_id = 'bucket_id_example' # str | The bucket id.
 flow_id = 'flow_id_example' # str | The flow id.
@@ -2222,12 +2222,12 @@ Gets the flow versions from the specified registry and bucket for the specified 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 registry_id = 'registry_id_example' # str | The registry client id.
 bucket_id = 'bucket_id_example' # str | The bucket id.
 flow_id = 'flow_id_example' # str | The flow id.
@@ -2274,12 +2274,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 offset = 'offset_example' # str | The offset into the result set.
 count = 'count_example' # str | The number of actions to return.
 sort_column = 'sort_column_example' # str | The field to sort on. (optional)
@@ -2336,14 +2336,14 @@ Schedule or unschedule components in the specified Process Group.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ScheduleComponentsEntity() # ScheduleComponentsEntity | The request to schedule or unschedule. If the comopnents in the request are not specified, all authorized components will be considered.
+body = nifi_client_v1.ScheduleComponentsEntity() # ScheduleComponentsEntity | The request to schedule or unschedule. If the comopnents in the request are not specified, all authorized components will be considered.
 
 try:
     # Schedule or unschedule components in the specified Process Group.
@@ -2386,12 +2386,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 q = 'q_example' # str | Node address to search for.
 
 try:
@@ -2434,12 +2434,12 @@ Only search results from authorized components will be returned.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FlowApi()
+api_instance = nifi_client_v1.FlowApi()
 q = 'q_example' # str |  (optional)
 a = 'a_example' # str |  (optional)
 

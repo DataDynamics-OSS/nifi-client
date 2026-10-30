@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.node_connection_status_snapshot_dto import NodeConnectionStatusSnapshotDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.node_connection_status_snapshot_dto import NodeConnectionStatusSnapshotDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestNodeConnectionStatusSnapshotDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestNodeConnectionStatusSnapshotDTO(unittest.TestCase):
     def testNodeConnectionStatusSnapshotDTO(self):
         """Test NodeConnectionStatusSnapshotDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.node_connection_status_snapshot_dto.NodeConnectionStatusSnapshotDTO()  # noqa: E501
+        # model = nifi_client_v1.models.node_connection_status_snapshot_dto.NodeConnectionStatusSnapshotDTO()  # noqa: E501
         pass
 
 

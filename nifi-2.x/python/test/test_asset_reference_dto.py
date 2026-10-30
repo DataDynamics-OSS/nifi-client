@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.asset_reference_dto import AssetReferenceDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.asset_reference_dto import AssetReferenceDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestAssetReferenceDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestAssetReferenceDTO(unittest.TestCase):
     def testAssetReferenceDTO(self):
         """Test AssetReferenceDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.asset_reference_dto.AssetReferenceDTO()  # noqa: E501
+        # model = nifi_client_v2.models.asset_reference_dto.AssetReferenceDTO()  # noqa: E501
         pass
 
 

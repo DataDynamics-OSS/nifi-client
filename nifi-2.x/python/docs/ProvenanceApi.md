@@ -1,4 +1,4 @@
-# swagger_client.ProvenanceApi
+# nifi_client_v2.ProvenanceApi
 
 All URIs are relative to */*
 
@@ -21,18 +21,18 @@ Deletes a lineage query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the lineage query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -75,18 +75,18 @@ Deletes a provenance query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the provenance query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -129,18 +129,18 @@ Gets a lineage query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the lineage query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 
@@ -183,18 +183,18 @@ Gets a provenance query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The id of the provenance query.
 cluster_node_id = 'cluster_node_id_example' # str | The id of the node where this query exists if clustered. (optional)
 summarize = false # bool | Whether or not to summarize provenance events returned. This property is false by default. (optional) (default to false)
@@ -241,18 +241,18 @@ Gets the searchable attributes for provenance events
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
 
 try:
     # Gets the searchable attributes for provenance events
@@ -291,19 +291,19 @@ Lineage queries may be long running so this endpoint submits a request. The resp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
-body = swagger_client.LineageEntity() # LineageEntity | The lineage query details.
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.LineageEntity() # LineageEntity | The lineage query details.
 
 try:
     # Submits a lineage query
@@ -345,19 +345,19 @@ Provenance queries may be long running so this endpoint submits a request. The r
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ProvenanceApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ProvenanceEntity() # ProvenanceEntity | The provenance query details.
+api_instance = nifi_client_v2.ProvenanceApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ProvenanceEntity() # ProvenanceEntity | The provenance query details.
 
 try:
     # Submits a provenance query

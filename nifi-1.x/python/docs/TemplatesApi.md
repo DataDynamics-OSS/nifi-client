@@ -1,4 +1,4 @@
-# swagger_client.TemplatesApi
+# nifi_client_v1.TemplatesApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -19,12 +19,12 @@ Exports a template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TemplatesApi()
+api_instance = nifi_client_v1.TemplatesApi()
 id = 'id_example' # str | The template id.
 
 try:
@@ -67,12 +67,12 @@ Deletes a template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TemplatesApi()
+api_instance = nifi_client_v1.TemplatesApi()
 id = 'id_example' # str | The template id.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 

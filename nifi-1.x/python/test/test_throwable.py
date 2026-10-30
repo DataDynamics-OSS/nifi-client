@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.throwable import Throwable  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.throwable import Throwable  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestThrowable(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestThrowable(unittest.TestCase):
     def testThrowable(self):
         """Test Throwable"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.throwable.Throwable()  # noqa: E501
+        # model = nifi_client_v1.models.throwable.Throwable()  # noqa: E501
         pass
 
 

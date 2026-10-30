@@ -1,4 +1,4 @@
-# swagger_client.ParameterProvidersApi
+# nifi_client_v2.ParameterProvidersApi
 
 All URIs are relative to */*
 
@@ -30,19 +30,19 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -84,19 +84,19 @@ Clears bulletins for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request specifying the timestamp from which to clear bulletins.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request specifying the timestamp from which to clear bulletins.
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -138,20 +138,20 @@ Clears the state for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
-body = swagger_client.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
+body = nifi_client_v2.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
 
 try:
     # Clears the state for a parameter provider
@@ -194,18 +194,18 @@ Deletes the Apply Parameters Request with the given ID. After a request is creat
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 provider_id = 'provider_id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Apply Parameters Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
@@ -252,18 +252,18 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -306,19 +306,19 @@ Fetches and temporarily caches the parameters for a provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ParameterProviderParameterFetchEntity() # ParameterProviderParameterFetchEntity | The parameter fetch request.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ParameterProviderParameterFetchEntity() # ParameterProviderParameterFetchEntity | The parameter fetch request.
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -360,18 +360,18 @@ Gets a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -414,18 +414,18 @@ Returns the Apply Parameters Request with the given ID. Once an Apply Parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 provider_id = 'provider_id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Apply Parameters Request
 
@@ -468,18 +468,18 @@ Gets all references to a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -520,18 +520,18 @@ Gets a parameter provider property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
 property_name = 'property_name_example' # str | The property name.
 
@@ -574,18 +574,18 @@ Gets the state for a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -628,18 +628,18 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Parameter Provider
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -682,18 +682,18 @@ Deletes a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The parameter provider id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -742,19 +742,19 @@ This will initiate the process of applying fetched parameters to all referencing
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ParameterProviderParameterApplicationEntity() # ParameterProviderParameterApplicationEntity | The apply parameters request.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ParameterProviderParameterApplicationEntity() # ParameterProviderParameterApplicationEntity | The apply parameters request.
 provider_id = 'provider_id_example' # str | The ID of the Parameter Provider
 
 try:
@@ -798,19 +798,19 @@ This will initiate the process of verifying a given Parameter Provider configura
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The parameter provider configuration verification request.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The parameter provider configuration verification request.
 id = 'id_example' # str | The parameter provider id.
 
 try:
@@ -852,19 +852,19 @@ Updates a parameter provider
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ParameterProvidersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
+api_instance = nifi_client_v2.ParameterProvidersApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ParameterProviderEntity() # ParameterProviderEntity | The parameter provider configuration details.
 id = 'id_example' # str | The parameter provider id.
 
 try:

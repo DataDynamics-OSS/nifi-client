@@ -1,4 +1,4 @@
-# swagger_client.SiteToSiteApi
+# nifi_client_v1.SiteToSiteApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -19,12 +19,12 @@ Returns the available Peers and its status of this NiFi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SiteToSiteApi()
+api_instance = nifi_client_v1.SiteToSiteApi()
 
 try:
     # Returns the available Peers and its status of this NiFi
@@ -63,12 +63,12 @@ Returns the details about this NiFi necessary to communicate via site to site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SiteToSiteApi()
+api_instance = nifi_client_v1.SiteToSiteApi()
 
 try:
     # Returns the details about this NiFi necessary to communicate via site to site

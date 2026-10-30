@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.flow_analysis_rule_violation_dto import FlowAnalysisRuleViolationDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.flow_analysis_rule_violation_dto import FlowAnalysisRuleViolationDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestFlowAnalysisRuleViolationDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestFlowAnalysisRuleViolationDTO(unittest.TestCase):
     def testFlowAnalysisRuleViolationDTO(self):
         """Test FlowAnalysisRuleViolationDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.flow_analysis_rule_violation_dto.FlowAnalysisRuleViolationDTO()  # noqa: E501
+        # model = nifi_client_v2.models.flow_analysis_rule_violation_dto.FlowAnalysisRuleViolationDTO()  # noqa: E501
         pass
 
 

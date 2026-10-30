@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.processor_status_snapshot_entity import ProcessorStatusSnapshotEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.processor_status_snapshot_entity import ProcessorStatusSnapshotEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestProcessorStatusSnapshotEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestProcessorStatusSnapshotEntity(unittest.TestCase):
     def testProcessorStatusSnapshotEntity(self):
         """Test ProcessorStatusSnapshotEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.processor_status_snapshot_entity.ProcessorStatusSnapshotEntity()  # noqa: E501
+        # model = nifi_client_v2.models.processor_status_snapshot_entity.ProcessorStatusSnapshotEntity()  # noqa: E501
         pass
 
 

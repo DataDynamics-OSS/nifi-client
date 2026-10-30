@@ -1,4 +1,4 @@
-# swagger_client.SnippetsApi
+# nifi_client_v1.SnippetsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -20,13 +20,13 @@ Creates a snippet. The snippet will be automatically discarded if not used in a 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi()
-body = swagger_client.SnippetEntity() # SnippetEntity | The snippet configuration details.
+api_instance = nifi_client_v1.SnippetsApi()
+body = nifi_client_v1.SnippetEntity() # SnippetEntity | The snippet configuration details.
 
 try:
     # Creates a snippet. The snippet will be automatically discarded if not used in a subsequent request after 1 minute.
@@ -68,12 +68,12 @@ Deletes the components in a snippet and discards the snippet
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi()
+api_instance = nifi_client_v1.SnippetsApi()
 id = 'id_example' # str | The snippet id.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -118,14 +118,14 @@ Move's the components in this Snippet into a new Process Group and discards the 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SnippetsApi()
+api_instance = nifi_client_v1.SnippetsApi()
 id = 'id_example' # str | The snippet id.
-body = swagger_client.SnippetEntity() # SnippetEntity | The snippet configuration details.
+body = nifi_client_v1.SnippetEntity() # SnippetEntity | The snippet configuration details.
 
 try:
     # Move's the components in this Snippet into a new Process Group and discards the snippet

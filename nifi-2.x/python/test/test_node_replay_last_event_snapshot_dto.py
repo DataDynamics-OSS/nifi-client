@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.node_replay_last_event_snapshot_dto import NodeReplayLastEventSnapshotDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.node_replay_last_event_snapshot_dto import NodeReplayLastEventSnapshotDTO  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestNodeReplayLastEventSnapshotDTO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestNodeReplayLastEventSnapshotDTO(unittest.TestCase):
     def testNodeReplayLastEventSnapshotDTO(self):
         """Test NodeReplayLastEventSnapshotDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.node_replay_last_event_snapshot_dto.NodeReplayLastEventSnapshotDTO()  # noqa: E501
+        # model = nifi_client_v2.models.node_replay_last_event_snapshot_dto.NodeReplayLastEventSnapshotDTO()  # noqa: E501
         pass
 
 

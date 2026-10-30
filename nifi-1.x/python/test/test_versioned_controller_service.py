@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.versioned_controller_service import VersionedControllerService  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.versioned_controller_service import VersionedControllerService  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestVersionedControllerService(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestVersionedControllerService(unittest.TestCase):
     def testVersionedControllerService(self):
         """Test VersionedControllerService"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.versioned_controller_service.VersionedControllerService()  # noqa: E501
+        # model = nifi_client_v1.models.versioned_controller_service.VersionedControllerService()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.backlog_request_entity import BacklogRequestEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.backlog_request_entity import BacklogRequestEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestBacklogRequestEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestBacklogRequestEntity(unittest.TestCase):
     def testBacklogRequestEntity(self):
         """Test BacklogRequestEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.backlog_request_entity.BacklogRequestEntity()  # noqa: E501
+        # model = nifi_client_v2.models.backlog_request_entity.BacklogRequestEntity()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.OutputPortsApi
+# nifi_client_v1.OutputPortsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -21,12 +21,12 @@ Gets an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.OutputPortsApi()
+api_instance = nifi_client_v1.OutputPortsApi()
 id = 'id_example' # str | The output port id.
 
 try:
@@ -69,12 +69,12 @@ Deletes an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.OutputPortsApi()
+api_instance = nifi_client_v1.OutputPortsApi()
 id = 'id_example' # str | The output port id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -123,14 +123,14 @@ Updates an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.OutputPortsApi()
+api_instance = nifi_client_v1.OutputPortsApi()
 id = 'id_example' # str | The output port id.
-body = swagger_client.PortEntity() # PortEntity | The output port configuration details.
+body = nifi_client_v1.PortEntity() # PortEntity | The output port configuration details.
 
 try:
     # Updates an output port
@@ -173,14 +173,14 @@ Updates run status of an output-port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.OutputPortsApi()
+api_instance = nifi_client_v1.OutputPortsApi()
 id = 'id_example' # str | The port id.
-body = swagger_client.PortRunStatusEntity() # PortRunStatusEntity | The port run status.
+body = nifi_client_v1.PortRunStatusEntity() # PortRunStatusEntity | The port run status.
 
 try:
     # Updates run status of an output-port

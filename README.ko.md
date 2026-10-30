@@ -76,7 +76,8 @@ NiFi 2.x 스펙을 그대로 생성하면 동작하지 않는 부분이 있어�
 pip install ./nifi-1.x/python    # 또는 ./nifi-2.x/python, Python 3.9
 ```
 
-두 버전 모두 `io.swagger:nifi-client` / `nifi-client`이고 버전(1.28.1, 2.12.0)으로 구분한다.
+Java는 `io.datadynamics:nifi-client-v1:1.28.1` / `io.datadynamics:nifi-client-v2:2.12.0`, Python은 `nifi-client-v1` / `nifi-client-v2`라서 두 버전을 함께 쓸 수 있다.
+Java 패키지는 `io.datadynamics.nifi.client.v1` / `io.datadynamics.nifi.client.v2`, Python 패키지는 `nifi_client_v1` / `nifi_client_v2`이다.
 
 빌드된 jar와 wheel은 GitHub 릴리스 `v1.28.1`, `v2.12.0`에 첨부되어 있다.
 
@@ -111,12 +112,12 @@ ProcessorEntity p = new ProcessorsApi(client).updateRunStatus(runStatusEntity, p
 1.x는 `update_run_status(id, body)`, 2.x는 `update_run_status(body, id)` 순서다. 로그인은 두 버전 모두 같다.
 
 ```python
-import swagger_client
-cfg = swagger_client.Configuration()
+import nifi_client_v1 as nifi_client   # 2.x: nifi_client_v2
+cfg = nifi_client.Configuration()
 cfg.host = "https://localhost:8443/nifi-api"
 cfg.verify_ssl = False           # self-signed 인증서인 경우
-client = swagger_client.ApiClient(cfg)
-token = swagger_client.AccessApi(client).create_access_token(username="admin", password="password")
+client = nifi_client.ApiClient(cfg)
+token = nifi_client.AccessApi(client).create_access_token(username="admin", password="password")
 client.set_default_header("Authorization", "Bearer " + token)
 ```
 

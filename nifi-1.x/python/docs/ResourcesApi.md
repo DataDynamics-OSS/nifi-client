@@ -1,4 +1,4 @@
-# swagger_client.ResourcesApi
+# nifi_client_v1.ResourcesApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -18,12 +18,12 @@ Gets the available resources that support access/authorization policies
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ResourcesApi()
+api_instance = nifi_client_v1.ResourcesApi()
 
 try:
     # Gets the available resources that support access/authorization policies

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.flow_registry_client_types_entity import FlowRegistryClientTypesEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.flow_registry_client_types_entity import FlowRegistryClientTypesEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestFlowRegistryClientTypesEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestFlowRegistryClientTypesEntity(unittest.TestCase):
     def testFlowRegistryClientTypesEntity(self):
         """Test FlowRegistryClientTypesEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.flow_registry_client_types_entity.FlowRegistryClientTypesEntity()  # noqa: E501
+        # model = nifi_client_v2.models.flow_registry_client_types_entity.FlowRegistryClientTypesEntity()  # noqa: E501
         pass
 
 

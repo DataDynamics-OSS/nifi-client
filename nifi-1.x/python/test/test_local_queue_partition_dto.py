@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.local_queue_partition_dto import LocalQueuePartitionDTO  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.local_queue_partition_dto import LocalQueuePartitionDTO  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestLocalQueuePartitionDTO(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestLocalQueuePartitionDTO(unittest.TestCase):
     def testLocalQueuePartitionDTO(self):
         """Test LocalQueuePartitionDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.local_queue_partition_dto.LocalQueuePartitionDTO()  # noqa: E501
+        # model = nifi_client_v1.models.local_queue_partition_dto.LocalQueuePartitionDTO()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.replay_last_event_response_entity import ReplayLastEventResponseEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.replay_last_event_response_entity import ReplayLastEventResponseEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestReplayLastEventResponseEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestReplayLastEventResponseEntity(unittest.TestCase):
     def testReplayLastEventResponseEntity(self):
         """Test ReplayLastEventResponseEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.replay_last_event_response_entity.ReplayLastEventResponseEntity()  # noqa: E501
+        # model = nifi_client_v2.models.replay_last_event_response_entity.ReplayLastEventResponseEntity()  # noqa: E501
         pass
 
 

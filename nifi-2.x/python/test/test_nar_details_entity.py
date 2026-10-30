@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.nar_details_entity import NarDetailsEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.nar_details_entity import NarDetailsEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestNarDetailsEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestNarDetailsEntity(unittest.TestCase):
     def testNarDetailsEntity(self):
         """Test NarDetailsEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.nar_details_entity.NarDetailsEntity()  # noqa: E501
+        # model = nifi_client_v2.models.nar_details_entity.NarDetailsEntity()  # noqa: E501
         pass
 
 

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.parameter_context_validation_request_entity import ParameterContextValidationRequestEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.models.parameter_context_validation_request_entity import ParameterContextValidationRequestEntity  # noqa: E501
+from nifi_client_v1.rest import ApiException
 
 
 class TestParameterContextValidationRequestEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestParameterContextValidationRequestEntity(unittest.TestCase):
     def testParameterContextValidationRequestEntity(self):
         """Test ParameterContextValidationRequestEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.parameter_context_validation_request_entity.ParameterContextValidationRequestEntity()  # noqa: E501
+        # model = nifi_client_v1.models.parameter_context_validation_request_entity.ParameterContextValidationRequestEntity()  # noqa: E501
         pass
 
 

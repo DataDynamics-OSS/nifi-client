@@ -1,4 +1,4 @@
-# swagger_client.AuthenticationApi
+# nifi_client_v2.AuthenticationApi
 
 All URIs are relative to */*
 
@@ -15,12 +15,12 @@ Retrieves the authentication configuration details and status information
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AuthenticationApi()
+api_instance = nifi_client_v2.AuthenticationApi()
 
 try:
     # Retrieves the authentication configuration details and status information

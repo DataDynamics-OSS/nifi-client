@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.versioned_flow_update_request_entity import VersionedFlowUpdateRequestEntity  # noqa: E501
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.models.versioned_flow_update_request_entity import VersionedFlowUpdateRequestEntity  # noqa: E501
+from nifi_client_v2.rest import ApiException
 
 
 class TestVersionedFlowUpdateRequestEntity(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestVersionedFlowUpdateRequestEntity(unittest.TestCase):
     def testVersionedFlowUpdateRequestEntity(self):
         """Test VersionedFlowUpdateRequestEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.versioned_flow_update_request_entity.VersionedFlowUpdateRequestEntity()  # noqa: E501
+        # model = nifi_client_v2.models.versioned_flow_update_request_entity.VersionedFlowUpdateRequestEntity()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.ProcessGroupsApi
+# nifi_client_v1.ProcessGroupsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -58,14 +58,14 @@ Copies a snippet and discards it.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.CopySnippetRequestEntity() # CopySnippetRequestEntity | The copy snippet request.
+body = nifi_client_v1.CopySnippetRequestEntity() # CopySnippetRequestEntity | The copy snippet request.
 
 try:
     # Copies a snippet and discards it.
@@ -108,14 +108,14 @@ Creates a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ConnectionEntity() # ConnectionEntity | The connection configuration details.
+body = nifi_client_v1.ConnectionEntity() # ConnectionEntity | The connection configuration details.
 
 try:
     # Creates a connection
@@ -158,14 +158,14 @@ Creates a new controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+body = nifi_client_v1.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 
 try:
     # Creates a new controller service
@@ -208,12 +208,12 @@ Creates a request to drop all flowfiles of all connection queues in this process
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -256,14 +256,14 @@ Creates a funnel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.FunnelEntity() # FunnelEntity | The funnel configuration details.
+body = nifi_client_v1.FunnelEntity() # FunnelEntity | The funnel configuration details.
 
 try:
     # Creates a funnel
@@ -306,14 +306,14 @@ Creates an input port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.PortEntity() # PortEntity | The input port configuration details.
+body = nifi_client_v1.PortEntity() # PortEntity | The input port configuration details.
 
 try:
     # Creates an input port
@@ -356,14 +356,14 @@ Creates a label
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.LabelEntity() # LabelEntity | The label configuration details.
+body = nifi_client_v1.LabelEntity() # LabelEntity | The label configuration details.
 
 try:
     # Creates a label
@@ -406,14 +406,14 @@ Creates an output port
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.PortEntity() # PortEntity | The output port configuration.
+body = nifi_client_v1.PortEntity() # PortEntity | The output port configuration.
 
 try:
     # Creates an output port
@@ -456,14 +456,14 @@ Creates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
+body = nifi_client_v1.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
 parameter_context_handling_strategy = 'KEEP_EXISTING' # str | Handling Strategy controls whether to keep or replace Parameter Contexts (optional) (default to KEEP_EXISTING)
 
 try:
@@ -508,14 +508,14 @@ Creates a new processor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessorEntity() # ProcessorEntity | The processor configuration details.
+body = nifi_client_v1.ProcessorEntity() # ProcessorEntity | The processor configuration details.
 
 try:
     # Creates a new processor
@@ -558,14 +558,14 @@ Creates a new process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
+body = nifi_client_v1.RemoteProcessGroupEntity() # RemoteProcessGroupEntity | The remote process group configuration details.
 
 try:
     # Creates a new process group
@@ -608,14 +608,14 @@ Creates a template and discards the specified snippet.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.CreateTemplateRequestEntity() # CreateTemplateRequestEntity | The create template request.
+body = nifi_client_v1.CreateTemplateRequestEntity() # CreateTemplateRequestEntity | The create template request.
 
 try:
     # Creates a template and discards the specified snippet.
@@ -658,12 +658,12 @@ Deletes the Replace Request with the given ID. After a request is created via a 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The ID of the Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
 
@@ -708,12 +708,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 group_id = 'group_id_example' # str | The process group id.
 update_id = 'update_id_example' # str | The ID of the Variable Registry Update Request
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)
@@ -760,12 +760,12 @@ Gets a process group for download
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 include_referenced_services = false # bool | If referenced services from outside the target group should be included (optional) (default to false)
 
@@ -810,12 +810,12 @@ Gets all connections
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -858,12 +858,12 @@ Gets the current status of a drop all flowfiles request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -908,12 +908,12 @@ Gets all funnels
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -956,12 +956,12 @@ Gets all input ports
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1004,12 +1004,12 @@ Gets all labels
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1052,12 +1052,12 @@ Gets a list of local modifications to the Process Group since it was last synchr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1100,12 +1100,12 @@ Gets all output ports
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1148,12 +1148,12 @@ Gets a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1196,12 +1196,12 @@ Gets all process groups
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1244,12 +1244,12 @@ Gets all processors
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 include_descendant_groups = false # bool | Whether or not to include processors from descendant process groups (optional) (default to false)
 
@@ -1294,12 +1294,12 @@ Gets all remote process groups
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1342,12 +1342,12 @@ Returns the Replace Request with the given ID. Once a Replace Request has been c
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The ID of the Replace Request
 
 try:
@@ -1390,12 +1390,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 include_ancestor_groups = true # bool | Whether or not to include ancestor groups (optional) (default to true)
 
@@ -1440,12 +1440,12 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 group_id = 'group_id_example' # str | The process group id.
 update_id = 'update_id_example' # str | The ID of the Variable Registry Update Request
 
@@ -1490,12 +1490,12 @@ Imports a specified process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1538,12 +1538,12 @@ Imports a template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 
 try:
@@ -1586,14 +1586,14 @@ This will initiate the action of replacing a process group with the given proces
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity
+body = nifi_client_v1.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity
 
 try:
     # Initiate the Replace Request of a Process Group with the given ID
@@ -1636,14 +1636,14 @@ Instantiates a template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.InstantiateTemplateRequestEntity() # InstantiateTemplateRequestEntity | The instantiate template request.
+body = nifi_client_v1.InstantiateTemplateRequestEntity() # InstantiateTemplateRequestEntity | The instantiate template request.
 
 try:
     # Instantiates a template
@@ -1686,12 +1686,12 @@ Cancels and/or removes a request to drop all flowfiles.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 drop_request_id = 'drop_request_id_example' # str | The drop request id.
 
@@ -1736,12 +1736,12 @@ Deletes a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -1790,14 +1790,14 @@ This endpoint is used for replication within a cluster, when replacing a flow wi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity.
+body = nifi_client_v1.ProcessGroupImportEntity() # ProcessGroupImportEntity | The process group replace request entity.
 
 try:
     # Replace Process Group contents with the given ID with the specified Process Group contents
@@ -1840,14 +1840,14 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.VariableRegistryEntity() # VariableRegistryEntity | The variable registry configuration details.
+body = nifi_client_v1.VariableRegistryEntity() # VariableRegistryEntity | The variable registry configuration details.
 
 try:
     # Submits a request to update a process group's variable registry
@@ -1890,14 +1890,14 @@ Updates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
+body = nifi_client_v1.ProcessGroupEntity() # ProcessGroupEntity | The process group configuration details.
 
 try:
     # Updates a process group
@@ -1940,14 +1940,14 @@ Note: This endpoint is subject to change as NiFi and it's REST API evolve.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
-body = swagger_client.VariableRegistryEntity() # VariableRegistryEntity | The variable registry configuration details.
+body = nifi_client_v1.VariableRegistryEntity() # VariableRegistryEntity | The variable registry configuration details.
 
 try:
     # Updates the contents of a Process Group's variable Registry
@@ -1990,12 +1990,12 @@ Uploads a versioned flow definition and creates a process group
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 group_name = 'group_name_example' # str | The process group name.
 position_x = 8.14 # float | The process group X position.
@@ -2050,12 +2050,12 @@ Uploads a template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProcessGroupsApi()
+api_instance = nifi_client_v1.ProcessGroupsApi()
 id = 'id_example' # str | The process group id.
 template = '/path/to/file.txt' # file | The binary content of the template file being uploaded.
 disconnected_node_acknowledged = false # bool | Acknowledges that this node is disconnected to allow for mutable requests to proceed. (optional) (default to false)

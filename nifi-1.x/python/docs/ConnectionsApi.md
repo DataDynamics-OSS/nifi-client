@@ -1,4 +1,4 @@
-# swagger_client.ConnectionsApi
+# nifi_client_v1.ConnectionsApi
 
 All URIs are relative to *http://localhost/nifi-api*
 
@@ -20,12 +20,12 @@ Deletes a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionsApi()
+api_instance = nifi_client_v1.ConnectionsApi()
 id = 'id_example' # str | The connection id.
 version = 'version_example' # str | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -74,12 +74,12 @@ Gets a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionsApi()
+api_instance = nifi_client_v1.ConnectionsApi()
 id = 'id_example' # str | The connection id.
 
 try:
@@ -122,14 +122,14 @@ Updates a connection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v1
+from nifi_client_v1.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionsApi()
+api_instance = nifi_client_v1.ConnectionsApi()
 id = 'id_example' # str | The connection id.
-body = swagger_client.ConnectionEntity() # ConnectionEntity | The connection configuration details.
+body = nifi_client_v1.ConnectionEntity() # ConnectionEntity | The connection configuration details.
 
 try:
     # Updates a connection

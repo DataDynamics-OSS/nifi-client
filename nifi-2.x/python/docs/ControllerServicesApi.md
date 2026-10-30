@@ -1,4 +1,4 @@
-# swagger_client.ControllerServicesApi
+# nifi_client_v2.ControllerServicesApi
 
 All URIs are relative to */*
 
@@ -28,19 +28,19 @@ Performs analysis of the component's configuration, providing information about 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ConfigurationAnalysisEntity() # ConfigurationAnalysisEntity | The configuration analysis request.
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -82,19 +82,19 @@ Clears bulletins for a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request specifying the timestamp from which to clear bulletins.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ClearBulletinsRequestEntity() # ClearBulletinsRequestEntity | The clear bulletin request specifying the timestamp from which to clear bulletins.
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -136,20 +136,20 @@ Clears the state for a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
-body = swagger_client.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
+body = nifi_client_v2.ComponentStateEntity() # ComponentStateEntity | Optional component state to perform a selective key removal. If omitted, clears all state. (optional)
 
 try:
     # Clears the state for a controller service
@@ -192,18 +192,18 @@ Deletes the Verification Request with the given ID. After a request is created, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Controller Service
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -248,18 +248,18 @@ If the uiOnly query parameter is provided with a value of true, the returned ent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
 ui_only = false # bool |  (optional) (default to false)
 
@@ -302,18 +302,18 @@ Gets a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -354,18 +354,18 @@ Gets a controller service property descriptor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
 property_name = 'property_name_example' # str | The property name to return the descriptor for.
 sensitive = true # bool | Property Descriptor requested sensitive status (optional)
@@ -410,18 +410,18 @@ Gets the state for a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -464,18 +464,18 @@ Returns the Verification Request with the given ID. Once an Verification Request
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Controller Service
 request_id = 'request_id_example' # str | The ID of the Verification Request
 
@@ -518,18 +518,18 @@ Deletes a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
 id = 'id_example' # str | The controller service id.
 version = 789 # int | The revision is used to verify the client is working with the latest version of the flow. (optional)
 client_id = 'client_id_example' # str | If the client id is not specified, new one will be generated. This value (whether specified or generated) is included in the response. (optional)
@@ -578,19 +578,19 @@ This will initiate the process of verifying a given Controller Service configura
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The controller service configuration verification request.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.VerifyConfigRequestEntity() # VerifyConfigRequestEntity | The controller service configuration verification request.
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -632,19 +632,19 @@ Updates a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ControllerServiceEntity() # ControllerServiceEntity | The controller service configuration details.
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -686,19 +686,19 @@ Updates a controller services references
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UpdateControllerServiceReferenceRequestEntity() # UpdateControllerServiceReferenceRequestEntity | The controller service request update request.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.UpdateControllerServiceReferenceRequestEntity() # UpdateControllerServiceReferenceRequestEntity | The controller service request update request.
 id = 'id_example' # str | The controller service id.
 
 try:
@@ -740,19 +740,19 @@ Updates run status of a controller service
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import nifi_client_v2
+from nifi_client_v2.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: CookieSecureAuthorizationBearer
-configuration = swagger_client.Configuration()
+configuration = nifi_client_v2.Configuration()
 configuration.api_key['__Secure-Authorization-Bearer'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['__Secure-Authorization-Bearer'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ControllerServicesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ControllerServiceRunStatusEntity() # ControllerServiceRunStatusEntity | The controller service run status.
+api_instance = nifi_client_v2.ControllerServicesApi(nifi_client_v2.ApiClient(configuration))
+body = nifi_client_v2.ControllerServiceRunStatusEntity() # ControllerServiceRunStatusEntity | The controller service run status.
 id = 'id_example' # str | The controller service id.
 
 try:
