@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head(${service != null} ? ${service.getComponent().getName()} : '컨트롤러 서비스')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('services')}"></header>
+<div class="layout">
+<main>
+    <p class="small"><a th:href="@{/services}">&larr; 컨트롤러 서비스</a></p>
+    <h1 th:text="${service != null} ? ${service.getComponent().getName()} : '컨트롤러 서비스'"></h1>
+    <p class="lead" th:if="${service != null}"><code th:text="${service.getComponent().getType()}"></code></p>
+
+    <section id="list" th:attr="hx-get=@{/services/{id}(id=${service != null ? service.getId() : ''})}" hx-trigger="refresh from:body"
+             hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${get})}"></div>
+        <section class="panel" th:if="${service != null}" th:with="c=${service.getComponent()}">
+            <dl class="kv">
+                <dt>상태</dt><dd><span class="badge" th:classappend="${c.getState()}" th:text="${c.getState()}"></span></dd>
+                <dt>검증</dt><dd><span class="badge" th:classappend="${c.getValidationStatus()}" th:text="${c.getValidationStatus()}"></span>
+                    <ul class="small" th:unless="${#lists.isEmpty(c.getValidationErrors())}"><li th:each="e : ${c.getValidationErrors()}" th:text="${e}"></li></ul></dd>
+                <dt>revision</dt><dd><code th:text="'version ' + ${service.getRevision().getVersion()}"></code></dd>
+                <dt>제공하는 API</dt><dd class="small"><div th:each="a : ${c.getControllerServiceApis()}" th:text="${a.getType()}"></div></dd>
+            </dl>
+            <h4>속성</h4>
+            <table>
+                <tr th:each="e : ${c.getProperties()}"><td><code th:text="${e.key}"></code></td><td class="small" th:text="${e.value} ?: '(없음)'"></td></tr>
+            </table>
+        </section>
+    </section>
+
+    <th:block th:if="${service != null}">
+        <h2>동작</h2>
+        <div id="result"></div>
+        <section class="panel">
+            <h3>활성화 <code class="small">services.updateRunStatus</code></h3>
+            <p class="muted small">ENABLED가 되어야 프로세서가 쓸 수 있습니다. 활성화는 비동기라 잠깐 ENABLING일 수 있습니다.
+                참조하는 프로세서가 실행 중이면 비활성화할 수 없습니다(409).</p>
+            <div class="actions">
+                <button th:attr="hx-post=@{/services/{id}/run-status(id=${service.getId()},state='ENABLED')}" hx-target="#result">ENABLED</button>
+                <button class="secondary" th:attr="hx-post=@{/services/{id}/run-status(id=${service.getId()},state='DISABLED')}" hx-target="#result">DISABLED</button>
+                <button class="secondary" th:attr="hx-post=@{/services/{id}/references(id=${service.getId()})}" hx-target="#result">getControllerServiceReferences</button>
+            </div>
+        </section>
+        <section class="panel">
+            <h3>설정 고쳐 저장하기 <code class="small">services.updateControllerService</code></h3>
+            <form class="stack" th:attr="hx-post=@{/services/{id}/save(id=${service.getId()})}" hx-target="#result">
+                <textarea name="json" rows="18" data-editor="json" th:text="${editJson}"></textarea>
+                <div class="actions">
+                    <button>updateControllerService</button>
+                    <button class="danger" th:attr="hx-post=@{/services/{id}/delete(id=${service.getId()})}" hx-target="#result"
+                            hx-confirm="이 컨트롤러 서비스를 삭제할까요? 활성 상태면 NiFi가 거절합니다.">removeControllerService</button>
+                </div>
+            </form>
+            <details><summary>getControllerService 결과 전체</summary><pre class="code" data-lang="json" th:text="${@json.pretty(service)}"></pre></details>
+        </section>
+    </th:block>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/services :: help}"></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('컨트롤러 서비스')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('services')}"></header>
+<div class="layout">
+<main>
+    <h1>컨트롤러 서비스</h1>
+    <p class="lead">여러 프로세서가 함께 쓰는 공용 자원(레코드 리더·라이터, DB 연결 풀, SSL 설정 …)입니다. 흐름 전체의 서비스를 읽고,
+        새 서비스를 만듭니다. 이름을 누르면 활성화·비활성화와 수정을 할 수 있습니다.</p>
+
+    <section id="list" class="panel" th:attr="hx-get=${self}" hx-trigger="refresh from:body" hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${list})}"></div>
+        <table>
+            <thead><tr><th>이름</th><th>타입</th><th>상태</th><th>검증</th><th>참조</th><th>그룹</th></tr></thead>
+            <tbody>
+            <tr th:each="s : ${services}" th:with="c=${s.getComponent()}">
+                <td><a th:href="@{/services/{id}(id=${s.getId()})}" th:text="${c.getName()}"></a></td>
+                <td class="small" th:text="${#strings.substring(c.getType(), c.getType().lastIndexOf('.') + 1)}" th:title="${c.getType()}"></td>
+                <td><span class="badge" th:classappend="${c.getState()}" th:text="${c.getState()}"></span></td>
+                <td><span class="badge" th:classappend="${c.getValidationStatus()}" th:text="${c.getValidationStatus()}" th:title="${c.getValidationErrors()}"></span></td>
+                <td th:text="${c.getReferencingComponents() != null} ? ${#lists.size(c.getReferencingComponents())} : 0"></td>
+                <td class="small"><a th:href="@{/groups/{id}(id=${s.getParentGroupId()})}" th:text="${#strings.abbreviate(s.getParentGroupId(), 13)}"></a></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(services)}"><td colspan="6" class="muted">컨트롤러 서비스가 없습니다.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>동작</h2>
+    <div id="result"></div>
+
+    <section class="panel">
+        <h3>서비스 만들기 <code class="small">groups.createControllerService</code></h3>
+        <p class="muted small">만든 서비스는 DISABLED 상태입니다. 같은 그룹이나 하위 그룹의 프로세서만 이 서비스를 쓸 수 있습니다.
+            설치된 타입은 <span th:text="${#lists.size(types)}"></span>개입니다.</p>
+        <form class="stack" hx-post="/services/create" hx-target="#result">
+            <div class="row">
+                <label>그룹
+                    <select name="groupId">
+                        <option th:each="g : ${groupOptions}" th:value="${g.id()}" th:text="${g.name()}" th:selected="${g.id() == defaultGroup}"></option>
+                    </select></label>
+                <label>이름<input type="text" name="name" value="sdk-csv-reader"></label>
+            </div>
+            <label>타입<input type="text" name="type" list="service-types" value="org.apache.nifi.csv.CSVReader"></label>
+            <datalist id="service-types"><option th:each="t : ${types}" th:value="${t}"></option></datalist>
+            <label>속성 (한 줄에 key=value 하나, 비우면 기본값)
+                <textarea name="properties" rows="3">Value Separator=;</textarea></label>
+            <div class="actions"><button>createControllerService</button></div>
+        </form>
+    </section>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/services :: help}"></aside>
+</div>
+</body>
+</html>

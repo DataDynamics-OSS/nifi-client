@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('컨트롤러 서비스', '여러 프로세서가 함께 쓰는 공용 자원입니다.')}"></div>
+
+    <h3>컨트롤러 서비스란?</h3>
+    <p><span class="term">컨트롤러 서비스(controller service)</span>는 연결 풀, 레코드 리더·라이터, 인증서 설정처럼 여러 프로세서가 함께 쓰는
+        설정 묶음입니다. 프로세서는 속성 값으로 서비스의 <b>id</b>를 가리킵니다.</p>
+    <pre class="diagram">demo-json-reader (JsonTreeReader)  ◀── ConvertRecord.Record Reader
+demo-json-writer (JsonRecordSetWriter) ◀── ConvertRecord.Record Writer</pre>
+
+    <h3>상태</h3>
+    <ul>
+        <li><b>DISABLED</b>: 만든 직후. 설정을 고치거나 지울 수 있습니다.</li>
+        <li><b>ENABLED</b>: 프로세서가 쓸 수 있습니다. 고치거나 지울 수 없습니다(409).</li>
+        <li>참조하는 프로세서가 실행 중이면 비활성화할 수 없습니다. 먼저 프로세서를 멈추거나
+            <code>updateControllerServiceReferences</code>로 참조 컴포넌트를 한꺼번에 멈춥니다.</li>
+    </ul>
+
+    <h3>따라 해 보기</h3>
+    <ol>
+        <li>목록 화면에서 기본값으로 <code>sdk-csv-reader</code>를 만듭니다(DISABLED).</li>
+        <li>상세 화면에서 <b>ENABLED</b> → 설정 저장(409) → <b>DISABLED</b> → 저장(성공) → 삭제.</li>
+        <li>시드의 <code>demo-json-reader</code>에서 <b>getControllerServiceReferences</b>를 눌러 봅니다(참조 없음).</li>
+    </ol>
+
+    <h3>이 화면이 쓰는 API</h3>
+    <pre class="code" data-lang="java">List&lt;ControllerServiceEntity&gt; all = flow
+        .getControllerServicesFromGroup("root", false, true, false, false)
+        .getControllerServices();
+
+ControllerServiceEntity s = groups.createControllerService(new ControllerServiceEntity()
+        .revision(new RevisionDTO().version(0L))
+        .component(new ControllerServiceDTO()
+                .name("sdk-csv-reader").type("org.apache.nifi.csv.CSVReader")),
+        groupId);
+
+s = services.updateRunStatus(new ControllerServiceRunStatusEntity()
+        .revision(s.getRevision())
+        .state(ControllerServiceRunStatusEntity.StateEnum.ENABLED), s.getId());</pre>
+</aside>
+</body>
+</html>

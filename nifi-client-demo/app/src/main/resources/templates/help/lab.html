@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('장애 실험', '클라이언트가 실패를 어떻게 알려 주는지 일부러 실패시켜 봅니다.')}"></div>
+
+    <h3>생성된 클라이언트가 해 주는 것과 안 해 주는 것</h3>
+    <table>
+        <thead><tr><th></th><th>생성된 클라이언트</th><th>이 데모가 더한 것</th></tr></thead>
+        <tbody>
+        <tr><td>토큰</td><td><code>setAccessToken</code>만</td><td>401이면 로그인 후 재전송 (<code>NifiSession</code>)</td></tr>
+        <tr><td>재시도</td><td>없음 (OkHttp의 연결 재시도만)</td><td>없음. 필요하면 인터셉터로</td></tr>
+        <tr><td>예외</td><td><code>ApiException</code> 하나</td><td>화면에서 상태·메시지·원인을 나눠 보여 줌</td></tr>
+        <tr><td>TLS</td><td>okhttp4-gson에는 <code>setVerifyingSsl</code> 없음</td><td>OkHttp 빌더에 trust-all (로컬 전용)</td></tr>
+        <tr><td>기록·지표</td><td>디버그 로깅만</td><td>OkHttp 인터셉터로 요청 기록, Micrometer 타이머</td></tr>
+        </tbody>
+    </table>
+
+    <h3>① 토큰 만료</h3>
+    <p>NiFi의 JWT는 기본 12시간 뒤 만료됩니다. OkHttp는 401을 받으면 <code>Authenticator</code>를 부르고, 그것이 돌려준 요청을 다시 보냅니다.
+        이 앱의 Authenticator는 그때 <code>AccessApi.createAccessToken</code>으로 로그인합니다. 같은 요청을 두 번 넘게 보내지 않고,
+        로그인 요청 자체가 거절되면 포기합니다.</p>
+    <pre class="code" data-lang="java">OkHttpClient http = client.getHttpClient().newBuilder()
+        .authenticator((route, response) -&gt; {
+            if (response.priorResponse() != null) return null;     // 이미 한 번 다시 보냄
+            String token = new AccessApi(client).createAccessToken(user, password);
+            client.setAccessToken(token);
+            return response.request().newBuilder()
+                    .header("Authorization", "Bearer " + token).build();
+        })
+        .build();
+client.setHttpClient(http);</pre>
+
+    <h3>③ 예외를 구분하는 법</h3>
+    <ul>
+        <li><b>404</b>: 없는 id. <b>400</b>: 요청이 틀림(revision, 비밀번호). <b>401</b>: 토큰 없음·만료.</li>
+        <li><b>409</b>: 요청은 맞지만 지금 상태에서 할 수 없음(실행 중, 모르는 타입, 지원하지 않는 기능).</li>
+        <li><b>getCode() == 0</b>: 응답이 없음. <code>getCause()</code>가 <code>UnknownHostException</code>, <code>ConnectException</code>,
+            <code>SocketTimeoutException</code> 등입니다.</li>
+    </ul>
+
+    <h3>④ revision과 clientId</h3>
+    <p>NiFi는 변경 요청의 revision을 서버의 것과 비교합니다. version이 같으면 받아들이고, 다르더라도 <b>clientId가 마지막으로 고친 클라이언트와 같으면</b>
+        받아들입니다(같은 화면에서 연달아 저장하는 경우를 위해). 그래서 여러 프로그램이 같은 흐름을 고친다면 프로그램(또는 세션)마다
+        다른 clientId를 쓰세요. <code>flow.generateClientId()</code>로 받을 수 있습니다.</p>
+    <div class="warn">clientId를 비워 두면 서로 다른 프로그램도 충돌을 감지하지만, 같은 clientId를 여러 곳에서 공유하면 서로의 변경을 조용히 덮어씁니다.</div>
+</aside>
+</body>
+</html>

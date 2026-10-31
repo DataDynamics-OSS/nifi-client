@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('파라미터', '환경마다 다른 값을 흐름 밖으로 뺀 이름-값 묶음입니다.')}"></div>
+
+    <h3>파라미터 컨텍스트란?</h3>
+    <p><span class="term">파라미터 컨텍스트(parameter context)</span>는 이름-값의 묶음입니다. 프로세스 그룹에 하나를 연결하면,
+        그 그룹 안 컴포넌트의 속성에서 <code>#{이름}</code>으로 값을 씁니다. 개발·운영 NiFi에 같은 흐름을 두고 컨텍스트만 바꾸는 식으로 씁니다.</p>
+    <pre class="diagram">demo-params { env=demo, greeting=hello … }
+     ▲ 연결
+demo-flow
+  generate.Custom Text = {"greeting":"#{greeting}", …}
+  tag.env              = #{env}</pre>
+
+    <h3>값 바꾸기는 비동기</h3>
+    <p>파라미터를 쓰는 프로세서는 값이 바뀌는 동안 멈춰 있어야 합니다. 그래서 NiFi는 변경을 <b>update 요청</b>으로 받아
+        "멈춤 → 값 바꿈 → 다시 시작"을 차례로 하고, 클라이언트는 완료될 때까지 조회한 뒤 요청을 지웁니다.</p>
+    <div class="warn">생성된 <code>ParameterContextDTO</code>에는 <code>id</code> 설정자가 없습니다(스펙에서 읽기 전용). 그런데 NiFi는 update 요청 본문에
+        <code>component.id</code>를 요구합니다(없으면 400 <i>"Parameter Context's ID must be specified"</i>). 그래서 방금 읽은 DTO를 그대로 고쳐 보냅니다.</div>
+
+    <h3>따라 해 보기</h3>
+    <ol>
+        <li><code>demo-params</code>에서 <code>env=staging</code>으로 바꿉니다. 결과의 단계에서 <code>updateSteps</code>와 <code>percentCompleted</code>를 봅니다.</li>
+        <li><b>연결·큐</b>에서 새 FlowFile의 <code>env</code> 속성이 <code>staging</code>인지 확인합니다.</li>
+        <li>연결된 컨텍스트를 삭제해 409를 봅니다.</li>
+    </ol>
+
+    <h3>이 화면이 쓰는 API</h3>
+    <pre class="code" data-lang="java">ParameterContextEntity ctx = parameters.getParameterContext(id, false);
+ParameterContextUpdateRequestEntity update = parameters.submitParameterContextUpdate(
+        new ParameterContextEntity().id(id).revision(ctx.getRevision())
+                .component(ctx.getComponent().parameters(List.of(
+                        new ParameterEntity().parameter(new ParameterDTO().name("env").value("staging"))))),
+        id);
+String requestId = update.getRequest().getRequestId();
+try {
+    while (!update.getRequest().isComplete()) {
+        Thread.sleep(250);
+        update = parameters.getParameterContextUpdate(id, requestId);
+    }
+    if (update.getRequest().getFailureReason() != null) { /* 실패 */ }
+} finally {
+    parameters.deleteUpdateRequest(id, requestId, null);
+}</pre>
+</aside>
+</body>
+</html>

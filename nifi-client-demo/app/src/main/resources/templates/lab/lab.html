@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('장애 실험')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('lab')}"></header>
+<div class="layout">
+<main>
+    <h1>장애 실험</h1>
+    <p class="lead">토큰 만료, 시간 초과, 여러 종류의 오류, revision 충돌을 실제 NiFi에 일부러 일으켜 봅니다. 실험용 클라이언트는
+        같은 주소로 따로 만든 <code>ApiClient</code>입니다(<code>LabClients</code>). 결과마다 HTTP 시도가 모두 보입니다.</p>
+    <div class="alert error" th:unless="${seeded}">데모 데이터가 아직 없습니다. 일부 실험(③의 일부, ④)은 시드가 끝난 뒤에 됩니다.</div>
+
+    <div class="grid2">
+        <section class="panel">
+            <h3>① 토큰 만료와 재로그인</h3>
+            <p class="muted small">토큰을 NiFi가 받지 않는 값으로 바꾼 뒤 평소처럼 <code>flow.getAboutInfo()</code>를 부릅니다.
+                요청 표에 <b>401 → POST /access/token → 같은 요청(시도 2) 200</b>이 차례로 보입니다. 호출한 코드는 예외를 보지 않습니다.
+                이것은 생성된 클라이언트가 아니라 이 앱이 OkHttp에 붙인 <code>Authenticator</code>(<code>NifiSession</code>)가 하는 일입니다.</p>
+            <div class="actions"><button hx-post="/lab/expire" hx-target="#expire-result">토큰 망가뜨리고 호출</button></div>
+            <div id="expire-result"></div>
+        </section>
+
+        <section class="panel">
+            <h3>② 시간 초과</h3>
+            <p class="muted small">읽기 시간 제한 1ms인 클라이언트로 부릅니다. <code>ApiException</code>의 <code>getCode()</code>는 0이고
+                원인은 <code>SocketTimeoutException</code>입니다. 생성된 클라이언트에는 재시도 정책이 없으므로, 필요하면 OkHttp 인터셉터나
+                호출하는 쪽에서 직접 다시 시도해야 합니다.</p>
+            <div class="actions"><button hx-post="/lab/timeout" hx-target="#timeout-result">1ms 시간 제한으로 GET</button></div>
+            <div id="timeout-result"></div>
+        </section>
+    </div>
+
+    <section class="panel">
+        <h3>③ 예외 모음</h3>
+        <p class="muted small">생성된 클라이언트는 모든 실패를 <code>ApiException</code> 하나로 던집니다. 버튼마다 실패 하나를 일부러 일으킵니다.
+            예외 타입은 모두 같고 <code>getCode()</code>와 NiFi 메시지(<code>getResponseBody()</code>)만 다릅니다.</p>
+        <div class="actions">
+            <button class="secondary" hx-post="/lab/error/404" hx-target="#error-result">404 · 없는 프로세서</button>
+            <button class="secondary" hx-post="/lab/error/400-revision" hx-target="#error-result">400 · 만들 때 revision 1</button>
+            <button class="secondary" hx-post="/lab/error/400-login" hx-target="#error-result">400 · 틀린 비밀번호</button>
+            <button class="secondary" hx-post="/lab/error/401" hx-target="#error-result">401 · 토큰 없음</button>
+            <button class="secondary" hx-post="/lab/error/409-running" hx-target="#error-result">409 · 실행 중인 프로세서 삭제</button>
+            <button class="secondary" hx-post="/lab/error/409-type" hx-target="#error-result">409 · 모르는 프로세서 타입</button>
+            <button class="secondary" hx-post="/lab/error/409-tenants" hx-target="#error-result">409 · single-user에서 사용자 목록</button>
+            <button class="secondary" hx-post="/lab/error/transport" hx-target="#error-result">연결 불가 · 없는 호스트</button>
+        </div>
+        <div id="error-result"></div>
+    </section>
+
+    <section class="panel">
+        <h3>④ revision 충돌 (낙관적 잠금)</h3>
+        <p class="muted small">멈춰 있는 <code>log</code> 프로세서를 두 번 읽어 사본 A, B를 만듭니다. A(clientId <code>copy-a</code>)로 고치면 서버 version이 오르고,
+            낡은 B(clientId <code>copy-b</code>)로 고치면 400 <i>"is not the most up-to-date revision"</i>입니다.
+            그런데 같은 낡은 version이라도 clientId가 마지막으로 고친 <code>copy-a</code>면 NiFi는 받아 줍니다. 마지막에 comments를 원래대로 돌려놓습니다.</p>
+        <div class="actions"><button hx-post="/lab/locking" hx-target="#locking-result" th:disabled="${!seeded}">동시 수정 실행</button></div>
+        <div id="locking-result"></div>
+    </section>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/lab :: help}"></aside>
+</div>
+</body>
+</html>

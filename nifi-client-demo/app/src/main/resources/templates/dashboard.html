@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('대시보드')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('dashboard')}"></header>
+<div class="layout">
+<main>
+    <h1>대시보드</h1>
+    <p class="lead"><code>nifi.*</code> 설정으로 만든 <code>ApiClient</code> 빈의 연결·로그인 상태와 NiFi의 현재 상태입니다.
+        아래 값은 모두 화면을 열 때 실제로 조회한 것이고, 각 값 뒤의 클라이언트 호출을 볼 수 있습니다.</p>
+
+    <section class="panel">
+        <h3>연결</h3>
+        <table>
+            <thead><tr><th>빈</th><th>basePath</th><th>인증</th><th>토큰</th><th>확인</th></tr></thead>
+            <tbody>
+            <tr>
+                <td><code>ApiClient</code></td>
+                <td><code th:text="${basePath}"></code>
+                    <span class="badge warn" th:if="${props.insecureTls()}" title="nifi.insecure-tls=true">인증서 검증 안 함</span></td>
+                <td><code th:text="${props.authDescription()}"></code></td>
+                <td>
+                    <th:block th:if="${login.hasToken()}">
+                        <code th:text="${login.tokenPreview()}"></code>
+                        <div class="small muted" th:if="${login.expiresAt() != null}" th:text="'만료 ' + ${login.expiresAt()}"></div>
+                        <div class="small muted" th:text="'로그인 ' + ${login.logins()} + '회, 마지막 ' + ${login.loggedInAt()}"></div>
+                    </th:block>
+                    <span class="muted small" th:unless="${login.hasToken()}">없음 (첫 401에 로그인)</span>
+                </td>
+                <td><span class="badge" th:classappend="${about.ok()} ? 'UP' : 'DOWN'"
+                          th:text="${about.ok()} ? 'UP' : 'HTTP ' + ${about.failure().status() ?: '-'}"></span></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="actions" th:if="${props.secured()}" style="margin-top: 8px">
+            <button class="secondary" hx-post="/login" hx-target="#login-result">다시 로그인</button>
+        </div>
+        <div id="login-result"></div>
+        <details>
+            <summary>확인에 쓴 클라이언트 호출</summary>
+            <div th:replace="~{fragments/call :: panel(${about})}"></div>
+            <div th:replace="~{fragments/call :: panel(${user})}"></div>
+        </details>
+    </section>
+
+    <div class="grid2">
+        <section class="panel">
+            <h3>NiFi</h3>
+            <dl class="kv" th:if="${about.ok()}" th:with="a=${about.result().getAbout()}">
+                <dt>버전</dt><dd><strong th:text="${a.getVersion()}"></strong></dd>
+                <dt>빌드</dt><dd th:text="${a.getBuildTag()} + ' · ' + ${a.getBuildTimestamp()}"></dd>
+                <dt>시간대</dt><dd th:text="${a.getTimezone()}"></dd>
+                <th:block th:if="${user.ok()}" th:with="u=${user.result()}">
+                    <dt>현재 사용자</dt><dd><code th:text="${u.getIdentity()}"></code>
+                        <span class="badge" th:if="${u.isAnonymous()}">anonymous</span></dd>
+                    <dt>흐름 쓰기 권한</dt><dd><span class="badge" th:classappend="${u.getControllerPermissions().isCanWrite()}"
+                                                th:text="${u.getControllerPermissions().isCanWrite()}"></span></dd>
+                </th:block>
+            </dl>
+            <p class="muted" th:unless="${about.ok()}">NiFi에 연결하지 못했습니다. 위 "확인에 쓴 클라이언트 호출"의 오류를 보세요.</p>
+
+            <h4>컨트롤러 상태 <code class="small">flow.getControllerStatus()</code></h4>
+            <table th:if="${status.ok()}" th:with="s=${status.result().getControllerStatus()}">
+                <tr><th>실행 중</th><th>정지</th><th>잘못됨</th><th>비활성</th><th>활성 스레드</th><th>큐</th></tr>
+                <tr>
+                    <td><span class="badge RUNNING" th:text="${s.getRunningCount()}"></span></td>
+                    <td><span class="badge STOPPED" th:text="${s.getStoppedCount()}"></span></td>
+                    <td><span class="badge" th:classappend="${s.getInvalidCount() > 0} ? 'INVALID'" th:text="${s.getInvalidCount()}"></span></td>
+                    <td th:text="${s.getDisabledCount()}"></td>
+                    <td th:text="${s.getActiveThreadCount()}"></td>
+                    <td th:text="${s.getQueued()}"></td>
+                </tr>
+            </table>
+            <div th:unless="${status.ok()}" th:replace="~{fragments/call :: panel(${status})}"></div>
+
+            <h4>시스템 진단 <code class="small">diagnostics.getSystemDiagnostics(…)</code></h4>
+            <dl class="kv" th:if="${diag.ok()}" th:with="d=${diag.result().getSystemDiagnostics().getAggregateSnapshot()}">
+                <dt>가동 시간</dt><dd th:text="${d.getUptime()}"></dd>
+                <dt>힙</dt><dd th:text="${d.getUsedHeap()} + ' / ' + ${d.getMaxHeap()} + ' (' + ${d.getHeapUtilization()} + ')'"></dd>
+                <dt>스레드</dt><dd th:text="${d.getTotalThreads()} + ' (데몬 ' + ${d.getDaemonThreads()} + ')'"></dd>
+                <dt>CPU</dt><dd th:text="${d.getAvailableProcessors()} + '개, load ' + ${d.getProcessorLoadAverage()}"></dd>
+                <dt>FlowFile 저장소</dt><dd th:text="${d.getFlowFileRepositoryStorageUsage().getUtilization()} + ' 사용'"></dd>
+            </dl>
+            <div th:unless="${diag.ok()}" th:replace="~{fragments/call :: panel(${diag})}"></div>
+        </section>
+
+        <section class="panel">
+            <h3>데모 데이터</h3>
+            <p class="muted small">시작할 때 클라이언트로 넣은 작은 흐름입니다: 파라미터 컨텍스트 <code>demo-params</code>, 프로세스 그룹 <code>demo-flow</code>,
+                프로세서 <code>generate → tag → log</code>, 컨트롤러 서비스 두 개. 모든 단계가 "없을 때만 만들기"이므로 다시 실행해도 안전합니다.</p>
+            <p>
+                상태: <span class="badge" th:text="${seeder.state()}"
+                              th:classappend="${seeder.state().name() == 'DONE'} ? 'ok' : (${seeder.state().name() == 'FAILED'} ? 'err' : 'warn')"></span>
+                <span th:if="${seeder.finishedAt() != null}" class="small muted" th:text="'완료 ' + ${seeder.finishedAt()}"></span>
+                <a th:if="${seeder.groupId() != null}" th:href="@{/groups/{id}(id=${seeder.groupId()})}">demo-flow 열기 &rarr;</a>
+            </p>
+            <p th:if="${seeder.message() != null}" class="small" th:text="${seeder.message()}"></p>
+            <form method="post" th:action="@{/seed}">
+                <button type="submit" th:disabled="${seeder.isRunning()}">시드 다시 실행</button>
+            </form>
+            <table>
+                <tr th:each="st : ${seeder.steps()}">
+                    <td><span class="badge" th:classappend="${st.call().ok()} ? 'ok' : 'err'" th:text="${st.call().ok()} ? '성공' : '실패'"></span></td>
+                    <td th:text="${st.title()}"></td>
+                    <td class="small muted" th:text="${st.call().ok()} ? '' : ${st.call().errorMessage()}"></td>
+                </tr>
+            </table>
+            <details th:unless="${#lists.isEmpty(seeder.steps())}">
+                <summary>시드가 실행한 클라이언트 호출</summary>
+                <th:block th:each="st : ${seeder.steps()}"><div th:replace="~{fragments/call :: panel(${st.call()})}"></div></th:block>
+            </details>
+        </section>
+    </div>
+
+    <section class="panel">
+        <h3>게시판 (bulletin) <span class="muted small">최근 10건</span></h3>
+        <p class="muted small">프로세서와 서비스가 남긴 경고·오류입니다. NiFi UI의 오른쪽 위 게시판과 같습니다.</p>
+        <table th:if="${bulletins.ok()}">
+            <thead><tr><th>시각</th><th>수준</th><th>출처</th><th>메시지</th></tr></thead>
+            <tr th:each="b : ${bulletins.result().getBulletinBoard().getBulletins()}" th:if="${b.getBulletin() != null}">
+                <td class="small" th:text="${b.getBulletin().getTimestamp()}"></td>
+                <td><span class="badge" th:classappend="${b.getBulletin().getLevel()}" th:text="${b.getBulletin().getLevel()}"></span></td>
+                <td th:text="${b.getBulletin().getSourceName()}"></td>
+                <td class="small" th:text="${b.getBulletin().getMessage()}"></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(bulletins.result().getBulletinBoard().getBulletins())}"><td colspan="4" class="muted">게시물 없음</td></tr>
+        </table>
+        <div th:unless="${bulletins.ok()}" th:replace="~{fragments/call :: panel(${bulletins})}"></div>
+    </section>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/dashboard :: help}"></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('연결·큐')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('queues')}"></header>
+<div class="layout">
+<main>
+    <h1>연결·큐</h1>
+    <p class="lead">연결(connection)은 프로세서 사이의 큐입니다. 흐름 전체의 큐 크기를 상태 API 한 번으로 읽고(<code>recursive=true</code>),
+        새 연결을 만듭니다. 연결을 누르면 큐 안의 FlowFile을 보고 비울 수 있습니다.</p>
+
+    <section id="list" class="panel" th:attr="hx-get=${self}" hx-trigger="refresh from:body" hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${status})}"></div>
+        <table>
+            <thead><tr><th>출발 → 도착</th><th>큐</th><th>사용률 (개수 / 크기)</th><th>입력 / 출력 (5분)</th><th>그룹</th></tr></thead>
+            <tbody>
+            <tr th:each="c : ${connections}">
+                <td><a th:href="@{/queues/{id}(id=${c.getId()})}" th:text="${c.getSourceName()} + ' → ' + ${c.getDestinationName()}"></a>
+                    <span class="small muted" th:if="${!#strings.isEmpty(c.getName())}" th:text="'(' + ${c.getName()} + ')'"></span></td>
+                <td><strong th:text="${c.getQueued()}"></strong></td>
+                <td th:text="${c.getPercentUseCount()} + '% / ' + ${c.getPercentUseBytes()} + '%'"></td>
+                <td class="small" th:text="${c.getInput()} + ' / ' + ${c.getOutput()}"></td>
+                <td class="small"><a th:href="@{/groups/{id}(id=${c.getGroupId()})}" th:text="${#strings.abbreviate(c.getGroupId(), 13)}"></a></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(connections)}"><td colspan="5" class="muted">연결이 없습니다.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>동작</h2>
+    <div id="result"></div>
+
+    <section class="panel">
+        <h3>연결 만들기 <code class="small">groups.createConnection</code></h3>
+        <p class="muted small">출발 프로세서의 관계(relationship) 중 무엇을 이 큐로 보낼지 고릅니다. 출발과 도착이 같은 그룹에 있어야 합니다.
+            프로세서끼리가 아니면(포트, 깔때기) <code>ConnectableDTO.TypeEnum</code>만 바꾸면 됩니다.</p>
+        <form class="stack" hx-post="/queues/create" hx-target="#result">
+            <div class="row">
+                <label>출발
+                    <select name="sourceId"><option th:each="p : ${processors}" th:value="${p.getId()}"
+                                                    th:text="${p.getComponent().getName()} + ' (' + ${p.getComponent().getState()} + ')'"
+                                                    th:selected="${p.getComponent().getName() == 'generate'}"></option></select></label>
+                <label>도착
+                    <select name="destinationId"><option th:each="p : ${processors}" th:value="${p.getId()}"
+                                                         th:text="${p.getComponent().getName()} + ' (' + ${p.getComponent().getState()} + ')'"
+                                                         th:selected="${p.getComponent().getName() == 'log'}"></option></select></label>
+                <label>관계 (쉼표로 구분)<input type="text" name="relationships" value="success"></label>
+            </div>
+            <div class="actions"><button>createConnection</button></div>
+        </form>
+    </section>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/queues-list :: help}"></aside>
+</div>
+</body>
+</html>

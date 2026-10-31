@@ -25,6 +25,7 @@ nifi-1.x/ , nifi-2.x/
   java/                            generated Java client (Maven)
   python/                          generated Python client (setup.py)
   it/                              integration tests (Java JUnit 5 / Python pytest, docker-compose)
+nifi-client-demo/                  web demo of the 2.x Java client (docker compose)
 scripts/generate.sh                regenerates java/ and python/
 scripts/patch_spec.py              fixes up the 2.x spec
 ```
@@ -146,3 +147,11 @@ NIFI_URL=https://localhost:39443/nifi-api NIFI_USERNAME=admin NIFI_PASSWORD=ctsB
 ```
 
 For 1.x, run the same steps from `nifi-1.x/it` with ports 38080/38443.
+
+## Demo
+
+[nifi-client-demo](nifi-client-demo/README.md) starts NiFi 2.12.0 with docker compose and runs a Spring Boot web UI (Korean) that calls the generated 2.x Java client from every screen, showing the client code, each HTTP request with its bodies, and the result or `ApiException`.
+
+```bash
+cd nifi-client-demo && docker compose up -d --build --wait && open http://localhost:8080
+```

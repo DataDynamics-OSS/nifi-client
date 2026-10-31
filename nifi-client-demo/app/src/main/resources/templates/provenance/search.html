@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('프로비넌스')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('provenance')}"></header>
+<div class="layout">
+<main>
+    <h1>프로비넌스</h1>
+    <p class="lead">FlowFile마다 언제, 어느 컴포넌트에서, 무슨 일(생성·속성 변경·전송·삭제 …)이 있었는지 남은 기록입니다.
+        검색은 NiFi의 비동기 요청이므로 결과 위에 단계가 차례로 보입니다.</p>
+
+    <section class="panel">
+        <h3>검색 <code class="small">provenance.submitProvenanceRequest</code></h3>
+        <form class="stack" hx-post="/provenance/query" hx-target="#results">
+            <div class="row">
+                <label>컴포넌트 (비우면 전체)
+                    <select name="componentId">
+                        <option value="">전체</option>
+                        <option th:each="p : ${processors}" th:value="${p.getId()}" th:text="${p.getComponent().getName()}"
+                                th:selected="${p.getId() == componentId}"></option>
+                    </select></label>
+                <label>최대 결과<input type="number" name="maxResults" value="20" min="1" max="1000"></label>
+            </div>
+            <div class="actions"><button>검색</button></div>
+        </form>
+        <details th:if="${options.ok()}">
+            <summary>검색할 수 있는 필드 <code class="small">getSearchOptions()</code></summary>
+            <table>
+                <thead><tr><th>id (searchTerms의 키)</th><th>이름</th><th>타입</th></tr></thead>
+                <tr th:each="f : ${options.result().getProvenanceOptions().getSearchableFields()}">
+                    <td><code th:text="${f.getId()}"></code></td><td th:text="${f.getLabel()}"></td><td class="small" th:text="${f.getType()}"></td>
+                </tr>
+            </table>
+        </details>
+    </section>
+
+    <div id="results" th:fragment="results">
+        <th:block th:if="${steps != null}">
+            <details><summary th:text="'비동기 요청 단계 (' + ${#lists.size(steps)} + ')'"></summary>
+                <th:block th:each="s : ${steps}"><div th:replace="~{fragments/call :: panel(${s})}"></div></th:block>
+            </details>
+            <section class="panel">
+                <h3>이벤트 <span class="muted small" th:text="'(' + ${#lists.size(events)} + ' / 전체 ' + ${total} + ')'"></span></h3>
+                <table>
+                    <thead><tr><th>id</th><th>시각</th><th>종류</th><th>컴포넌트</th><th>FlowFile</th><th>크기</th></tr></thead>
+                    <tr th:each="e : ${events}">
+                        <td><a th:href="@{/provenance/events/{id}(id=${e.getEventId()})}" th:text="${e.getEventId()}"></a></td>
+                        <td class="small" th:text="${e.getEventTime()}"></td>
+                        <td><span class="badge" th:text="${e.getEventType()}"></span></td>
+                        <td th:text="${e.getComponentName()}"></td>
+                        <td class="small"><code th:text="${#strings.abbreviate(e.getFlowFileUuid(), 13)}"></code></td>
+                        <td class="small" th:text="${e.getFileSize()}"></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(events)}"><td colspan="6" class="muted">이벤트가 없습니다. 흐름이 돌기 시작한 직후라면 잠시 후 다시 검색하세요.</td></tr>
+                </table>
+            </section>
+            <section th:replace="~{fragments :: actionTrace}"></section>
+        </th:block>
+    </div>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/provenance :: help}"></aside>
+</div>
+</body>
+</html>

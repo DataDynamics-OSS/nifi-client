@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('프로세서', '데이터를 만들고, 바꾸고, 보내는 흐름의 일꾼입니다.')}"></div>
+
+    <h3>프로세서란?</h3>
+    <p><span class="term">프로세서(processor)</span>는 FlowFile(데이터 한 덩어리 + 속성)을 받아 처리한 뒤 <b>관계(relationship)</b>
+        중 하나로 내보냅니다. 예: <code>GenerateFlowFile</code>은 데이터를 만들어 <code>success</code>로, <code>UpdateAttribute</code>는
+        속성을 바꿔 <code>success</code>로 보냅니다.</p>
+    <ul>
+        <li>모든 관계는 다른 컴포넌트에 <b>연결</b>되거나 <b>자동 종료(auto-terminate)</b>여야 합니다. 아니면 INVALID입니다.</li>
+        <li><b>예약 주기(scheduling period)</b>: 타이머 방식에서 몇 초마다 실행할지. 예: <code>5 sec</code>, <code>1 min</code>.</li>
+        <li>속성 값에는 NiFi 표현식(<code>${now()}</code>)과 파라미터(<code>#{env}</code>)를 쓸 수 있습니다.</li>
+    </ul>
+
+    <h3>이 화면 사용법</h3>
+    <ol>
+        <li>기본값 그대로 <b>createProcessor</b>를 누릅니다. <code>demo-flow</code>에 <code>sdk-generate</code>가 생깁니다.</li>
+        <li>목록이 새로 고쳐지고, 검증이 끝나면 상태가 VALID가 됩니다(만든 직후에는 VALIDATING일 수 있음).</li>
+        <li>이름을 눌러 상세 화면에서 RUNNING → STOPPED → 삭제를 해 봅니다.</li>
+        <li>자동 종료를 비우고 만들어 보세요. INVALID가 되고, 상세 화면에 검증 오류가 보입니다.</li>
+    </ol>
+    <div class="tip">타입 이름이 틀리면 409 <i>"… is not known to this NiFi instance"</i>입니다. 확장이 여러 버전이면 <code>bundle</code>도 지정해야 합니다.</div>
+
+    <h3>이 화면이 쓰는 API</h3>
+    <pre class="code" data-lang="java">// 흐름 전체의 프로세서 (하위 그룹 포함)
+List&lt;ProcessorEntity&gt; all = groups.getProcessors("root", true).getProcessors();
+
+// 설치된 프로세서 타입
+List&lt;DocumentedTypeDTO&gt; types = flow.getProcessorTypes(null, null, null).getProcessorTypes();
+
+ProcessorEntity created = groups.createProcessor(new ProcessorEntity()
+        .revision(new RevisionDTO().version(0L))
+        .component(new ProcessorDTO()
+                .name("sdk-generate")
+                .type("org.apache.nifi.processors.standard.GenerateFlowFile")
+                .config(new ProcessorConfigDTO()
+                        .schedulingPeriod("10 sec")
+                        .properties(Map.of("Custom Text", "hello"))
+                        .autoTerminatedRelationships(List.of("success")))),
+        groupId);</pre>
+</aside>
+</body>
+</html>

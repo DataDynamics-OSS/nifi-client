@@ -25,6 +25,7 @@ nifi-1.x/ , nifi-2.x/
   java/                            생성된 Java 클라이언트 (Maven)
   python/                          생성된 Python 클라이언트 (setup.py)
   it/                              통합 테스트 (Java JUnit 5 / Python pytest, docker-compose)
+nifi-client-demo/                  2.x Java 클라이언트 웹 데모 (docker compose)
 scripts/generate.sh                java/, python/ 재생성
 scripts/patch_spec.py              2.x 스펙 보정
 ```
@@ -146,3 +147,11 @@ NIFI_URL=https://localhost:39443/nifi-api NIFI_USERNAME=admin NIFI_PASSWORD=ctsB
 ```
 
 1.x는 `nifi-1.x/it`에서 포트만 38080/38443으로 바꿔 같은 방법으로 실행한다.
+
+## 데모
+
+[nifi-client-demo](nifi-client-demo/README.md)는 docker compose로 NiFi 2.12.0을 띄우고, 생성된 2.x Java 클라이언트를 화면마다 호출하는 Spring Boot 웹 UI를 실행한다. 실행한 클라이언트 코드, 시도별 HTTP 요청과 본문, 결과 또는 `ApiException`을 함께 보여 준다.
+
+```bash
+cd nifi-client-demo && docker compose up -d --build --wait && open http://localhost:8080
+```

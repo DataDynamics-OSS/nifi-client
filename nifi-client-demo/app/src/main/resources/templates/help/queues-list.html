@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('연결·큐', '프로세서 사이에서 FlowFile이 기다리는 곳입니다.')}"></div>
+
+    <h3>연결이란?</h3>
+    <p><span class="term">연결(connection)</span>은 출발 컴포넌트의 관계 하나 이상을 도착 컴포넌트로 잇는 <b>큐</b>입니다.
+        도착 프로세서가 멈춰 있으면 FlowFile이 쌓이고, <b>배압(back pressure)</b> 임계값(기본 10,000개 또는 1 GB)에 닿으면
+        출발 프로세서가 더 이상 실행되지 않습니다.</p>
+    <pre class="diagram">generate ─success─▶ [큐] ─▶ tag ─success─▶ [큐 쌓임] ─▶ log (정지)</pre>
+
+    <h3>상태 API 한 번으로 전체 보기</h3>
+    <p>그룹마다 연결을 따로 읽는 대신 <code>flow.getProcessGroupStatus("root", true, …)</code> 한 번으로 모든 그룹의 큐 크기를 받습니다.
+        응답은 그룹마다 중첩되어 있으므로 하위 그룹(<code>processGroupStatusSnapshots</code>)까지 내려가며 모읍니다.</p>
+
+    <h3>이 화면 사용법</h3>
+    <ol>
+        <li><code>tag → log</code> 큐가 시간이 지날수록 커지는 것을 봅니다(<code>log</code>가 정지 상태).</li>
+        <li>연결을 눌러 상세 화면에서 큐 목록과 FlowFile 내용을 봅니다.</li>
+        <li><b>연결 만들기</b>로 <code>generate → log</code>를 이어 봅니다. 같은 관계를 두 연결로 보내면 FlowFile이 복제됩니다.</li>
+    </ol>
+
+    <h3>이 화면이 쓰는 API</h3>
+    <pre class="code" data-lang="java">ProcessGroupStatusSnapshotDTO root = flow.getProcessGroupStatus("root", true, false, null)
+        .getProcessGroupStatus().getAggregateSnapshot();
+for (ConnectionStatusSnapshotEntity c : root.getConnectionStatusSnapshots()) {
+    System.out.println(c.getConnectionStatusSnapshot().getQueued());
+}
+
+groups.createConnection(new ConnectionEntity()
+        .revision(new RevisionDTO().version(0L))
+        .component(new ConnectionDTO()
+                .source(new ConnectableDTO().id(sourceId).groupId(groupId)
+                        .type(ConnectableDTO.TypeEnum.PROCESSOR))
+                .destination(new ConnectableDTO().id(destinationId).groupId(groupId)
+                        .type(ConnectableDTO.TypeEnum.PROCESSOR))
+                .selectedRelationships(List.of("success"))),
+        groupId);</pre>
+</aside>
+</body>
+</html>

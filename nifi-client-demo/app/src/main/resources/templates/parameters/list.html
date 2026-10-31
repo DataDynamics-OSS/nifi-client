@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('파라미터')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('parameters')}"></header>
+<div class="layout">
+<main>
+    <h1>파라미터 컨텍스트</h1>
+    <p class="lead">환경마다 다른 값(주소, 계정, 경로 …)을 흐름 밖으로 뺀 이름-값 묶음입니다. 프로세스 그룹에 연결하면 그 안의 속성에서
+        <code>#{이름}</code>으로 씁니다. 목록을 읽고 새 컨텍스트를 만듭니다.</p>
+
+    <section id="list" class="panel" th:attr="hx-get=${self}" hx-trigger="refresh from:body" hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${list})}"></div>
+        <table>
+            <thead><tr><th>이름</th><th>파라미터</th><th>연결된 그룹</th><th>설명</th></tr></thead>
+            <tbody>
+            <tr th:each="c : ${contexts}">
+                <td><a th:href="@{/parameters/{id}(id=${c.getId()})}" th:text="${c.getComponent().getName()}"></a></td>
+                <td class="small"><span th:each="p : ${c.getComponent().getParameters()}" class="badge" th:text="${p.getParameter().getName()}"></span></td>
+                <td th:text="${c.getComponent().getBoundProcessGroups() != null} ? ${#lists.size(c.getComponent().getBoundProcessGroups())} : 0"></td>
+                <td class="small" th:text="${c.getComponent().getDescription()}"></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(contexts)}"><td colspan="4" class="muted">파라미터 컨텍스트가 없습니다.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>동작</h2>
+    <div id="result"></div>
+
+    <section class="panel">
+        <h3>컨텍스트 만들기 <code class="small">parameters.createParameterContext</code></h3>
+        <p class="muted small">민감(sensitive) 파라미터는 저장된 뒤 다시 읽을 수 없고, 민감 속성에서만 참조할 수 있습니다. 화면의 코드에도 값을 가립니다.</p>
+        <form class="stack" hx-post="/parameters/create" hx-target="#result">
+            <div class="row">
+                <label>이름<input type="text" name="name" value="sdk-params"></label>
+                <label>설명<input type="text" name="description" value="Created from the client demo"></label>
+            </div>
+            <label>파라미터 (한 줄에 이름=값 하나)
+                <textarea name="values" rows="3">db.url=jdbc:postgresql://db.example:5432/app
+db.password=secret-value</textarea></label>
+            <label>민감 파라미터 이름 (쉼표로 구분)<input type="text" name="sensitive" value="db.password"></label>
+            <div class="actions"><button>createParameterContext</button></div>
+        </form>
+    </section>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/parameters :: help}"></aside>
+</div>
+</body>
+</html>

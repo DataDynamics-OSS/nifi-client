@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: nifi-client-demo
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8080
+
+# NiFi connection. The generated client has no Spring Boot starter, so config/NifiClientConfig builds the
+# ApiClient bean from these properties. Docker compose sets the login; the "local" profile points at the
+# port published on localhost.
+nifi:
+  url: ${NIFI_URL:https://nifi:8443/nifi-api}
+  username: ${NIFI_USERNAME:admin}
+  password: ${NIFI_PASSWORD}
+  insecure-tls: true        # the NiFi image uses a self-signed certificate
+  connect-timeout: 10s
+  read-timeout: 60s
+
+demo:
+  seed:
+    enabled: true
+    timeout: 5m
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+logging:
+  level:
+    io.datadynamics.nifi: INFO
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+nifi:
+  url: https://localhost:8443/nifi-api

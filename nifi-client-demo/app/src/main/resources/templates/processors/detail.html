@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head(${processor != null} ? ${processor.getComponent().getName()} : '프로세서')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('processors')}"></header>
+<div class="layout">
+<main>
+    <p class="small"><a th:href="@{/processors}">&larr; 프로세서</a></p>
+    <h1 th:text="${processor != null} ? ${processor.getComponent().getName()} : '프로세서'"></h1>
+    <p class="lead" th:if="${processor != null}"><code th:text="${processor.getComponent().getType()}"></code> ·
+        <a th:href="@{/groups/{id}(id=${processor.getComponent().getParentGroupId()})}">그룹 &rarr;</a> ·
+        <a th:href="@{/provenance(componentId=${processor.getId()})}">이 프로세서의 프로비넌스 &rarr;</a></p>
+
+    <section id="list" th:attr="hx-get=@{/processors/{id}(id=${processor != null ? processor.getId() : ''})}" hx-trigger="refresh from:body"
+             hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${get})}"></div>
+        <section class="panel" th:if="${processor != null}" th:with="c=${processor.getComponent()}">
+            <dl class="kv">
+                <dt>상태</dt><dd><span class="badge" th:classappend="${c.getState()}" th:text="${c.getState()}"></span>
+                    <span class="muted small" th:text="'활성 스레드 ' + ${processor.getStatus().getAggregateSnapshot().getActiveThreadCount()}"></span></dd>
+                <dt>검증</dt><dd><span class="badge" th:classappend="${c.getValidationStatus()}" th:text="${c.getValidationStatus()}"></span>
+                    <ul class="small" th:unless="${#lists.isEmpty(c.getValidationErrors())}"><li th:each="e : ${c.getValidationErrors()}" th:text="${e}"></li></ul></dd>
+                <dt>revision</dt><dd><code th:text="'version ' + ${processor.getRevision().getVersion()} + ', clientId ' + ${processor.getRevision().getClientId()}"></code></dd>
+                <dt>예약</dt><dd th:text="${c.getConfig().getSchedulingStrategy()} + ' · ' + ${c.getConfig().getSchedulingPeriod()} + ' · 동시 작업 ' + ${c.getConfig().getConcurrentlySchedulableTaskCount()}"></dd>
+                <dt>관계</dt><dd><span th:each="r : ${c.getRelationships()}" class="badge" th:classappend="${r.isAutoTerminate()} ? 'warn'"
+                                     th:text="${r.getName()} + (${r.isAutoTerminate()} ? ' (자동 종료)' : '')"></span></dd>
+                <dt>5분 통계</dt><dd th:with="s=${processor.getStatus().getAggregateSnapshot()}"
+                                   th:text="'입력 ' + ${s.getInput()} + ', 출력 ' + ${s.getOutput()} + ', 작업 ' + ${s.getTasks()}"></dd>
+            </dl>
+            <h4>속성</h4>
+            <table>
+                <thead><tr><th>이름</th><th>값</th><th>설명</th></tr></thead>
+                <tr th:each="e : ${c.getConfig().getProperties()}" th:with="d=${c.getConfig().getDescriptors().get(e.key)}">
+                    <td><code th:text="${e.key}"></code><span class="badge warn" th:if="${d != null and d.isDynamic()}">dynamic</span></td>
+                    <td class="small pre-wrap" th:text="${e.value} ?: '(없음)'"></td>
+                    <td class="small muted" th:text="${d != null} ? ${#strings.abbreviate(d.getDescription(), 120)} : ''"></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <th:block th:if="${processor != null}">
+        <h2>동작</h2>
+        <div id="result"></div>
+        <section class="panel">
+            <h3>실행 상태 <code class="small">processors.updateRunStatus</code></h3>
+            <p class="muted small">상태를 바꿀 때도 최신 revision이 필요하므로 먼저 <code>getProcessor</code>로 읽습니다. <b>RUN_ONCE</b>는 한 번만 실행하고 멈춥니다.
+                INVALID인 프로세서는 시작할 수 없습니다.</p>
+            <div class="actions">
+                <button th:attr="hx-post=@{/processors/{id}/run-status(id=${processor.getId()},state='RUNNING')}" hx-target="#result">RUNNING</button>
+                <button class="secondary" th:attr="hx-post=@{/processors/{id}/run-status(id=${processor.getId()},state='STOPPED')}" hx-target="#result">STOPPED</button>
+                <button class="secondary" th:attr="hx-post=@{/processors/{id}/run-status(id=${processor.getId()},state='RUN_ONCE')}" hx-target="#result">RUN_ONCE</button>
+                <button class="secondary" th:attr="hx-post=@{/processors/{id}/run-status(id=${processor.getId()},state='DISABLED')}" hx-target="#result">DISABLED</button>
+                <button class="secondary" th:attr="hx-post=@{/processors/{id}/state(id=${processor.getId()})}" hx-target="#result">getState</button>
+            </div>
+        </section>
+        <section class="panel">
+            <h3>설정 고쳐 저장하기 <code class="small">processors.updateProcessor</code></h3>
+            <p class="muted small">보낸 필드만 바뀝니다. 속성 값을 <code>null</code>로 보내면 기본값으로 돌아갑니다. 실행 중인 프로세서는 고칠 수 없습니다(409).</p>
+            <form class="stack" th:attr="hx-post=@{/processors/{id}/save(id=${processor.getId()})}" hx-target="#result">
+                <textarea name="json" rows="20" data-editor="json" th:text="${editJson}"></textarea>
+                <div class="actions">
+                    <button>updateProcessor</button>
+                    <button class="danger" th:attr="hx-post=@{/processors/{id}/delete(id=${processor.getId()})}" hx-target="#result"
+                            hx-confirm="이 프로세서를 삭제할까요? 실행 중이거나 연결이 남아 있으면 NiFi가 거절합니다.">deleteProcessor</button>
+                </div>
+            </form>
+            <details><summary>getProcessor 결과 전체</summary><pre class="code" data-lang="json" th:text="${@json.pretty(processor)}"></pre></details>
+        </section>
+    </th:block>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/processors-detail :: help}"></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head('연결')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('queues')}"></header>
+<div class="layout">
+<main>
+    <p class="small"><a th:href="@{/queues}">&larr; 연결·큐</a></p>
+    <h1 th:text="${connection != null} ? ${connection.getComponent().getSource().getName()} + ' → ' + ${connection.getComponent().getDestination().getName()} : '연결'"></h1>
+    <p class="lead">연결 하나와 그 큐입니다. 큐 목록 보기와 비우기는 NiFi의 <b>비동기 요청</b>이므로 결과에 여러 단계가 차례로 보입니다.</p>
+
+    <section id="list" th:attr="hx-get=@{/queues/{id}(id=${connection != null ? connection.getId() : ''})}" hx-trigger="refresh from:body"
+             hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${get})}"></div>
+        <section class="panel" th:if="${connection != null}" th:with="c=${connection.getComponent()}, s=${connection.getStatus().getAggregateSnapshot()}">
+            <dl class="kv">
+                <dt>큐</dt><dd><strong th:text="${s.getQueued()}"></strong> <span class="muted small" th:text="'(개수 ' + ${s.getPercentUseCount()} + '%, 크기 ' + ${s.getPercentUseBytes()} + '%)'"></span></dd>
+                <dt>출발</dt><dd><a th:href="@{/processors/{id}(id=${c.getSource().getId()})}" th:text="${c.getSource().getName()}"></a>
+                    <span class="badge" th:classappend="${c.getSource().isRunning()} ? 'RUNNING' : 'STOPPED'" th:text="${c.getSource().isRunning()} ? 'RUNNING' : 'STOPPED'"></span></dd>
+                <dt>도착</dt><dd><a th:href="@{/processors/{id}(id=${c.getDestination().getId()})}" th:text="${c.getDestination().getName()}"></a>
+                    <span class="badge" th:classappend="${c.getDestination().isRunning()} ? 'RUNNING' : 'STOPPED'" th:text="${c.getDestination().isRunning()} ? 'RUNNING' : 'STOPPED'"></span></dd>
+                <dt>관계</dt><dd th:text="${c.getSelectedRelationships()}"></dd>
+                <dt>배압(back pressure)</dt><dd th:text="${c.getBackPressureObjectThreshold()} + '개 또는 ' + ${c.getBackPressureDataSizeThreshold()}"></dd>
+                <dt>만료</dt><dd th:text="${c.getFlowFileExpiration()}"></dd>
+            </dl>
+        </section>
+    </section>
+
+    <th:block th:if="${connection != null}">
+        <h2>동작</h2>
+        <section class="panel">
+            <h3>큐 보기와 비우기</h3>
+            <p class="muted small">목록은 앞에서부터 최대 100개입니다. 도착 프로세서가 실행 중이면 큐가 금방 빠져 목록이 비어 있을 수 있습니다.</p>
+            <div class="actions">
+                <button th:attr="hx-post=@{/queues/{id}/list(id=${connection.getId()})}" hx-target="#listing">큐 목록 보기</button>
+                <button class="secondary" th:attr="hx-post=@{/queues/{id}/drop(id=${connection.getId()})}" hx-target="#listing"
+                        hx-confirm="이 큐의 FlowFile을 모두 지울까요?">큐 비우기</button>
+            </div>
+            <div id="listing" th:fragment="listing">
+                <th:block th:if="${steps != null}">
+                    <details><summary th:text="'비동기 요청 단계 (' + ${#lists.size(steps)} + ')'"></summary>
+                        <th:block th:each="s : ${steps}"><div th:replace="~{fragments/call :: panel(${s})}"></div></th:block>
+                    </details>
+                    <table th:if="${flowFiles != null}">
+                        <thead><tr><th>#</th><th>파일 이름</th><th>크기</th><th>큐에 있은 시간</th><th></th></tr></thead>
+                        <tr th:each="f : ${flowFiles}">
+                            <td th:text="${f.getPosition()}"></td>
+                            <td class="small"><code th:text="${f.getFilename()}"></code></td>
+                            <td th:text="${f.getSize()} + ' B'"></td>
+                            <td th:text="${f.getQueuedDuration() / 1000} + ' s'"></td>
+                            <td><div class="actions">
+                                <button class="secondary" th:attr="hx-post=@{/queues/{id}/flowfiles/{u}(id=${connectionId},u=${f.getUuid()})}" hx-target="#flowfile">속성</button>
+                                <button class="secondary" th:attr="hx-post=@{/queues/{id}/flowfiles/{u}/content(id=${connectionId},u=${f.getUuid()})}" hx-target="#flowfile">내용</button>
+                            </div></td>
+                        </tr>
+                        <tr th:if="${#lists.isEmpty(flowFiles)}"><td colspan="5" class="muted">큐가 비어 있습니다.</td></tr>
+                    </table>
+                    <div id="flowfile"></div>
+                    <section th:replace="~{fragments :: actionTrace}"></section>
+                </th:block>
+            </div>
+        </section>
+
+        <div id="result"></div>
+        <section class="panel">
+            <h3>설정 고쳐 저장하기 <code class="small">connections.updateConnection</code></h3>
+            <p class="muted small">배압 임계값을 낮춰 보세요(예: <code>10</code>). 큐가 그만큼 차면 출발 프로세서가 더 이상 실행되지 않습니다.</p>
+            <form class="stack" th:attr="hx-post=@{/queues/{id}/save(id=${connection.getId()})}" hx-target="#result">
+                <textarea name="json" rows="16" data-editor="json" th:text="${editJson}"></textarea>
+                <div class="actions">
+                    <button>updateConnection</button>
+                    <button class="danger" th:attr="hx-post=@{/queues/{id}/delete(id=${connection.getId()})}" hx-target="#result"
+                            hx-confirm="이 연결을 삭제할까요? 큐에 데이터가 있거나 양쪽이 실행 중이면 NiFi가 거절합니다.">deleteConnection</button>
+                </div>
+            </form>
+        </section>
+    </th:block>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/queues-detail :: help}"></aside>
+</div>
+</body>
+</html>

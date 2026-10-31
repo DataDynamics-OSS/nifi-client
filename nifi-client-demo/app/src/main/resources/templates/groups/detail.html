@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head(${pg != null} ? '그룹 ' + ${crumbs[#lists.size(crumbs) - 1].name()} : '프로세스 그룹')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('groups')}"></header>
+<div class="layout">
+<main>
+    <p class="small" th:if="${crumbs != null}">
+        <th:block th:each="c, st : ${crumbs}"><a th:href="@{/groups/{id}(id=${c.id()})}" th:text="${c.name()}"></a><span th:unless="${st.last}"> / </span></th:block>
+    </p>
+    <h1 th:text="${crumbs != null} ? ${crumbs[#lists.size(crumbs) - 1].name()} : '프로세스 그룹'">프로세스 그룹</h1>
+    <p class="lead"><code>flow.getFlow(id)</code>는 그룹 하나에 바로 들어 있는 컴포넌트(하위 그룹, 프로세서, 연결 …)를 상태와 함께 한 번에 돌려줍니다.
+        NiFi UI가 캔버스를 그릴 때 쓰는 호출과 같습니다. <code>root</code>는 최상위 그룹의 별칭입니다.</p>
+
+    <section id="list" th:attr="hx-get=@{/groups/{id}(id=${id})}" hx-trigger="refresh from:body" hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${get})}"></div>
+        <th:block th:if="${pg != null}" th:with="f=${pg.getFlow()}">
+            <p class="small" th:if="${pg.getParameterContext() != null}">파라미터 컨텍스트:
+                <a th:href="@{/parameters/{id}(id=${pg.getParameterContext().getId()})}"
+                   th:text="${pg.getParameterContext().getComponent() != null} ? ${pg.getParameterContext().getComponent().getName()} : ${pg.getParameterContext().getId()}"></a></p>
+
+            <section class="panel flow-panel">
+                <h3>흐름 <span class="muted small">컴포넌트 위치와 연결로 그린 캔버스 · 상자를 누르면 상세, 연결을 누르면 큐</span></h3>
+                <p class="muted" th:if="${#lists.isEmpty(graph.nodes())}">이 그룹에는 컴포넌트가 없습니다.</p>
+                <svg th:unless="${#lists.isEmpty(graph.nodes())}" class="flow" xmlns="http://www.w3.org/2000/svg"
+                     th:attr="viewBox=${graph.viewBox()}" preserveAspectRatio="xMidYMin meet"
+                     th:style="'max-width:' + ${#numbers.formatDecimal(graph.width() * 0.8, 1, 0)} + 'px'">
+                    <defs>
+                        <marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                            <path d="M0,0 L10,5 L0,10 z"></path>
+                        </marker>
+                    </defs>
+                    <g th:each="e : ${graph.edges()}" class="edge" th:classappend="${e.hasQueued()} ? 'queued'">
+                        <a th:href="@{${e.href()}}">
+                            <title th:text="${e.relationships()} + ' · 큐 ' + ${e.queued()}"></title>
+                            <path class="line" th:attr="d=${e.path()}" marker-end="url(#flow-arrow)"></path>
+                            <rect class="label" th:attr="x=${e.labelX() - 90},y=${e.labelY() - 21}" width="180" height="42" rx="4"></rect>
+                            <text class="rel" th:attr="x=${e.labelX()},y=${e.labelY() - 4}" text-anchor="middle"
+                                  th:text="${#strings.abbreviate(e.relationships(), 26)}"></text>
+                            <text class="q" th:attr="x=${e.labelX()},y=${e.labelY() + 14}" text-anchor="middle" th:text="'큐 ' + ${e.queued()}"></text>
+                        </a>
+                    </g>
+                    <g th:each="n : ${graph.nodes()}" class="node" th:classappend="${n.kind()} + ' ' + ${n.state()}">
+                        <a th:href="${n.href() != null} ? @{${n.href()}}">
+                            <title th:text="${n.name()} + ' (' + ${n.detail()} + ')' + (${n.state() != null} ? ' ' + ${n.state()} : '')"></title>
+                            <th:block th:if="${n.kind() == 'funnel'}">
+                                <circle th:attr="cx=${n.x() + 24},cy=${n.y() + 24}" r="24"></circle>
+                            </th:block>
+                            <th:block th:unless="${n.kind() == 'funnel'}">
+                                <rect class="box" th:attr="x=${n.x()},y=${n.y()},width=${n.w()},height=${n.h()}" rx="6"></rect>
+                                <rect class="bar" th:attr="x=${n.x()},y=${n.y()},height=${n.h()}" width="8" rx="3"></rect>
+                                <text class="name" th:attr="x=${n.x() + 22},y=${n.y() + (n.h() > 60 ? 34 : 22)}"
+                                      th:text="${#strings.abbreviate(n.name(), n.w() > 300 ? 26 : 18)}"></text>
+                                <text class="detail" th:attr="x=${n.x() + 22},y=${n.y() + (n.h() > 60 ? 60 : 40)}"
+                                      th:text="${#strings.abbreviate(n.detail(), 40)} + (${n.state() != null and n.kind() != 'group'} ? ' · ' + ${n.state()} : '')"></text>
+                                <text class="stats" th:if="${n.h() > 60}" th:attr="x=${n.x() + 22},y=${n.y() + n.h() - 20}"
+                                      th:text="${#strings.abbreviate(n.stats(), 48)}"></text>
+                            </th:block>
+                        </a>
+                    </g>
+                </svg>
+                <p class="small muted legend" th:unless="${#lists.isEmpty(graph.nodes())}">
+                    <span class="badge RUNNING">RUNNING</span> <span class="badge STOPPED">STOPPED</span> <span class="badge INVALID">INVALID</span>
+                    · 노란 연결: 큐에 FlowFile이 있음 · 위치는 NiFi UI 캔버스와 같습니다.</p>
+            </section>
+
+            <section class="panel">
+                <h3>하위 그룹 <span class="muted" th:text="'(' + ${#lists.size(f.getProcessGroups())} + ')'"></span></h3>
+                <table>
+                    <thead><tr><th>이름</th><th>실행</th><th>정지</th><th>잘못됨</th><th>큐</th><th>id</th></tr></thead>
+                    <tr th:each="g : ${f.getProcessGroups()}">
+                        <td><a th:href="@{/groups/{id}(id=${g.getId()})}" th:text="${g.getComponent().getName()}"></a></td>
+                        <td><span class="badge RUNNING" th:text="${g.getRunningCount()}"></span></td>
+                        <td><span class="badge STOPPED" th:text="${g.getStoppedCount()}"></span></td>
+                        <td><span class="badge" th:classappend="${g.getInvalidCount() > 0} ? 'INVALID'" th:text="${g.getInvalidCount()}"></span></td>
+                        <td th:text="${g.getStatus() != null} ? ${g.getStatus().getAggregateSnapshot().getQueued()} : ''"></td>
+                        <td class="small muted" th:text="${g.getId()}"></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(f.getProcessGroups())}"><td colspan="6" class="muted">없음</td></tr>
+                </table>
+            </section>
+
+            <section class="panel">
+                <h3>프로세서 <span class="muted" th:text="'(' + ${#lists.size(f.getProcessors())} + ')'"></span></h3>
+                <table>
+                    <thead><tr><th>이름</th><th>타입</th><th>상태</th><th>검증</th><th>입력 / 출력 (5분)</th></tr></thead>
+                    <tr th:each="p : ${f.getProcessors()}">
+                        <td><a th:href="@{/processors/{id}(id=${p.getId()})}" th:text="${p.getComponent().getName()}"></a></td>
+                        <td class="small" th:text="${#strings.substringAfter(p.getComponent().getType(), 'processors.')} ?: ${p.getComponent().getType()}"></td>
+                        <td><span class="badge" th:classappend="${p.getComponent().getState()}" th:text="${p.getComponent().getState()}"></span></td>
+                        <td><span class="badge" th:classappend="${p.getComponent().getValidationStatus()}" th:text="${p.getComponent().getValidationStatus()}"></span></td>
+                        <td class="small" th:text="${p.getStatus().getAggregateSnapshot().getInput()} + ' / ' + ${p.getStatus().getAggregateSnapshot().getOutput()}"></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(f.getProcessors())}"><td colspan="5" class="muted">없음</td></tr>
+                </table>
+            </section>
+
+            <section class="panel">
+                <h3>연결 <span class="muted" th:text="'(' + ${#lists.size(f.getConnections())} + ')'"></span></h3>
+                <table>
+                    <thead><tr><th>출발 → 도착</th><th>관계</th><th>큐</th></tr></thead>
+                    <tr th:each="c : ${f.getConnections()}">
+                        <td><a th:href="@{/queues/{id}(id=${c.getId()})}"
+                               th:text="${c.getComponent().getSource().getName()} + ' → ' + ${c.getComponent().getDestination().getName()}"></a></td>
+                        <td class="small" th:text="${c.getComponent().getSelectedRelationships()}"></td>
+                        <td th:text="${c.getStatus().getAggregateSnapshot().getQueued()}"></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(f.getConnections())}"><td colspan="3" class="muted">없음</td></tr>
+                </table>
+            </section>
+        </th:block>
+    </section>
+
+    <th:block th:if="${pg != null}">
+        <h2>동작</h2>
+        <div id="result"></div>
+        <div class="grid2">
+            <section class="panel">
+                <h3>하위 그룹 만들기</h3>
+                <p class="muted small">새 컴포넌트는 revision version 0으로 만듭니다. 이름이 같아도 NiFi는 막지 않습니다(id로 구분).</p>
+                <form class="stack" th:attr="hx-post=@{/groups/{id}/children(id=${pg.getId()})}" hx-target="#result">
+                    <label>이름<input type="text" name="name" value="sdk-demo-group"></label>
+                    <div class="actions"><button>createProcessGroup</button></div>
+                </form>
+            </section>
+            <section class="panel">
+                <h3>시작·정지·비우기</h3>
+                <p class="muted small"><code>scheduleComponents</code>는 그룹 안(하위 그룹 포함)의 프로세서와 포트를 한 번에 시작하거나 멈춥니다.
+                    큐 비우기는 NiFi의 비동기 요청(요청 → 조회 → 삭제)입니다.</p>
+                <div class="actions">
+                    <button th:attr="hx-post=@{/groups/{id}/schedule(id=${pg.getId()},state='RUNNING')}" hx-target="#result">모두 시작</button>
+                    <button class="secondary" th:attr="hx-post=@{/groups/{id}/schedule(id=${pg.getId()},state='STOPPED')}" hx-target="#result">모두 정지</button>
+                    <button class="secondary" th:attr="hx-post=@{/groups/{id}/empty(id=${pg.getId()})}" hx-target="#result"
+                            hx-confirm="이 그룹의 모든 큐에서 FlowFile을 지울까요?">모든 큐 비우기</button>
+                </div>
+            </section>
+        </div>
+
+        <section class="panel" th:if="${entity != null}">
+            <h3>JSON 고쳐 저장하기 <code class="small">updateProcessGroup</code></h3>
+            <p class="muted small">본문의 <code>revision.version</code>이 서버의 현재 값과 같아야 합니다. 저장하면 version이 1 올라가므로,
+                화면을 새로 고치지 않고 두 번 저장하면 두 번째는 400(낡은 revision)이 됩니다(같은 clientId면 예외적으로 받아 줌, 장애 실험 ④ 참고).</p>
+            <form class="stack" th:attr="hx-post=@{/groups/{id}/save(id=${pg.getId()})}" hx-target="#result">
+                <textarea name="json" rows="18" data-editor="json"
+                          th:text="${editJson}"></textarea>
+                <div class="actions">
+                    <button>updateProcessGroup</button>
+                    <button class="danger" th:if="${pg.getParentGroupId() != null}" th:attr="hx-post=@{/groups/{id}/delete(id=${pg.getId()})}" hx-target="#result"
+                            hx-confirm="이 그룹을 삭제할까요? 안에 실행 중인 컴포넌트나 큐에 데이터가 있으면 NiFi가 거절합니다.">removeProcessGroup</button>
+                </div>
+            </form>
+            <details><summary>getProcessGroup 결과 전체</summary><pre class="code" data-lang="json" th:text="${@json.pretty(entity)}"></pre></details>
+        </section>
+    </th:block>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/groups :: help}"></aside>
+</div>
+</body>
+</html>

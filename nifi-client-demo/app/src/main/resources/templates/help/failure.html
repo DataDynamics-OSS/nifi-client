@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('오류', '생성된 클라이언트가 던진 예외를 그대로 보여 줍니다.')}"></div>
+
+    <h3>예외는 ApiException 하나</h3>
+    <p>swagger-codegen이 만든 클라이언트는 모든 실패를 checked 예외 <code>ApiException</code> 하나로 던집니다.
+        예외 타입으로 나눌 수 없으므로, 아래 값으로 구분합니다.</p>
+    <table>
+        <thead><tr><th>값</th><th>뜻</th></tr></thead>
+        <tbody>
+        <tr><td><code>getCode()</code></td><td>NiFi가 돌려준 HTTP 상태. 응답을 받지 못했으면(연결 실패, 시간 초과) <b>0</b></td></tr>
+        <tr><td><code>getResponseBody()</code></td><td>NiFi가 보낸 오류 문장(평문). 예: <i>Unable to find processor with id '…'</i></td></tr>
+        <tr><td><code>getCause()</code></td><td>응답을 받지 못했을 때의 I/O 예외(<code>UnknownHostException</code>, <code>SocketTimeoutException</code> …)</td></tr>
+        <tr><td><code>getMessage()</code></td><td>HTTP 상태 문구 또는 원인 예외의 <code>toString()</code></td></tr>
+        </tbody>
+    </table>
+
+    <h3>NiFi가 자주 돌려주는 상태</h3>
+    <table>
+        <thead><tr><th>상태</th><th>언제</th></tr></thead>
+        <tbody>
+        <tr><td>400</td><td>잘못된 요청, 낡은 revision("is not the most up-to-date revision"), 틀린 비밀번호</td></tr>
+        <tr><td>401</td><td>토큰 없음·만료</td></tr>
+        <tr><td>403</td><td>권한 없음(멀티 유저 설정에서)</td></tr>
+        <tr><td>404</td><td>없는 컴포넌트 id</td></tr>
+        <tr><td>409</td><td>지금 상태에서 할 수 없는 일: 실행 중인 프로세서 삭제, 데이터가 남은 연결 삭제, single-user에서 사용자 관리 등</td></tr>
+        </tbody>
+    </table>
+
+    <h3>오류 상자 읽는 법</h3>
+    <ul>
+        <li>굵은 글씨: 예외 클래스 이름. 맨 아래 회색 글씨가 전체 이름입니다.</li>
+        <li><b>HTTP</b> 배지: NiFi가 돌려준 상태 코드. 응답이 없으면 "응답 없음"입니다.</li>
+        <li><b>NiFi 메시지</b>: 응답 본문의 오류 문장. 원인은 대부분 여기에 있습니다.</li>
+        <li><b>원인</b>: 응답을 받지 못했을 때의 I/O 예외.</li>
+    </ul>
+
+    <h3>코드에서 처리하기</h3>
+    <pre class="code" data-lang="java">try {
+    processors.getProcessor(id);
+} catch (ApiException e) {
+    if (e.getCode() == 404) {
+        // 없는 경우 처리
+    } else if (e.getCode() == 0) {
+        log.warn("NiFi에 연결하지 못함", e.getCause());
+    } else {
+        log.warn("NiFi {}: {}", e.getCode(), e.getResponseBody());
+    }
+}</pre>
+</aside>
+</body>
+</html>

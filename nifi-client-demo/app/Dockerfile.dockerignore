@@ -1,0 +1,6 @@
+# Build context is the repository root; send only what the image build needs.
+*
+!nifi-2.x/java/
+!nifi-client-demo/app/pom.xml
+!nifi-client-demo/app/src/
+**/target/

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<aside class="help" th:fragment="help">
+    <div th:replace="~{fragments :: helpTitle('플로우 정의', '흐름을 JSON 파일로 다룹니다.')}"></div>
+
+    <h3>플로우 정의(flow definition)란?</h3>
+    <p>프로세스 그룹 하나를 그 안의 프로세서, 연결, 컨트롤러 서비스, 파라미터 컨텍스트까지 묶어 JSON으로 적은 것입니다.
+        id 대신 <code>identifier</code>(버전 관리용 id)를 쓰므로, 다른 NiFi에 올려도 새 id로 만들어집니다.</p>
+    <pre class="diagram">{
+  "flowContents": { "name": "demo-flow",
+    "processors": [ … ], "connections": [ … ], "controllerServices": [ … ] },
+  "parameterContexts": { "demo-params": { … } },
+  "externalControllerServices": { … }
+}</pre>
+
+    <h3>업로드와 multipart</h3>
+    <p>업로드 API는 <code>multipart/form-data</code>로 파일을 받습니다. 생성된 <code>uploadProcessGroup(…, Object file, …)</code>은
+        인자가 <code>java.io.File</code>일 때만 파일 파트로 보내므로, 문자열 JSON은 임시 파일에 써서 넘깁니다.</p>
+    <div class="tip">민감한 속성 값과 민감 파라미터 값은 내보낸 JSON에 들어가지 않습니다. 올린 뒤 다시 넣어야 합니다.</div>
+
+    <h3>따라 해 보기</h3>
+    <ol>
+        <li><code>demo-flow</code>를 내보냅니다.</li>
+        <li>편집기에서 <code>"schedulingPeriod" : "5 sec"</code>를 <code>"1 min"</code>으로 바꿉니다.</li>
+        <li><b>uploadProcessGroup</b>을 누르고, <b>프로세스 그룹</b> 화면에서 <code>demo-flow-copy</code>를 확인합니다(모두 정지 상태).</li>
+    </ol>
+
+    <h3>이 화면이 쓰는 API</h3>
+    <pre class="code" data-lang="java">String flowJson = groups.exportProcessGroup(groupId, true, false);
+
+Path tmp = Files.createTempFile("flow-", ".json");
+Files.writeString(tmp, flowJson);
+try {
+    ProcessGroupEntity copy = groups.uploadProcessGroup(
+            parentGroupId, clientId, false, tmp.toFile(), "demo-flow-copy", 0d, 600d);
+} finally {
+    Files.deleteIfExists(tmp);
+}</pre>
+</aside>
+</body>
+</html>

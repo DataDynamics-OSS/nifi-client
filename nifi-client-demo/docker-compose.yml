@@ -1,0 +1,45 @@
+# NiFi 2.12.0 (HTTPS, single-user login) + NiFi Client demo app.
+#   docker compose up -d --build --wait   # first start takes 2-5 minutes
+#   open http://localhost:8080
+#   docker compose down                   # stop and wipe all data (the flow lives in the container only)
+name: nifi-client-demo
+
+services:
+  nifi:
+    image: apache/nifi:${NIFI_VERSION}
+    # The demo app calls https://nifi:8443; NiFi accepts that Host header because it is its own host name.
+    hostname: nifi
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: ${NIFI_USERNAME}
+      SINGLE_USER_CREDENTIALS_PASSWORD: ${NIFI_PASSWORD}
+      # Lets the browser open the NiFi UI through the published port as well.
+      NIFI_WEB_PROXY_HOST: localhost:${NIFI_PORT},${PUBLIC_HOST}:${NIFI_PORT}
+    ports:
+      - "${BIND_ADDRESS}:${NIFI_PORT}:8443"
+    healthcheck:
+      # Public endpoint (no login needed); answers once the web server and the flow are up.
+      # NiFi listens on its host name only (NIFI_WEB_HTTPS_HOST defaults to it), not on localhost.
+      test: ["CMD-SHELL", "curl -skf https://nifi:8443/nifi-api/authentication/configuration >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 60s
+
+  demo-app:
+    build:
+      context: ..
+      dockerfile: nifi-client-demo/app/Dockerfile
+    image: nifi-client-demo/app:latest
+    environment:
+      NIFI_USERNAME: ${NIFI_USERNAME}
+      NIFI_PASSWORD: ${NIFI_PASSWORD}
+    ports:
+      - "${BIND_ADDRESS}:${APP_PORT}:8080"
+    depends_on:
+      nifi: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/actuator/health/liveness >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s

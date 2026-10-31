@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments :: head(${context != null} ? ${context.getComponent().getName()} : '파라미터 컨텍스트')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('parameters')}"></header>
+<div class="layout">
+<main>
+    <p class="small"><a th:href="@{/parameters}">&larr; 파라미터</a></p>
+    <h1 th:text="${context != null} ? ${context.getComponent().getName()} : '파라미터 컨텍스트'"></h1>
+
+    <section id="list" th:attr="hx-get=@{/parameters/{id}(id=${context != null ? context.getId() : ''})}" hx-trigger="refresh from:body"
+             hx-select="#list" hx-swap="outerHTML">
+        <div th:replace="~{fragments/call :: panel(${get})}"></div>
+        <section class="panel" th:if="${context != null}" th:with="c=${context.getComponent()}">
+            <p class="small muted" th:text="${c.getDescription()}"></p>
+            <table>
+                <thead><tr><th>이름</th><th>값</th><th>민감</th><th>참조하는 컴포넌트</th></tr></thead>
+                <tr th:each="pe : ${c.getParameters()}" th:with="p=${pe.getParameter()}">
+                    <td><code th:text="${p.getName()}"></code></td>
+                    <td class="small" th:text="${p.isSensitive()} ? '(가려짐)' : ${p.getValue()}"></td>
+                    <td><span class="badge" th:classappend="${p.isSensitive()} ? 'warn'" th:text="${p.isSensitive()}"></span></td>
+                    <td class="small"><span th:each="r : ${p.getReferencingComponents()}" class="badge" th:text="${r.getComponent().getName()}"></span></td>
+                </tr>
+            </table>
+            <p class="small">연결된 그룹:
+                <a th:each="g : ${c.getBoundProcessGroups()}" th:href="@{/groups/{id}(id=${g.getId()})}" th:text="${g.getComponent() != null ? g.getComponent().getName() : g.getId()} + ' '"></a>
+                <span class="muted" th:if="${#lists.isEmpty(c.getBoundProcessGroups())}">없음</span></p>
+        </section>
+    </section>
+
+    <th:block th:if="${context != null}">
+        <h2>동작</h2>
+        <div id="result"></div>
+        <div class="grid2">
+            <section class="panel">
+                <h3>값 바꾸기 <code class="small">submitParameterContextUpdate</code></h3>
+                <p class="muted small">보낸 파라미터만 바뀌거나 추가됩니다. 값을 쓰는 프로세서는 NiFi가 멈췄다가 다시 시작합니다. 비동기 요청이므로 결과에 단계가 차례로 보입니다.</p>
+                <form class="stack" th:attr="hx-post=@{/parameters/{id}/update(id=${context.getId()})}" hx-target="#result">
+                    <label>파라미터 (한 줄에 이름=값 하나)<textarea name="values" rows="3">env=staging</textarea></label>
+                    <label>민감 파라미터 이름 (쉼표로 구분)<input type="text" name="sensitive" value=""></label>
+                    <div class="actions"><button>submitParameterContextUpdate</button></div>
+                </form>
+            </section>
+            <section class="panel">
+                <h3>그룹에 연결 <code class="small">updateProcessGroup</code></h3>
+                <p class="muted small">그룹 하나에는 컨텍스트 하나만 연결됩니다. 연결하면 그룹 안의 <code>#{…}</code>가 이 컨텍스트에서 값을 찾습니다.</p>
+                <form class="stack" th:attr="hx-post=@{/parameters/{id}/bind(id=${context.getId()})}" hx-target="#result">
+                    <label>그룹<select name="groupId"><option th:each="g : ${groupOptions}" th:value="${g.id()}" th:text="${g.name()}"></option></select></label>
+                    <div class="actions">
+                        <button>updateProcessGroup</button>
+                        <button class="danger" th:attr="hx-post=@{/parameters/{id}/delete(id=${context.getId()})}" hx-target="#result"
+                                hx-confirm="이 파라미터 컨텍스트를 삭제할까요? 그룹에 연결되어 있으면 NiFi가 거절합니다.">deleteParameterContext</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <details class="panel"><summary>getParameterContext 결과 전체</summary><pre class="code" data-lang="json" th:text="${@json.pretty(context)}"></pre></details>
+    </th:block>
+    <section th:replace="~{fragments :: trace}"></section>
+</main>
+<aside class="help" th:replace="~{help/parameters :: help}"></aside>
+</div>
+</body>
+</html>

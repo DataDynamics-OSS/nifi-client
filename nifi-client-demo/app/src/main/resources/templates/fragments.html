@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<!--/* 모든 화면이 함께 쓰는 조각입니다. 화면 하나는 다음 모양입니다.
+
+<head th:replace="~{fragments :: head('프로세서')}"></head>
+<body>
+<header th:replace="~{fragments :: nav('processors')}"></header>
+<div class="layout">
+<main> ... <section th:replace="~{fragments :: trace}"></section></main>
+<aside class="help" th:replace="~{help/processors-list :: help}"></aside>
+</div>
+</body>
+*/-->
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title} + ' · NiFi Client Demo'">NiFi Client Demo</title>
+    <meta name="monaco-base" th:content="@{/webjars/monaco-editor/min/vs}">
+    <link rel="stylesheet" th:href="@{/css/demo.css}">
+    <script th:src="@{/webjars/htmx.org/dist/htmx.min.js}" defer></script>
+    <script th:src="@{/js/demo.js}" defer></script>
+</head>
+<body>
+
+<header th:fragment="nav(active)" class="nav">
+    <a class="brand" th:href="@{/}">NiFi Client Demo</a>
+    <nav>
+        <a th:href="@{/}" th:classappend="${active == 'dashboard'} ? 'active'">대시보드</a>
+        <a th:href="@{/groups}" th:classappend="${active == 'groups'} ? 'active'">프로세스 그룹</a>
+        <a th:href="@{/processors}" th:classappend="${active == 'processors'} ? 'active'">프로세서</a>
+        <a th:href="@{/queues}" th:classappend="${active == 'queues'} ? 'active'">연결·큐</a>
+        <a th:href="@{/services}" th:classappend="${active == 'services'} ? 'active'">컨트롤러 서비스</a>
+        <a th:href="@{/parameters}" th:classappend="${active == 'parameters'} ? 'active'">파라미터</a>
+        <span class="sep"></span>
+        <a th:href="@{/provenance}" th:classappend="${active == 'provenance'} ? 'active'">프로비넌스</a>
+        <a th:href="@{/flows}" th:classappend="${active == 'flows'} ? 'active'">플로우 정의</a>
+        <span class="sep"></span>
+        <a th:href="@{/lab}" th:classappend="${active == 'lab'} ? 'active'">장애 실험</a>
+        <a th:href="@{/calls}" th:classappend="${active == 'calls'} ? 'active'">요청 기록</a>
+    </nav>
+    <button type="button" class="help-toggle" data-help-toggle title="도움말 보이기/숨기기">? 도움말</button>
+</header>
+
+<!-- 성공 메시지(message)와 실패(failure, Failure 레코드)를 보여 줍니다. -->
+<div th:fragment="alerts">
+    <div class="alert ok" th:if="${message}" th:text="${message}"></div>
+    <th:block th:if="${failure}"><div th:replace="~{fragments :: failure(${failure})}"></div></th:block>
+</div>
+
+<!-- 예외 하나. 생성된 클라이언트는 모든 실패를 ApiException 하나로 던지므로, HTTP 상태·NiFi 메시지·원인 예외를 나눠 보여 주는 것이 핵심입니다. -->
+<div th:fragment="failure(f)" class="alert error">
+    <strong th:text="${f.simpleType()}">ApiException</strong>
+    <span class="badge" th:if="${f.status()}" th:text="'HTTP ' + ${f.status()}"></span>
+    <span class="badge" th:unless="${f.status()}">응답 없음 (getCode() = 0)</span>
+    <code th:if="${f.request()}" th:text="${f.request()}"></code>
+    <div class="pre-wrap" th:text="${f.message()}"></div>
+    <dl class="kv small" th:if="${f.serverMessage() != null or f.cause() != null}">
+        <dt th:if="${f.serverMessage()}">NiFi 메시지</dt><dd th:if="${f.serverMessage()}" class="pre-wrap" th:text="${f.serverMessage()}"></dd>
+        <dt th:if="${f.cause()}">원인</dt><dd th:if="${f.cause()}"><code th:text="${f.cause()}"></code></dd>
+    </dl>
+    <div class="muted small" th:text="${f.type()}"></div>
+</div>
+
+<!-- 이 화면(웹 요청)을 처리하는 동안 클라이언트가 NiFi에 보낸 요청 목록입니다. 데모에서 가장 보여 주고 싶은 부분입니다. -->
+<section th:fragment="trace" class="trace" th:if="${trace != null}">
+    <h3>이 화면에서 클라이언트가 보낸 요청 <span class="muted" th:text="'(' + ${#lists.size(trace)} + ')'"></span></h3>
+    <p class="muted small" th:if="${#lists.isEmpty(trace)}">NiFi REST 요청 없음</p>
+    <div th:replace="~{fragments :: requestTable(${trace})}"></div>
+</section>
+
+<!-- htmx 동작의 결과 조각 아래에 붙이는 요청 목록입니다. 제목만 다릅니다. -->
+<section th:fragment="actionTrace" class="trace action" th:if="${trace != null}">
+    <h4>이 동작에서 클라이언트가 보낸 요청 <span class="muted" th:text="'(' + ${#lists.size(trace)} + ')'"></span></h4>
+    <p class="muted small" th:if="${#lists.isEmpty(trace)}">NiFi REST 요청 없음 (입력 검증에서 멈춤)</p>
+    <div th:replace="~{fragments :: requestTable(${trace})}"></div>
+</section>
+
+<table th:fragment="requestTable(requests)" class="requests" th:unless="${#lists.isEmpty(requests)}">
+    <thead><tr><th>#</th><th>클라이언트</th><th>메서드</th><th>경로</th><th>시도</th><th>상태</th><th>시간</th></tr></thead>
+    <tbody>
+    <tr th:each="r : ${requests}" class="request-row" th:classappend="${r.failed()} ? 'failed'">
+        <td th:text="${r.id()}"></td>
+        <td><span class="badge" th:text="${r.client()}">nifi</span></td>
+        <td><span class="method" th:text="${r.method()}"></span></td>
+        <td class="path">
+            <details>
+                <summary th:text="${r.target()}"></summary>
+                <div class="muted small" th:text="${r.uri()}"></div>
+                <div th:if="${r.requestBody()}"><h4>요청 본문</h4>
+                    <pre class="code" th:attr="data-lang=${r.requestLang()}" th:text="${r.requestBody()}"></pre></div>
+                <div th:if="${r.responseBody()}"><h4>응답 본문</h4>
+                    <pre class="code" th:attr="data-lang=${r.responseLang()}" th:text="${r.responseBody()}"></pre></div>
+                <div th:if="${r.error()}"><h4>실패</h4><pre class="code" data-lang="text" th:text="${r.error()}"></pre></div>
+            </details>
+        </td>
+        <td th:text="${r.attempt()}"></td>
+        <td th:text="${r.status() != null} ? ${r.status()} : '응답 없음'"></td>
+        <td th:text="${r.elapsedMs()} + ' ms'"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:fragment="helpTitle(title, lead)">
+    <div class="help-title"><h2 th:text="'도움말 · ' + ${title}">도움말</h2>
+        <button type="button" data-help-toggle title="도움말 숨기기">×</button></div>
+    <p class="help-lead" th:text="${lead}"></p>
+</div>
+
+<!-- 여러 호출을 차례로 실행한 동작(비동기 요청 흐름 등)의 결과입니다. 모델 속성 "steps"(SdkCall 목록). -->
+<div th:fragment="steps">
+    <th:block th:each="s : ${steps}"><div th:replace="~{fragments/call :: panel(${s})}"></div></th:block>
+    <section th:replace="~{fragments :: actionTrace}"></section>
+</div>
+
+</body>
+</html>
